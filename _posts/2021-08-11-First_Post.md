@@ -7,4 +7,5 @@ categories:
   - Github pages
 ---
 
-    첫번째 포스팅
+# 1. Github에서 Repository 생성하기
+가나다라
