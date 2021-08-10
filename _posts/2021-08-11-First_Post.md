@@ -4,7 +4,7 @@ excerpt: "Github에 페이지를 만들고 웹 브라우저로 접속하기"
 date: 2021-08-11
 
 categories:
-	- Github pages
+  - Github pages
 ---
 
 첫번째 포스팅
