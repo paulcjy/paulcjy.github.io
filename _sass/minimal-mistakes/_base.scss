@@ -138,6 +138,9 @@ a {
     color: $link-color-hover;
     outline: 0;
   }
+
+  // 링크 밑줄 제거
+  text-decoration: none;
 }
 
 /* buttons */
