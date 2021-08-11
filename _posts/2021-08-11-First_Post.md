@@ -7,7 +7,10 @@ categories:
   - Github pages
 ---
 
+<br>
+
 # 1. Github에서 Repository 생성하기
+<br>
 Github 블로그는 Repository를 이용해서 관리한다.
 주의할 점은, Repository 이름이 *username*.github.io일 때에만 블로그로 사용이 가능하다.
 *username*에는 본인의 계정 이름을 넣으면 된다.
@@ -19,7 +22,12 @@ New를 클릭하여 새 repository 생성
 <img width="500" alt="레포지터리2" src="https://user-images.githubusercontent.com/86853786/128949235-93c2ca92-a35e-43c1-a9b4-75d371e7b523.png">
 repository 이름을 계정 이름과 같게 입력
 
+<br>
+<br>
+<br>
+
 # 2. Repository Clone 하기
+<br>
 Github 홈페이지에서 파일을 작성하고 수정하는 방법으로도 블로그를 만들 수 있겠지만, 편하게 작성하기 위해 컴퓨터로 repository를 복사해 온다.
 이렇게 하면 원래 사용하던 코드 에디터로 관리할 수 있어서 편하다.
 Github repository에 있는 파일들이 그대로 내 컴퓨터에도 저장되고, git을 이용하여 두 곳을 연동한다.
@@ -55,7 +63,12 @@ repository에 파일이 있다면 초록색 `Code` 버튼을 누르면 된다.
 이제 명령 프롬프트에서 이동했던 폴더로 가면 `username.github.io`라는 폴더가 생겼을 것이다.
 이 폴더와 Github의 repository는 원격으로 연동되어 있다.
 
+<br>
+<br>
+<br>
+
 # 3. 페이지 만들어 업로드하기
+<br>
 간단하게 웹 페이지가 잘 뜨는지만 확인하기 위해 폴더에 index.html을 만들어 보자.
 내용은 hello world 같이 아무 내용이나 적으면 된다.
 
