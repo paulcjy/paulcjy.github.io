@@ -1,5 +1,5 @@
 ---
-title: "웹사이트 제작 (1) - 작업 환경 구성"
+title: "웹사이트 제작 (1) - 작업 환경 구성aa"
 excerpt: "React와 Express 설치"
 date: 2021-08-11
 
@@ -10,7 +10,7 @@ categories:
 # Node.js 설치
 React와 Express를 사용하기 위해서는 Node.js가 설치되어 있어야 한다.
 Node.js란 JavaScript runtime이다.
-원래 JavaScript는 웹 브라우저에서 작동하는 언어이지만 이것을 
+원래 JavaScript는 웹 브라우저에서 작동하는 언어이지만, 
 
 1. Node.js 설치
 2. npm, yarn, npx란?
