@@ -20,7 +20,14 @@ tags:
 원래 구현하고 싶은 방법은 사용자가 백엔드로 요청을 보내면 백엔드에서 처리하여 React를 통해 돌려주는 것이지만 React router를 이용한 방법이 더 쉬워보여서 일단 이 방법을 사용했다.
 
 # 1. 준비물
-React router인 react-router-dom을 설치해야 한다.
+
+React router에는 3가지가 있다고 한다.
+- react-router        - 웹 & 앱
+- react-router-dom    - 웹
+- react-router-native - 앱
+
+일단은 웹을 만들 것이므로 react-router-dom을 설치했다.
 
 	> npm install react-router-dom
 
+<br>
