@@ -35,3 +35,18 @@ React router에는 3가지가 있다고 한다.
 	> npm install react-router-dom
 
 <br>
+<br>
+<br>
+
+# 2. 각 페이지 만들기
+
+4개의 페이지를 만들었다.
+- 홈 - Home.js
+- 학사일정 - Calendar.js
+- 시간표 - Timetable.js
+- 식단표 - Menu.js
+
+<br>
+홈은 4번 글 [React][1]에서 사용한 App.js와 같다
+
+[1]: https://paulcjy.github.io/pc%20community/004-react-express-%EC%97%B0%EB%8F%99/
