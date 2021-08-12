@@ -201,6 +201,7 @@ app.use('/users', usersRouter);
 ```
 라우터를 통해 `/users`로 들어온 요청을 `./routes/users.js`로 보낸다.
 
+<br>
 Express의 `/routes/users.js`
 ```javascript
 router.get('/', function(req, res, next) {
