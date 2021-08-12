@@ -47,6 +47,6 @@ React router에는 3가지가 있다고 한다.
 - 식단표 - Menu.js
 
 <br>
-홈은 4번 글 [React][1]에서 사용한 App.js와 같다
+홈은 4번 글 [React]에서 사용한 App.js와 같다
 
-[1]: https://paulcjy.github.io/pc%20community/004-react-express-%EC%97%B0%EB%8F%99/
+[React]: https://paulcjy.github.io/pc%20community/004-react-express-%EC%97%B0%EB%8F%99/
