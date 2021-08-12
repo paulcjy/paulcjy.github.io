@@ -254,16 +254,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navigation() {
-	return (
-		<div>
-			<ul>
-				<li><Link to='/'>Home</Link></li>
-				<li><Link to='/calendar'>학사일정</Link></li>
-				<li><Link to='/timetable'>시간표</Link></li>
-				<li><Link to='/menu'>식단표</Link></li>
-			</ul>
-		</div>
-	);
+    return (
+        <div>
+            <ul>
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/calendar'>학사일정</Link></li>
+                <li><Link to='/timetable'>시간표</Link></li>
+                <li><Link to='/menu'>식단표</Link></li>
+            </ul>
+        </div>
+    );
 }
 
 export default Navigation;
@@ -285,17 +285,17 @@ import Timetable from './routes/Timetable';
 import Menu from './routes/Menu';
 
 class App extends React.Component {
-	render() {
-		return (
-			<BrowserRouter>
-				<Navigation />
-				<Route exact path='/' component={Home} />
-				<Route path='/calendar' component={Calendar} />
-				<Route path='/timetable' component={Timetable} />
-				<Route path='/menu' component={Menu} />
-			</BrowserRouter>
-		);
-	}
+    render() {
+        return (
+            <BrowserRouter>
+                <Navigation />
+                <Route exact path='/' component={Home} />
+                <Route path='/calendar' component={Calendar} />
+                <Route path='/timetable' component={Timetable} />
+                <Route path='/menu' component={Menu} />
+            </BrowserRouter>
+        );
+    }
 }
 
 export default App;
