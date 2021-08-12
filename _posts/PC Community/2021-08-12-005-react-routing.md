@@ -190,7 +190,7 @@ import Menu from './routes/Menu';
 <br>
 이제 App에 라우터를 적용해야 한다. 라우터는 사용할 경로와 경로에 연결할 컴포넌트를 지정해 주어야 한다. 그리고 BrowserRouter로 감싸준다.
 
-```js
+```jsx
 <BrowserRouter>
     <Route exact path='/' component={Home} />
     <Route path='/calendar' component={Calendar} />
