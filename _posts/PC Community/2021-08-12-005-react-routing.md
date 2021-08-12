@@ -61,7 +61,7 @@ src
 홈은 [(4) React와 Express 연동][link1]에서 사용한 `App.js`와 같다
 
 Home.js
-```js
+```jsx
 import React from 'react';
 import axios from 'axios';
 
@@ -113,7 +113,7 @@ export default Home;
 <br>
 Calendar.js
 
-```js
+```jsx
 import React from 'react';
 
 class Calendar extends React.Component {
@@ -130,7 +130,7 @@ export default Calendar;
 <br>
 Timetable.js
 
-```js
+```jsx
 import React from 'react';
 
 class Timetable extends React.Component {
@@ -147,7 +147,7 @@ export default Timetable;
 <br>
 Menu.js
 
-```js
+```jsx
 import React from 'react';
 
 class Menu extends React.Component {
@@ -249,7 +249,7 @@ import { Link } from 'react-router-dom';
 <br>
 나는 리스트를 이용하여 링크를 만들었다. 전체 파일의 내용은 다음과 같다.
 
-```js
+```jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -274,7 +274,7 @@ export default Navigation;
 
 완성된 `App.js`의 모습이다.
 
-```js
+```jsx
 import React from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
 
