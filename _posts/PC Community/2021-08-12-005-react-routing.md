@@ -192,7 +192,7 @@ import Menu from './routes/Menu';
 
 ```jsx
 <BrowserRouter>
-    <Route exact path='/' component={Home} />
+    <Route path='/' component={Home} />
     <Route path='/calendar' component={Calendar} />
     <Route path='/timetable' component={Timetable} />
     <Route path='/menu' component={Menu} />
