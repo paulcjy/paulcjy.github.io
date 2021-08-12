@@ -217,7 +217,7 @@ GET 방식으로 요청이 들어오면 위의 json 파일을 돌려준다.
 <br>
 React의 `/src/App.js`
 
-```js
+```jsx
 class App extends React.Component {
     state = {
         isLoading: true,
