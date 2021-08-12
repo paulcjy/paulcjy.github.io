@@ -7,7 +7,7 @@ categories:
   - PC Community
 
 tags:
-  - [Node.js, React, Route, React-router]
+  - [Node.js, React, Route, React-router, react-router-dom, Link]
 ---
 
 
@@ -22,7 +22,7 @@ tags:
 <br>
 <br>
 
-# 1. 준비물
+# 1. Router 설치
 
 React router에는 3가지가 있다고 한다.
 - react-router        - 웹 & 앱
@@ -38,7 +38,7 @@ React router에는 3가지가 있다고 한다.
 <br>
 <br>
 
-# 2. 각 페이지 만들기
+# 2. 페이지 만들기
 
 4개의 페이지를 만들었다.
 - 홈 - Home.js
@@ -198,7 +198,135 @@ import Menu from './routes/Menu';
     <Route path='/menu' component={Menu} />
 </BrowserRouter>
 ```
+이렇게 하면 `http://localhost:3000/`에서는 `Home.js`가 나오고, `http://localhost:3000/calendar`에서는 `Calendar.js`가 나온다.
+
+<br>
+그런데 문제가 생겼다. 실제로 `http://localhost:3000/calendar`로 접속해보니 `Home.js`와 `Calendar.js`가 모두 렌더링된다.
+
+![/calendar 페이지][img1]
+
+이건 React의 라우터가 `BrowserRouter` 내부의 모든 `Route`를 지나면서 해당되는 경로를 모두 불러오기 때문이라고 한다. 즉, `http://localhost:3000/calendar`의 `/calendar`에는 맨 앞에 `/`가 있기 때문에 `Home`을 렌더링한다. 아래로 내려오면서 `/calendar`를 만나면 해당되는 경로이기 때문에 또 `Calendar`를 렌더링한다. 이런식으로 `Route` 중에 하나만 띄우는 것이 아니라 중복되는 것이 있어도 경로가 맞기만 하면 모두 렌더링하기 때문에 설정을 신경써서 하지 않으면 원하지 않는 결과가 나올 수 있다.
+
+<br>
+이 문제를 피하려면 `exact`를 사용하면 된다. `Route` 안에 `exact` 혹은 `exact={true}`를 적으면 `path`로 주어진 경로와 완벽히 일치할 때만 해당 컴포넌트를 렌더링한다.
+
+위의 경우에는 `/`의 `Route`에만 `exact`를 넣으면 문제가 해결된다.
+```jsx
+<Route exact path='/' component={Home} />
+```
+
+<br>
+이제 주소창에 `/`, `/calendar`, `/timetable`, `/menu`를 입력할 때마다 해당 페이지들이 잘 나오는 것을 볼 수 있다.
+
+![/][img2]
+![/calendar][img3]
+![/timetable][img4]
+![/menu][img5]
+
+<br>
+<br>
+<br>
+
+# 4. Navigation 만들기
+
+클릭으로 페이지를 옮겨다닐 수 있도록 네비게이션을 만들었다.
+`/src/components`에 `Navigation.js` 파일을 생성한다.
+각 페이지로 이동할 수 있도록 링크를 만들어야 하는데, React 라우터를 쓸 때는 react-router-dom에서 제공하는 `Link` 태그를 사용한다.
+`Link` 태그의 속성값 `to`로 경로를 지정해주면 해당 경로로 이동하는 링크를 만들 수 있다.
+
+먼저 `Link`를 사용하기 위해서는 `Link`를 `import` 해야한다.
+```js
+import { Link } from 'react-router-dom';
+```
+
+<br>
+그리고 `Link` 태그를 이용하여 아래의 형식으로 링크를 만들어준다.
+
+```jsx
+<Link to='path'>text</Link>
+```
+
+<br>
+나는 리스트를 이용하여 링크를 만들었다. 전체 파일의 내용은 다음과 같다.
+
+```js
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+function Navigation() {
+	return (
+		<div>
+			<ul>
+				<li><Link to='/'>Home</Link></li>
+				<li><Link to='/calendar'>학사일정</Link></li>
+				<li><Link to='/timetable'>시간표</Link></li>
+				<li><Link to='/menu'>식단표</Link></li>
+			</ul>
+		</div>
+	);
+}
+
+export default Navigation;
+```
+
+<br>
+이제 `App.js`에 `Navigation.js`를 추가하고 네비게이션 컴포넌트를 넣어준다.
+
+완성된 `App.js`의 모습이다.
+
+```js
+import React from 'react';
+import { Route, BrowserRouter } from 'react-router-dom';
+
+import Navigation from './components/Navigation';
+import Home from './routes/Home';
+import Calendar from './routes/Calendar';
+import Timetable from './routes/Timetable';
+import Menu from './routes/Menu';
+
+class App extends React.Component {
+	render() {
+		return (
+			<BrowserRouter>
+				<Navigation />
+				<Route exact path='/' component={Home} />
+				<Route path='/calendar' component={Calendar} />
+				<Route path='/timetable' component={Timetable} />
+				<Route path='/menu' component={Menu} />
+			</BrowserRouter>
+		);
+	}
+}
+
+export default App;
+```
+
+<br>
+접속해보면 페이지에 네비게이션이 뜨고 각 링크를 클릭했을 때 잘 작동하는 것을 볼 수 있다.
+
+![네비게이션 페이지][img6]
+
+<br>
+
+## \<Link>와 \<a>
+
+원래 링크를 만들 때는 `<a>` 태그를 이용한다. 그러나 React에서는 `<Link>`를 사용하는 것이 좋다.
+React는 SPA(Single Page Application)라서 한 번 페이지가 로드되면 다른 페이지로 이동해도 서버에 페이지를 새로 요청하지 않고 필요한 부분만 수정한다. 그래서 `<Link>`를 사용하면 페이지가 새로고침 되지는 않지만 다른 페이지로 이동하게 된다. 그러나 `<a>`를 사용하면 해당 url로 서버에 다시 요청을 보내게 되고, 페이지는 새로고침 된다.
+
+지금까지 만든 페이지로는 `<Link>`를 사용하든 `<a>`를 사용하든 별 문제는 없지만 `<a>`를 사용하면 페이지가 새로고침 되는 것을 볼 수 있다.
+
+
+
+
+
 
 
 
 [link1]: https://paulcjy.github.io/pc%20community/004-react-express-%EC%97%B0%EB%8F%99/
+
+[img1]: https://user-images.githubusercontent.com/86853786/129266795-c52ddb79-cf3c-48d7-8d46-84338883182f.png
+[img2]: https://user-images.githubusercontent.com/86853786/129268618-545b5b2d-12d8-4bc9-b75d-65232cf28ac1.png
+[img3]: https://user-images.githubusercontent.com/86853786/129268667-07921d6e-c5e7-469f-b91a-283ab9828c5c.png
+[img4]: https://user-images.githubusercontent.com/86853786/129268701-1ebb6db8-580f-43f9-a9a7-d80a925ab734.png
+[img5]: https://user-images.githubusercontent.com/86853786/129268749-b6f58fd0-de67-4689-ac6c-16be86dcb23e.png
+[img6]: https://user-images.githubusercontent.com/86853786/129272977-d3ee37af-5397-42a0-9197-3b6db68349c1.png
