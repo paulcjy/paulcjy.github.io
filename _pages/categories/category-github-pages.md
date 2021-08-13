@@ -1,7 +1,7 @@
 ---
 title: "Github 블로그"
 layout: archive
-permalink: categories/github-pages
+permalink: /categories/github-pages
 author_profile: true
 ---
 

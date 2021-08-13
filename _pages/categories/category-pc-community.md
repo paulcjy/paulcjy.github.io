@@ -1,7 +1,7 @@
 ---
 title: "학생 커뮤니티 사이트"
 layout: archive
-permalink: categories/pc-community
+permalink: /categories/pc-community
 author_profile: true
 ---
 
