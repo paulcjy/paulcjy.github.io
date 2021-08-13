@@ -1,5 +1,5 @@
 ---
-title: "Github 블로그"
+title: "Github Pages로 블로그 만들기"
 layout: archive
 permalink: /categories/github-pages/
 author_profile: true
