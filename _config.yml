@@ -288,3 +288,5 @@ defaults:
       share: true
       related: true
       sidebar_nav: true
+      sidebar:
+        nav: "sidenav"
