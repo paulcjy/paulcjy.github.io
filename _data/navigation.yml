@@ -19,6 +19,8 @@ sidenav:
   - title: WEB
     children:
       - title: "학생 커뮤니티 사이트 제작"
+        category: "PC Community"
         url: /categories/pc-community/
       - title: "Github Pages 블로그"
+        category: "Github Pages"
         url: /categories/github-pages/
