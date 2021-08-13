@@ -105,7 +105,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "개발 공부 기록하기"
   location         : "Seoul, Korea"
-  email            : "paulcjy@naver.com"
+  email            : # "paulcjy@naver.com"
   links:
     - label: "paulcjy@naver.com"
       icon: "fas fa-fw fa-envelope-square"
