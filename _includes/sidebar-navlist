@@ -4,7 +4,7 @@
 <nav class="nav__list">
 	<ul class="nav__items" id="category_tag_menu">
 		<li>
-			전체 글 수 {{sum}}개
+			전체 글 수 {{total}}개
 		</li>
 		<li>
 			<ul>
