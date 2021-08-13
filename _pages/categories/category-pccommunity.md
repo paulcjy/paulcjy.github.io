@@ -8,5 +8,5 @@ author_profile: true
 {% assign posts = site.categories['PC Community'] %}
 
 {% for post in posts %}
-	{% include archive.html type=page.entries_layout %}
+	{% include archive-single2.html type=page.entries_layout %}
 {% endfor %}
