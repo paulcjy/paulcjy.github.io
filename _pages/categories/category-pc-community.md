@@ -1,5 +1,5 @@
 ---
-title: "학생 커뮤니티 사이트"
+title: "학생 커뮤니티 사이트 제작"
 layout: archive
 permalink: /categories/pc-community/
 author_profile: true

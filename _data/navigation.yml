@@ -6,11 +6,19 @@ main:
     url: /categories/
   - title: "Quick-Start Guide"
     url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  - title: "About"
+    url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+sidenav: 
+  - title: WEB
+    children:
+      - title: "학생 커뮤니티 사이트 제작"
+        url: /categories/pc-community/
+      - title: "Github Pages 블로그"
+        url: /categories/github-pages/
