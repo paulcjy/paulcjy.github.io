@@ -287,6 +287,13 @@ defaults:
       comments: true
       share: true
       related: true
-      sidebar_nav: true
+      sidebar:
+        nav: "sidenav"
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      author_profile: true
       sidebar:
         nav: "sidenav"
