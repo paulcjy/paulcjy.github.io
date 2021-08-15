@@ -9,7 +9,7 @@
 
     {% comment %} 전체 게시글 숫자 표시 {% endcomment %}
     <li>
-      <span class="nav__sub-title">전체 게시글 {{ total }}개</span>
+      <span class="nav__sub-title nav__total">전체 게시글 {{ total }}개</span>
     </li>
 
     {% for nav in navigation %}
