@@ -20,10 +20,20 @@
           <span class="nav__sub-title">{{ nav.title }}</span>
         {% endif %}
 
+
         {% if nav.children != null %}
         <ul>
+          {% comment %} 각각의 카테고리 처리 {% endcomment %}
           {% for child in nav.children %}
-            <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url or page.url contains child.category %} class="active"{% endif %}>{{ child.title }} ({{ site.categories[child.category] | size }}) {{ page.url }}</a></li>
+
+            <li>
+              <a href="{{ child.url | relative_url }}"
+                {% if child.url == page.url or child.category == page.categories %} class="active"{% endif %}
+              >
+                {{ child.title }} ({{ site.categories[child.category] | size }})
+              </a>
+            </li>
+
           {% endfor %}
         </ul>
         {% endif %}
