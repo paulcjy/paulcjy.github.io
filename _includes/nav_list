@@ -28,7 +28,7 @@
 
             <li>
               <a href="{{ child.url | relative_url }}"
-                {% if child.url == page.url or child.category == page.categories %} class="active"{% endif %}
+                {% if child.category == page.categories %} class="active"{% endif %}
               >
                 {{ child.title }} ({{ site.categories[child.category] | size }}) {{ child.category }} {{ page.categories }}
               </a>
