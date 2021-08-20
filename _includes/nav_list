@@ -31,8 +31,7 @@
                 {% if child.url == page.url %} class="active"{% endif %}
               >
                 {{ child.title }} ({{ site.categories[child.category] | size }})
-                {% if page.categories %}page.categories is string{% else %}page.categories is not string{% endif %}
-                {% if child.category %}child.category is string{% else %}child.category is not string{% endif %}
+                {{ page.categories[0] }}
               </a>
             </li>
 
