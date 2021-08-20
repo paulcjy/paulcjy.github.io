@@ -28,9 +28,11 @@
 
             <li>
               <a href="{{ child.url | relative_url }}"
-                {% if child.category == page.categories %} class="active"{% endif %}
+                {% if child.url == page.url %} class="active"{% endif %}
               >
-                {{ child.title }} ({{ site.categories[child.category] | size }}) {{ child.category }} {{ page.categories }}
+                {{ child.title }} ({{ site.categories[child.category] | size }})
+                {% if page.categories %}page.categories is string{% else %}page.categories is not string{% endif %}
+                {% if child.category %}child.category is string{% else %}child.category is not string{% endif %}
               </a>
             </li>
 
