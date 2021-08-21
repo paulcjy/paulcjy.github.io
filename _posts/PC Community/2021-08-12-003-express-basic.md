@@ -1,6 +1,5 @@
 ---
 title: "학생 커뮤니티 사이트 제작 (3) - Express 기본"
-excerpt: "Express를 혼자서 만들고 nodemon과 ES6 문법 사용하기"
 date: 2021-08-12
 
 categories:

@@ -1,6 +1,5 @@
 ---
-title: "학생 커뮤니티 사이트 제작 (5) - React Router"
-excerpt: "React에서 Router 기능 이용하여 네비게이션 만들기"
+title: "학생 커뮤니티 사이트 제작 (5) - React Router & Navigation"
 date: 2021-08-12
 
 categories:

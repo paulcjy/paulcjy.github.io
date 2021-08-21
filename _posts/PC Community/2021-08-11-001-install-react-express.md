@@ -1,6 +1,5 @@
 ---
-title: "학생 커뮤니티 사이트 제작 (1) - 작업 환경 구성"
-excerpt: "React와 Express 설치"
+title: "학생 커뮤니티 사이트 제작 (1) - React와 Express 설치"
 date: 2021-08-11
 
 categories:
