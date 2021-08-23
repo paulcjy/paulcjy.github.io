@@ -15,13 +15,17 @@
   //   -webkit-transform: translate3d(0, 0, 0);
   //   transform: translate3d(0, 0, 0);
   // }
+  padding-left: $sidebar-padding-small;
+  padding-right: $sidebar-padding-small;
 
   @include breakpoint($large) {
     float: left;
-    width: calc(#{$right-sidebar-width-narrow} - 1em);
+    width: calc(#{$left-sidebar-width-narrow} - 1em);
     opacity: 0.75;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
+    padding-left: 0;
+    padding-right: 0;
 
     &:hover {
       opacity: 1;
@@ -37,7 +41,8 @@
   }
 
   @include breakpoint($x-large) {
-    width: calc(#{$right-sidebar-width} - 1em);
+    width: calc(#{$left-sidebar-width} - 1em);
+    padding-right: $sidebar-padding-large;
   }
 
   > * {
@@ -73,6 +78,8 @@
 
 .sidebar__right {
   margin-bottom: 1em;
+  padding-left: $sidebar-padding-small;
+  padding-right: $sidebar-padding-small;
 
   @include breakpoint($large) {
     position: absolute;
@@ -80,7 +87,7 @@
     right: 0;
     width: $right-sidebar-width-narrow;
     margin-right: -1 * $right-sidebar-width-narrow;
-    padding-left: 1em;
+    padding-right: 0;
     z-index: 10;
 
     &.sticky {
@@ -102,6 +109,7 @@
   @include breakpoint($x-large) {
     width: $right-sidebar-width;
     margin-right: -1 * $right-sidebar-width;
+    padding-left: $sidebar-padding-large;
   }
 }
 

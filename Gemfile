@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.2.0"
+gem "liquid", "~> 5.0.1"
 
 group :jekyll_plugins do
   gem "jekyll-paginate"

@@ -1,10 +1,6 @@
 ---
-title: "Github Pages로 블로그 만들기 (8) - 카테고리와 태그 모아보기"
-excerpt: ""
-date: 2021-08-23
-
-categories:
-  - Github Pages
+title: Github Pages로 블로그 만들기 (8) - 카테고리와 태그 모아보기
+category: Github Pages
 ---
 
 

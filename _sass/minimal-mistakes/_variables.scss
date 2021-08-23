@@ -2,6 +2,9 @@
    Variables
    ========================================================================== */
 
+$sidebar-padding-small: 1.2em !default;
+$sidebar-padding-large: 2.5em !default;
+
 /*
    Typography
    ========================================================================== */
@@ -151,18 +154,22 @@ $small: 600px !default;
 $medium: 768px !default;
 $medium-wide: 900px !default;
 $large: 1024px !default;
-$x-large: 1280px !default;
+$x-large: 1400px !default;
 $max-width: $x-large !default;
 
 /*
    Grid
    ========================================================================== */
 
-$right-sidebar-width-narrow: 200px !default;
-$right-sidebar-width: 220px !default;
+$left-sidebar-width-narrow: 210px !default;
+$right-sidebar-width-narrow: 270px !default;
+
+$left-sidebar-width: 270px !default;
+$right-sidebar-width: 295px !default;
+
+$left-sidebar-width-wide: 350px !default;
 $right-sidebar-width-wide: 350px !default;
-// $right-sidebar-width: 300px !default; 기본값
-// $right-sidebar-width-wide: 400px !default; 기본값
+
 
 /*
    Other
