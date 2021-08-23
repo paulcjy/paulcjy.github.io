@@ -8,9 +8,9 @@
   <ul class="nav__items">
 
     {% comment %} 전체 게시글 숫자 표시 {% endcomment %}
-    <li>
+    {% comment %} <li>
       <span class="nav__sub-title nav__total">전체 게시글 {{ total }}개</span>
-    </li>
+    </li> {% endcomment %}
 
     {% for nav in navigation %}
       <li>

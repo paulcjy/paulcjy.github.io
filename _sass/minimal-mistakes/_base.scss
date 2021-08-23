@@ -27,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 2em 0 0.5em;
+  margin: 2em 0 1em;
   line-height: 1.2;
   font-family: $header-font-family;
   font-weight: bold;
@@ -108,10 +108,12 @@ abbr[data-original-title] {
 
 blockquote {
   margin: 2em 1em 2em 0;
-  padding-left: 1em;
-  padding-right: 1em;
-  font-style: italic;
+  // padding-left: 1em;
+  // padding-right: 1em;
+  padding: 1em 1em;
+  // font-style: italic;
   border-left: 0.25em solid $primary-color;
+  background-color: $lighte-gray;
 
   cite {
     font-style: italic;
@@ -185,9 +187,9 @@ td > code {
 
 hr {
   display: block;
-  margin: 1em 0;
+  margin: 6.5rem 0;
   border: 0;
-  border-top: 1px solid $border-color;
+  // border-top: 1px solid $border-color;
 }
 
 /* lists */
