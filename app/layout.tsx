@@ -1,15 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import '#/styles/globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
     default: '개발 일지',
-    template: '%s | 개발 일지'
-  }
-  
+    template: '%s | 개발 일지',
+  },
 }
 
 export default function RootLayout({
@@ -19,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
