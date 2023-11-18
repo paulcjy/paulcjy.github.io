@@ -1,6 +1,6 @@
 import { Post, allPosts } from '#/.contentlayer/generated'
 import { PostCard } from '#/components/postCard'
-import { getBoards } from '#/lib/getMenu'
+import { getBoards } from '#/lib/menu'
 import { compareDesc } from 'date-fns'
 
 export const generateStaticParams = async () =>

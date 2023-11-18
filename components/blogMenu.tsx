@@ -1,4 +1,4 @@
-import { Boards, Menu, getMenu } from '#/lib/getMenu'
+import { Boards, Menu, getMenu } from '#/lib/menu'
 import clsx from 'clsx'
 import Link from 'next/link'
 import React from 'react'
