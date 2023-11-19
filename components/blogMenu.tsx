@@ -11,9 +11,10 @@ export const BlogMenu = () => {
       {Object.entries(menu).map(([category, boards]: [string, Boards]) => {
         return (
           <div key={category}>
-            <div className="text-small mb-1 px-3 font-semibold tracking-wider text-zinc-400">
+            <div className="mb-1 px-3 font-semibold tracking-wider text-zinc-400">
               {category}
             </div>
+
             {Object.entries(boards).map(([board, count]: [string, number]) => {
               return (
                 <Link

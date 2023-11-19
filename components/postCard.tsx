@@ -11,25 +11,26 @@ export const PostCard = (post: Post) => {
     body: { html },
   } = post
 
+  const summaryLimit = 220
   const summary: string = html
     .replaceAll(/<.*?>/g, '')
-    .substring(0, html.length > 200 ? 201 : html.length)
+    .substring(0, html.length > summaryLimit ? summaryLimit + 1 : html.length)
 
   return (
-    <div className="mb-8">
-      <h2 className="mb-1 text-xl">
+    <div className="mb-12">
+      <h1 className="mb-1 text-2xl font-bold">
         <Link
           href={url}
-          className="text-blue-700 hover:text-blue-900 dark:text-blue-400"
+          className="transition-all hover:text-red-700/50 text-emerald-700/80"
         >
           {title}
         </Link>
-      </h2>
+      </h1>
       <time dateTime={created} className="mb-2 block text-xs text-gray-600">
-        {format(parseISO(created), 'LLLL d, yyyy')}
+        {format(parseISO(created), 'yyyy. LL. dd.')}
       </time>
-      <div className="text-sm [&>*]:mb-3 [&>*:last-child]:mb-0">
-        {summary.length > 200 ? `${summary}...` : summary}
+      <div className="text-sm leading-loose">
+        {summary.length > summaryLimit ? `${summary}...` : summary}
       </div>
     </div>
   )
