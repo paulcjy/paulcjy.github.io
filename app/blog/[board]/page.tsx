@@ -1,5 +1,5 @@
 import { Post, allPosts } from '#/.contentlayer/generated'
-import { PostCard } from '#/components/postCard'
+import { PostCard } from '#/components/PostCard'
 import { getBoards } from '#/lib/menu'
 import { compareDesc } from 'date-fns'
 

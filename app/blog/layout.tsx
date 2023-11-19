@@ -1,4 +1,4 @@
-import { BlogMenu } from '#/components/blogMenu'
+import { BlogMenu } from '#/components/BlogMenu'
 import React from 'react'
 
 export default ({ children }: { children: React.ReactNode }) => {
