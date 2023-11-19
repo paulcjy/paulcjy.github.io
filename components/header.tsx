@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 export const Header = () => {
   return (
-    <header className="h-16 sticky top-0 flex justify-center shadow bg-white/80 items-center">
-      <nav>
+    <header className="h-16 sticky top-0 flex justify-center shadow bg-white/70 items-center backdrop-blur-sm">
+      <nav className="flex">
         <div className="menu flex font-bold">
           {header.map((item) => (
             <Link
