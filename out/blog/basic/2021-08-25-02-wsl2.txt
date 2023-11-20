@@ -1,0 +1,106 @@
+1:HL["/_next/static/css/91417e851664d5e6.css","style",{"crossOrigin":""}]
+0:["I-pGflQKisqRv9OcXwST-",[[["",{"children":["blog",{"children":[["board","basic","d"],{"children":[["post","2021-08-25-02-wsl2","d"],{"children":["__PAGE__?{\"board\":\"basic\",\"post\":\"2021-08-25-02-wsl2\"}",{}]}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/91417e851664d5e6.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
+4:I[2649,["326","static/chunks/326-9823f391d24e26fc.js","185","static/chunks/app/layout-3fc148124fdeb158.js"],"CustomThemeProvider"]
+5:I[8326,["326","static/chunks/326-9823f391d24e26fc.js","431","static/chunks/app/blog/%5Bboard%5D/page-86149bc53665de2b.js"],""]
+6:I[5235,["326","static/chunks/326-9823f391d24e26fc.js","185","static/chunks/app/layout-3fc148124fdeb158.js"],""]
+7:I[6954,[],""]
+8:I[7264,[],""]
+9:["board","basic","d"]
+b:T1c7e,<h1>1. WSL2 설치</h1>
+<blockquote>
+<p><a href="https://docs.microsoft.com/ko-kr/windows/wsl/install-win10">WSL2 설치 가이드</a></p>
+</blockquote>
+<h2>1) Windows 버전 확인</h2>
+<p>WSL2 실행을 위해서는 특정 버전 이상이어야 한다.</p>
+<ul>
+<li>x64: <strong>버전 1903</strong> 이상, <strong>빌드 18362</strong> 이상</li>
+<li>ARM64: <strong>버전 2004</strong> 이상, <strong>빌드 19041</strong> 이상</li>
+</ul>
+<p>자신의 버전 및 빌드를 확인하려면 <code>Win + r</code>을 눌러 <code>winver</code>를 입력한다. 요구 사항이 충족되지 않는다면 윈도우 업데이트를 해야 한다.</p>
+<h2>2) Windows 옵션 설정</h2>
+<p>WSL2를 사용하기 위해 두 가지 옵션을 설정해야 한다. <code>PowerShell</code>을 관리자 권한으로 실행하고 다음 명령어를 입력한다.</p>
+<p><strong>WSL 사용</strong></p>
+<pre><code>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+</code></pre>
+<p><strong>Virtual Machine 플랫폼 사용</strong></p>
+<pre><code>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+</code></pre>
+<h2>3) Linux 커널 업데이트 패키지 설치</h2>
+<p><a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">x64 머신용 최신 WSL2 Linux 커널 업데이트 패키지</a></p>
+<h2>4) WSL2를 기본 버전으로 설정</h2>
+<p>이제 WSL을 사용하면 WSL1로 실행된다. WSL2를 사용하기 위해서 기본 버전을 따로 설정해야 한다.</p>
+<pre><code>> wsl --set-default-version 2
+</code></pre>
+<h2>5) 원하는 Linux 설치</h2>
+<p><a href="https://aka.ms/terminal">Microsoft Store</a>에서 원하는 Linux를 설치한다.</p>
+<h3>지원하는 Linux 목록 (2021.08.25 기준)</h3>
+<ul>
+<li><a href="https://www.microsoft.com/store/apps/9N9TNGVNDL3Q">Ubuntu 18.04 LTS</a></li>
+<li><a href="https://www.microsoft.com/store/apps/9n6svws3rx71">Ubuntu 20.04 LTS</a></li>
+<li><a href="https://www.microsoft.com/store/apps/9NJFZK00FGKV">openSUSE Leap 15.1</a></li>
+<li><a href="https://www.microsoft.com/store/apps/9MZ3D1TRP8T1">SUSE Linux Enterprise Server 12 SP5</a></li>
+<li><a href="https://www.microsoft.com/store/apps/9PN498VPMF3Z">SUSE Linux Enterprise Server 15 SP1</a></li>
+<li><a href="https://www.microsoft.com/store/apps/9PKR34TNCV07">Kali Linux</a></li>
+<li><a href="https://www.microsoft.com/store/apps/9MSVKQC78PK6">Debian GNU/Linux</a></li>
+<li><a href="https://www.microsoft.com/store/apps/9n6gdm4k2hnc">Fedora Remix for WSL</a></li>
+<li><a href="https://www.microsoft.com/store/apps/9NV1GV1PXZ6P">Pengwin</a></li>
+<li><a href="https://www.microsoft.com/store/apps/9N8LP0X93VCP">Pengwin Enterprise</a></li>
+<li><a href="https://www.microsoft.com/store/apps/9p804crf0395">Alpine WSL</a></li>
+</ul>
+<p>설치가 끝나면 사용자 계정과 암호를 만들어야 한다.</p>
+<h2>6) WSL 버전 확인하는 방법</h2>
+<p>다음 명령어로 설치한 Linux의 버전을 확인할 수 있다.</p>
+<pre><code>> wsl -l -v
+</code></pre>
+<p>만약 WSL2가 적용되지 않았다면 이렇게 뜬다.</p>
+<pre><code>  NAME            STATE           VERSION
+* Ubuntu-20.04    Running         1
+</code></pre>
+<p>이럴 때는 다음 명령어로 설치한 Linux에 WSL2를 적용해야 한다.</p>
+<pre><code>> wsl --set-version &#x3C;distribution name> &#x3C;versionNumber>
+</code></pre>
+<p><code>distribution name</code>에는 <code>wsl -l -v</code>를 실행했을 때 나오는 Linux의 <code>NAME</code>을 적어준다.</p>
+<p><strong>예)</strong></p>
+<pre><code>> wsl --set-version Ubuntu-20.04 2
+</code></pre>
+<p><strong>WSL2가 잘 적용된 모습</strong></p>
+<pre><code>  NAME            STATE           VERSION
+* Ubuntu-20.04    Running         2
+</code></pre>
+<hr>
+<h1>2. Windows Terminal에서 WSL2 설정</h1>
+<p>Linux 설치가 끝나면 자동으로 Windows Terminal 프로필에 등록된다. 그런데 조금 불편한 부분이 있어서 원하는 대로 바꿔보았다.</p>
+<p><a href="https://docs.microsoft.com/ko-kr/windows/terminal/troubleshooting">공식 문서 참고</a></p>
+<blockquote>
+<p><strong>Json 파일 열기</strong>를 통해 다양한 설정을 변경할 수 있다.</p>
+</blockquote>
+<h2>Ubuntu 시작 경로 변경</h2>
+<p>설치 후에는 시작 경로가 <code>/mnt/c/Users/&#x3C;username></code>으로 되어있다. 이 경로는 Windows의 <code>C/Users/&#x3C;username></code>과 같은 경로이다.</p>
+<p><img src="https://user-images.githubusercontent.com/86853786/130960702-90429e87-0b71-4c50-af4c-c6bbd4569c38.png" alt="image"></p>
+<p>나는 시작 경로를 홈 디렉토리(<code>~</code>)로 바꾸려고 한다.</p>
+<p>시작 경로에 대한 설정은 <code>json</code> 파일의 <code>profiles.list</code>에서 찾을 수 있다. <code>list</code> 안에는 여러 항목이 있을 텐데, 이게 각각의 프로필들이다. 여기서 <code>name</code>이 <code>Ubuntu</code>인 것을 찾는다. 같은 위치에 <code>startingDirectory</code>라는 항목이 있고, 초기값은 <code>%USERPROFILE%</code>로 되어있을 것이다. 이 부분을 바꿔주면 된다. 만약 없다면 새로 만들어주자.</p>
+<pre><code class="language-json">"startingDirectory": "\\\\wsl$\\&#x3C;Ubuntu name>\\home\\&#x3C;username>"
+</code></pre>
+<p><code>Ubuntu name</code>은 본인이 설치한 Ubuntu 이름이다. PowerShell에 <code>wsl -l -v</code>를 쳤을 때 나오는 이름이다.</p>
+<p><code>username</code>은 Ubuntu를 설치할 때 만든 계정 이름이다. 잘 모르겠다면 다음 명령어로 확인할 수 있다.</p>
+<pre><code>$ cd ~
+$ pwd
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/86853786/130963059-ecf50ad6-9d98-4715-b49a-413a02048e5b.png" alt="image"></p>
+<p><code>home</code> 다음에 오는 이름이 계정 이름이다.</p>
+<p>이제 Ubuntu를 켜면 시작 경로가 <code>~</code>로 되어있는 것을 확인할 수 있다.</p>
+<p><img src="https://user-images.githubusercontent.com/86853786/130963295-04698456-e1d7-48d9-803f-59ea438983a9.png" alt="image"></p>
+<h2>기본 프로필을 Ubuntu로 설정</h2>
+<p>기본 프로필은 <strong>설정</strong>의 <strong>시작</strong>에서 바꿀 수 있다.</p>
+<p>만약 기본 프로필을 선택하는 목록에 Ubuntu가 없다면 <code>json</code>에서 설정하면 된다. 기본 프로필 설정은 <code>defaultProfile</code>에 해당하는 <code>guid</code>를 넣어주면 된다.
+<code>profiles.list</code>에서 Ubuntu를 찾아 <code>guid</code>에 해당하는 부분을 복사해서 붙여넣는다.</p>
+<h3>Ubuntu 항목에 guid가 없을 경우</h3>
+<p>Ubuntu에 <code>guid</code>도 없다면 새로 만들어야 한다. <code>PowerShell</code>에 들어가서 다음 명령을 실행한다.</p>
+<pre><code>> [guid]::NewGuid()
+</code></pre>
+<p>그리고 나온 <code>guid</code>를 복사해서 사용하면 된다.</p>
+<p>아니면 <code>guid</code> 형식에 맞게 아무렇게나 수정해서 사용해도 괜찮다고 한다.</p>
+<h2>프로필 순서 변경</h2>
+<p>프로필 순서는 <code>json</code>의 <code>profiles.list</code>에서의 순서와 같다. 해당 배열의 순서를 바꿔주면 Windows Terminal에서의 순서도 바뀐다.</p>2:[null,["$","html",null,{"children":["$","body",null,{"children":["$","$L4",null,{"children":[["$","header",null,{"className":"h-16 sticky top-0 flex justify-center shadow bg-white/70 items-center backdrop-blur-sm dark:bg-black/80 dark:shadow-neutral-800","children":["$","nav",null,{"className":"flex ","children":[["$","div",null,{"className":"flex font-bold","children":[["$","$L5","Blog",{"href":"/blog","className":"transition flex justify-center w-16 text-gray-900 hover:text-gray-300 dark:text-gray-100 dark:hover:text-gray-600","children":"Blog"}],["$","$L5","About",{"href":"/about","className":"transition flex justify-center w-16 text-gray-900 hover:text-gray-300 dark:text-gray-100 dark:hover:text-gray-600","children":"About"}]]}],["$","div",null,{"className":"flex","children":["$","$L6",null,{}]}]]}]}],["$","main",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"flex flex-col h-[90vh] items-center justify-center","children":["$","div",null,{"className":"flex items-center","children":[["$","h1",null,{"className":"inline-block text-2xl pr-8 mr-8 border-r-[1.5px] border-gray-400 py-2","children":"404"}],["$","h2",null,{"className":"inline-block text-lg","children":"This page could not be found"}]]}]}],"notFoundStyles":[],"childProp":{"current":[null,["$","div",null,{"className":"my-10 grid grid-cols-[1fr,minmax(auto,1100px),1fr]","children":["$","div",null,{"className":"col-start-2 grid grid-cols-[minmax(auto,200px),min(700px,100%)] gap-x-10","children":[["$","div",null,{"children":["$","div",null,{"className":"space-y-5","children":[["$","div","Linux",{"children":[["$","div",null,{"className":"mb-1 px-3 font-semibold tracking-wider text-zinc-400","children":"Linux"}],[["$","$L5","basic",{"href":"/blog/basic","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"basic"}],["$","span",null,{"className":"text-gray-400","children":["(",7,")"]}]]}]]]}],["$","div","Web",{"children":[["$","div",null,{"className":"mb-1 px-3 font-semibold tracking-wider text-zinc-400","children":"Web"}],[["$","$L5","GitHub Pages + Next",{"href":"/blog/GitHub Pages + Next","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"GitHub Pages + Next"}],["$","span",null,{"className":"text-gray-400","children":["(",1,")"]}]]}],["$","$L5","Github pages",{"href":"/blog/Github pages","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"Github pages"}],["$","span",null,{"className":"text-gray-400","children":["(",15,")"]}]]}],["$","$L5","PC Community",{"href":"/blog/PC Community","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"PC Community"}],["$","span",null,{"className":"text-gray-400","children":["(",8,")"]}]]}],["$","$L5","온라인 명륜당",{"href":"/blog/온라인 명륜당","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"온라인 명륜당"}],["$","span",null,{"className":"text-gray-400","children":["(",0,")"]}]]}]]]}]]}]}],["$","div",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children",["board","basic","d"],"children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$9","children",["post","2021-08-25-02-wsl2","d"],"children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$La",["$","article",null,{"className":"mx-auto","children":[["$","div",null,{"className":"mb-12 text-center","children":[["$","h1",null,{"className":"text-3xl font-bold","children":"[Linux] WSL2 설치하고 Windows Terminal에서 설정하기"}],["$","time",null,{"dateTime":"2021-08-11T00:00:00.000Z","className":"mb-1 text-xs text-gray-600 dark:text-gray-400","children":"2021. 08. 11."}]]}],["$","div",null,{"className":"[&>*]:mb-3 [&>*:last-child]:mb-0 markdown-body","dangerouslySetInnerHTML":{"__html":"$b"}}]]}],null],"segment":"__PAGE__?{\"board\":\"basic\",\"post\":\"2021-08-25-02-wsl2\"}"},"styles":null}],"segment":["post","2021-08-25-02-wsl2","d"]},"styles":null}],"segment":["board","basic","d"]},"styles":null}]}]]}]}],null],"segment":"blog"},"styles":null}]}]]}]}]}],null]
+3:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"[Linux] WSL2 설치하고 Windows Terminal에서 설정하기 | 개발 일지"}]]
+a:null

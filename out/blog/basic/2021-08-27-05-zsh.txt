@@ -1,0 +1,52 @@
+1:HL["/_next/static/css/91417e851664d5e6.css","style",{"crossOrigin":""}]
+0:["I-pGflQKisqRv9OcXwST-",[[["",{"children":["blog",{"children":[["board","basic","d"],{"children":[["post","2021-08-27-05-zsh","d"],{"children":["__PAGE__?{\"board\":\"basic\",\"post\":\"2021-08-27-05-zsh\"}",{}]}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/91417e851664d5e6.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
+4:I[2649,["326","static/chunks/326-9823f391d24e26fc.js","185","static/chunks/app/layout-3fc148124fdeb158.js"],"CustomThemeProvider"]
+5:I[8326,["326","static/chunks/326-9823f391d24e26fc.js","431","static/chunks/app/blog/%5Bboard%5D/page-86149bc53665de2b.js"],""]
+6:I[5235,["326","static/chunks/326-9823f391d24e26fc.js","185","static/chunks/app/layout-3fc148124fdeb158.js"],""]
+7:I[6954,[],""]
+8:I[7264,[],""]
+9:["board","basic","d"]
+b:T977,<p>리눅스에서는 터미널을 많이 사용한다. 이 때 명령을 해석하고 실행시키는 것이 <code>shell</code>이다. 우분투에서는 기본 쉘로 <code>bash</code>를 사용한다.</p>
+<p><code>zsh</code>는 <code>bash</code>보다 기능도 많고 플러그인이나 테마를 이용해 커스터마이징이 가능해서 기본 쉘보다 더 예쁘고 편리하게 터미널을 사용할 수 있도록 해준다. 이를 위해서는 <code>oh-my-zsh</code>도 같이 설치해야 한다.</p>
+<blockquote>
+<p><a href="/linux/06-oh-my-zsh/">oh-my-zsh 설치</a></p>
+</blockquote>
+<p></p>
+<h1>1. zsh 설치</h1>
+<p>현재 사용 중인 쉘을 확인해보자.</p>
+<pre><code class="language-zsh">$ echo $SHELL
+</code></pre>
+<pre><code>/bin/bash
+</code></pre>
+<p>기본 쉘은 <code>bash</code>이다.</p>
+<p>이제 <code>zsh</code>를 설치한다.</p>
+<pre><code class="language-zsh">$ sudo apt-get install zsh
+</code></pre>
+<hr>
+<h1>2. zsh를 기본 쉘로 변경</h1>
+<p><code>zsh</code>가 설치된 위치를 확인한다.</p>
+<pre><code class="language-zsh">$ which zsh
+</code></pre>
+<pre><code>/usr/bin/zsh
+</code></pre>
+<p>확인한 위치를 넣어 기본 쉘을 변경한다.</p>
+<pre><code class="language-zsh">$ chsh -s /usr/bin/zsh
+</code></pre>
+<p>그러고 터미널을 다시 시작하니 이런 화면이 떴다.</p>
+<p><img src="https://user-images.githubusercontent.com/86853786/131117079-ccbb4657-6901-48de-ad4f-727e7249808a.png" alt="image"></p>
+<ul>
+<li><strong>(q)</strong> : 그냥 종료한다. 다음에 이 화면이 다시 뜬다.</li>
+<li><strong>(0)</strong> : <code>~/.zshrc</code> 파일을 생성만 하고 종료한다. 이 화면은 다시 뜨지 않는다.</li>
+<li><strong>(1)</strong> : 메인 메뉴로 들어간다.</li>
+<li><strong>(2)</strong> : <code>~/.zshrc</code> 파일을 생성하고 추천하는 기본값으로 세팅한다.</li>
+</ul>
+<p>나는 (2)를 선택했다. 쉘이 이렇게 바뀌었다.</p>
+<p><img src="https://user-images.githubusercontent.com/86853786/131118358-b13eae06-bea1-4ca7-b6bc-4bfc5d748422.png" alt="image"></p>
+<p>다시 사용 중인 쉘을 확인해보면 <code>zsh</code>가 잘 나온다.</p>
+<pre><code class="language-zsh">$ echo $SHELL
+</code></pre>
+<pre><code>/usr/bin/zsh
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/86853786/131119029-d18e57f2-ffcd-4290-b9f3-67ac30042a19.png" alt="image"></p>2:[null,["$","html",null,{"children":["$","body",null,{"children":["$","$L4",null,{"children":[["$","header",null,{"className":"h-16 sticky top-0 flex justify-center shadow bg-white/70 items-center backdrop-blur-sm dark:bg-black/80 dark:shadow-neutral-800","children":["$","nav",null,{"className":"flex ","children":[["$","div",null,{"className":"flex font-bold","children":[["$","$L5","Blog",{"href":"/blog","className":"transition flex justify-center w-16 text-gray-900 hover:text-gray-300 dark:text-gray-100 dark:hover:text-gray-600","children":"Blog"}],["$","$L5","About",{"href":"/about","className":"transition flex justify-center w-16 text-gray-900 hover:text-gray-300 dark:text-gray-100 dark:hover:text-gray-600","children":"About"}]]}],["$","div",null,{"className":"flex","children":["$","$L6",null,{}]}]]}]}],["$","main",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"flex flex-col h-[90vh] items-center justify-center","children":["$","div",null,{"className":"flex items-center","children":[["$","h1",null,{"className":"inline-block text-2xl pr-8 mr-8 border-r-[1.5px] border-gray-400 py-2","children":"404"}],["$","h2",null,{"className":"inline-block text-lg","children":"This page could not be found"}]]}]}],"notFoundStyles":[],"childProp":{"current":[null,["$","div",null,{"className":"my-10 grid grid-cols-[1fr,minmax(auto,1100px),1fr]","children":["$","div",null,{"className":"col-start-2 grid grid-cols-[minmax(auto,200px),min(700px,100%)] gap-x-10","children":[["$","div",null,{"children":["$","div",null,{"className":"space-y-5","children":[["$","div","Linux",{"children":[["$","div",null,{"className":"mb-1 px-3 font-semibold tracking-wider text-zinc-400","children":"Linux"}],[["$","$L5","basic",{"href":"/blog/basic","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"basic"}],["$","span",null,{"className":"text-gray-400","children":["(",7,")"]}]]}]]]}],["$","div","Web",{"children":[["$","div",null,{"className":"mb-1 px-3 font-semibold tracking-wider text-zinc-400","children":"Web"}],[["$","$L5","GitHub Pages + Next",{"href":"/blog/GitHub Pages + Next","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"GitHub Pages + Next"}],["$","span",null,{"className":"text-gray-400","children":["(",1,")"]}]]}],["$","$L5","Github pages",{"href":"/blog/Github pages","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"Github pages"}],["$","span",null,{"className":"text-gray-400","children":["(",15,")"]}]]}],["$","$L5","PC Community",{"href":"/blog/PC Community","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"PC Community"}],["$","span",null,{"className":"text-gray-400","children":["(",8,")"]}]]}],["$","$L5","온라인 명륜당",{"href":"/blog/온라인 명륜당","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"온라인 명륜당"}],["$","span",null,{"className":"text-gray-400","children":["(",0,")"]}]]}]]]}]]}]}],["$","div",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children",["board","basic","d"],"children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$9","children",["post","2021-08-27-05-zsh","d"],"children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$La",["$","article",null,{"className":"mx-auto","children":[["$","div",null,{"className":"mb-12 text-center","children":[["$","h1",null,{"className":"text-3xl font-bold","children":"[Linux] zsh 설치"}],["$","time",null,{"dateTime":"2021-08-11T00:00:00.000Z","className":"mb-1 text-xs text-gray-600 dark:text-gray-400","children":"2021. 08. 11."}]]}],["$","div",null,{"className":"[&>*]:mb-3 [&>*:last-child]:mb-0 markdown-body","dangerouslySetInnerHTML":{"__html":"$b"}}]]}],null],"segment":"__PAGE__?{\"board\":\"basic\",\"post\":\"2021-08-27-05-zsh\"}"},"styles":null}],"segment":["post","2021-08-27-05-zsh","d"]},"styles":null}],"segment":["board","basic","d"]},"styles":null}]}]]}]}],null],"segment":"blog"},"styles":null}]}]]}]}]}],null]
+3:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"[Linux] zsh 설치 | 개발 일지"}]]
+a:null

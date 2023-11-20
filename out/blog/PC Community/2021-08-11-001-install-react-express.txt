@@ -1,0 +1,92 @@
+1:HL["/_next/static/css/91417e851664d5e6.css","style",{"crossOrigin":""}]
+0:["I-pGflQKisqRv9OcXwST-",[[["",{"children":["blog",{"children":[["board","PC%20Community","d"],{"children":[["post","2021-08-11-001-install-react-express","d"],{"children":["__PAGE__?{\"board\":\"PC Community\",\"post\":\"2021-08-11-001-install-react-express\"}",{}]}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/91417e851664d5e6.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
+4:I[2649,["326","static/chunks/326-9823f391d24e26fc.js","185","static/chunks/app/layout-3fc148124fdeb158.js"],"CustomThemeProvider"]
+5:I[8326,["326","static/chunks/326-9823f391d24e26fc.js","431","static/chunks/app/blog/%5Bboard%5D/page-86149bc53665de2b.js"],""]
+6:I[5235,["326","static/chunks/326-9823f391d24e26fc.js","185","static/chunks/app/layout-3fc148124fdeb158.js"],""]
+7:I[6954,[],""]
+8:I[7264,[],""]
+9:["board","PC%20Community","d"]
+b:T1170,<h1>1. Node.js 설치</h1>
+<p>React와 Express를 사용하기 위해서는 Node.js가 설치되어 있어야 한다.
+Node.js란 JavaScript runtime이다.
+원래 JavaScript는 웹 브라우저에서 작동하는 언어이지만, Node.js는 브라우저 밖에서도 JavaScript 코드를 실행할 수 있게 한다.</p>
+<p><a href="https://nodejs.org">Node.js 다운로드</a></p>
+<pre><code>> node -v
+</code></pre>
+<pre><code>> npm -v
+v.14.17.3
+</code></pre>
+<h1>2. React와 Create React App</h1>
+<p>React는 페이스북에서 만든 프론트엔드 프레임워크이다.
+페이지의 모든 부분을 component 단위로 관리하고, SPA(Single Page Application)를 만들어낸다.
+SPA란 페이지는 하나이지만 사용자가 어떤 동작을 하면 화면이 바뀌는 것이다.
+이것은 새 페이지로 이동한 것이 아니다.
+React는 추가로 필요한 정보만 서버에 요청하여 변화가 이루어져야 하는 부분만 수정한다.
+</p>
+<h2>Create React App</h2>
+<p>React를 설치하기 전에 Create React App을 먼저 설치할 것이다.</p>
+<pre><code>> npm install -g create-react-app
+</code></pre>
+<p>여기서 npm은 Node Package Manager로 Node.js에서 패키지를 설치하게 해준다.
+Node.js를 설치할 때 자동으로 함께 설치되고 <code>npm install &#x3C;package></code> 형태로 실행한다.
+<code>-g</code>는 전역 설치 옵션이다.
+전역으로 설치한 패키지는 어디서든 사용할 수 있다.
+<code>-g</code> 옵션을 쓰지 않으면 지역으로 설치되고, 설치한 디렉토리에서만 사용할 수 있다.</p>
+<pre><code>> create-react-app .
+</code></pre>
+<p>위 명령은 현재 디렉토리에 React App을 생성한다.</p>
+<pre><code>> create-react-app &#x3C;path>
+</code></pre>
+<p>위 명령은 해당 경로에 React App을 생성한다.
+주의점은 앱이 설치되는 폴더 이름에는 대문자가 들어갈 수 없다.</p>
+<h2>React</h2>
+<p>이제 설치한 앱 폴더에 React를 지역 설치할 것이다.</p>
+<pre><code>> npm install --save react react-dom
+</code></pre>
+<p>react와 react-dom, 2개의 패키지를 설치한다.
+지역 설치를 하면 프로젝트 폴더 안에 <code>node_modules</code> 디렉토리가 생성되고 그 안에 패키지가 설치된다.
+<code>--save</code> 옵션은 <code>package.json</code> 파일의 dependency 항목에 패키지를 추가한다.
+참고로 npm5부터는 <code>--save</code> 옵션을 사용하지 않아도 자동으로 dependency 항목에 패키지가 추가된다.</p>
+<h1>3. React 실행</h1>
+<p>프로젝트 폴더 안에서 다음 명령어를 실행하면 React 서버가 시작된다.</p>
+<pre><code>> npm start
+</code></pre>
+<pre><code>Compiled successfully!
+
+You can now view reactapp in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.219.109:3000
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/86853786/128968934-6ec04ebc-1898-40ec-88b3-afb1413af365.png" alt="create-react-app의 기본 페이지"></p>
+<h1>4. Express와 Express Generator</h1>
+<p>Express와 Express Generator의 관계도 React와 Create React App의 관계와 같다.
+Express는 백엔드 프레임워크이고, Express Generator는 기본 구성을 갖춘 Express 프로젝트를 간단하게 생성해준다.</p>
+<p>마찬가지로 express-generator는 전역 설치를 하고, Express는 지역 설치를 한다.</p>
+<pre><code>> npm install -g express-generator
+</code></pre>
+<pre><code>> express .
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/86853786/128971542-bf139a22-21a7-462c-9761-f9e992cc2c90.png" alt="express-generator로 만들어진 디렉토리"></p>
+<h1>5. Express 실행</h1>
+<p>Express도 React와 같은 방법으로 실행한다.</p>
+<pre><code>> npm start
+</code></pre>
+<pre><code>internal/modules/cjs/loader.js:905
+  throw err;
+  ^
+
+Error: Cannot find module 'http-errors'
+</code></pre>
+<pre><code>> npm install
+</code></pre>
+<p>위 명령어는 <code>package.json</code>의 dependency에 해당하는 패키지들을 알아서 설치해준다.</p>
+<pre><code>> reactapp@0.0.0 start
+> node ./bin/www
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/86853786/129253089-be07c3d7-4f4b-45e4-a0cc-83146a1f38d7.png" alt="express-generator의 기본 페이지"></p>2:[null,["$","html",null,{"children":["$","body",null,{"children":["$","$L4",null,{"children":[["$","header",null,{"className":"h-16 sticky top-0 flex justify-center shadow bg-white/70 items-center backdrop-blur-sm dark:bg-black/80 dark:shadow-neutral-800","children":["$","nav",null,{"className":"flex ","children":[["$","div",null,{"className":"flex font-bold","children":[["$","$L5","Blog",{"href":"/blog","className":"transition flex justify-center w-16 text-gray-900 hover:text-gray-300 dark:text-gray-100 dark:hover:text-gray-600","children":"Blog"}],["$","$L5","About",{"href":"/about","className":"transition flex justify-center w-16 text-gray-900 hover:text-gray-300 dark:text-gray-100 dark:hover:text-gray-600","children":"About"}]]}],["$","div",null,{"className":"flex","children":["$","$L6",null,{}]}]]}]}],["$","main",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"flex flex-col h-[90vh] items-center justify-center","children":["$","div",null,{"className":"flex items-center","children":[["$","h1",null,{"className":"inline-block text-2xl pr-8 mr-8 border-r-[1.5px] border-gray-400 py-2","children":"404"}],["$","h2",null,{"className":"inline-block text-lg","children":"This page could not be found"}]]}]}],"notFoundStyles":[],"childProp":{"current":[null,["$","div",null,{"className":"my-10 grid grid-cols-[1fr,minmax(auto,1100px),1fr]","children":["$","div",null,{"className":"col-start-2 grid grid-cols-[minmax(auto,200px),min(700px,100%)] gap-x-10","children":[["$","div",null,{"children":["$","div",null,{"className":"space-y-5","children":[["$","div","Linux",{"children":[["$","div",null,{"className":"mb-1 px-3 font-semibold tracking-wider text-zinc-400","children":"Linux"}],[["$","$L5","basic",{"href":"/blog/basic","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"basic"}],["$","span",null,{"className":"text-gray-400","children":["(",7,")"]}]]}]]]}],["$","div","Web",{"children":[["$","div",null,{"className":"mb-1 px-3 font-semibold tracking-wider text-zinc-400","children":"Web"}],[["$","$L5","GitHub Pages + Next",{"href":"/blog/GitHub Pages + Next","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"GitHub Pages + Next"}],["$","span",null,{"className":"text-gray-400","children":["(",1,")"]}]]}],["$","$L5","Github pages",{"href":"/blog/Github pages","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"Github pages"}],["$","span",null,{"className":"text-gray-400","children":["(",15,")"]}]]}],["$","$L5","PC Community",{"href":"/blog/PC Community","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"PC Community"}],["$","span",null,{"className":"text-gray-400","children":["(",8,")"]}]]}],["$","$L5","온라인 명륜당",{"href":"/blog/온라인 명륜당","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"온라인 명륜당"}],["$","span",null,{"className":"text-gray-400","children":["(",0,")"]}]]}]]]}]]}]}],["$","div",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children",["board","PC%20Community","d"],"children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$9","children",["post","2021-08-11-001-install-react-express","d"],"children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$La",["$","article",null,{"className":"mx-auto","children":[["$","div",null,{"className":"mb-12 text-center","children":[["$","h1",null,{"className":"text-3xl font-bold","children":"학생 커뮤니티 사이트 제작 (1) - React와 Express 설치"}],["$","time",null,{"dateTime":"2021-08-11T00:00:00.000Z","className":"mb-1 text-xs text-gray-600 dark:text-gray-400","children":"2021. 08. 11."}]]}],["$","div",null,{"className":"[&>*]:mb-3 [&>*:last-child]:mb-0 markdown-body","dangerouslySetInnerHTML":{"__html":"$b"}}]]}],null],"segment":"__PAGE__?{\"board\":\"PC Community\",\"post\":\"2021-08-11-001-install-react-express\"}"},"styles":null}],"segment":["post","2021-08-11-001-install-react-express","d"]},"styles":null}],"segment":["board","PC%20Community","d"]},"styles":null}]}]]}]}],null],"segment":"blog"},"styles":null}]}]]}]}]}],null]
+3:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"학생 커뮤니티 사이트 제작 (1) - React와 Express 설치 | 개발 일지"}]]
+a:null
