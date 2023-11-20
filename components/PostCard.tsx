@@ -17,7 +17,7 @@ export const PostCard = (post: Post) => {
     .substring(0, html.length > summaryLimit ? summaryLimit + 1 : html.length)
 
   return (
-    <div className="mb-12">
+    <div className="mb-10">
       <h1 className="mb-1 text-2xl font-bold">
         <Link
           href={url}

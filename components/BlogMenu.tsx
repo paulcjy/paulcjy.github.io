@@ -21,7 +21,7 @@ export const BlogMenu = () => {
                   key={board}
                   href={`/blog/${board}`}
                   className={clsx(
-                    'block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gary-200 hover:text-zinc-800'
+                    'block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100'
                   )}
                 >
                   <span className="pr-1.5">{board}</span>

@@ -9,7 +9,7 @@ export default () => {
 
   return (
     <div className="mx-auto">
-      <h1 className="mb-10 text-center text-3xl font-black text-zinc-700">
+      <h1 className="mb-10 text-center text-3xl font-black text-zinc-700 dark:text-zinc-200">
         Latest
       </h1>
       {posts.map((post, idx) => (
