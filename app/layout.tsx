@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
-import { Header } from '#/components/header'
+import { Header } from '#/components/Header'
+import { CustomThemeProvider } from './theme-provider'
 import '#/styles/globals.css'
+import '#/styles/github-markdown.css'
 
 export const metadata: Metadata = {
   title: {
@@ -17,8 +19,10 @@ export default function RootLayout({
   return (
     <html>
       <body>
-        <Header />
-        <main>{children}</main>
+        <CustomThemeProvider>
+          <Header />
+          <main>{children}</main>
+        </CustomThemeProvider>
       </body>
     </html>
   )

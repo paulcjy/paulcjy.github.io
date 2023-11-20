@@ -3,12 +3,14 @@ import React from 'react'
 
 export default ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="my-10 grid grid-cols-[1fr,minmax(auto,200px),min(690px,100%),1fr] gap-x-10">
-      <div className="col-start-2">
-        <BlogMenu />
-      </div>
+    <div className="my-10 grid grid-cols-[1fr,minmax(auto,1100px),1fr]">
+      <div className="col-start-2 grid grid-cols-[minmax(auto,200px),min(700px,100%)] gap-x-10">
+        <div>
+          <BlogMenu />
+        </div>
 
-      <div className="col-start-3">{children}</div>
+        <div>{children}</div>
+      </div>
     </div>
   )
 }

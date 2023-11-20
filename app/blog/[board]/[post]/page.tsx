@@ -33,7 +33,7 @@ export default ({ params }: { params: { board: string; post: string } }) => {
 
   return (
     <article className="mx-auto">
-      <div className="mb-8 text-center">
+      <div className="mb-12 text-center">
         <h1 className="text-3xl font-bold">{post.title}</h1>
         <time dateTime={post.created} className="mb-1 text-xs text-gray-600">
           {format(parseISO(post.created), 'yyyy. LL. dd.')}

@@ -21,7 +21,7 @@ export const PostCard = (post: Post) => {
       <h1 className="mb-1 text-2xl font-bold">
         <Link
           href={url}
-          className="transition-all hover:text-red-700/50 text-emerald-700/80"
+          className="transition-all duration-200 hover:text-red-700/50 text-emerald-700/80 dark:text-emerald-400 dark:hover:text-red-300"
         >
           {title}
         </Link>
