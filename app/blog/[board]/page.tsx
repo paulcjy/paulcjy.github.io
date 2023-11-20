@@ -10,13 +10,13 @@ export const generateMetadata = ({
   params,
 }: {
   params: { board: string }
-}) => ({ title: decodeURI(params.board) })
+}) => ({ title: decodeURIComponent(params.board) })
 
 export default ({ params }: { params: { board: string } }) => {
   const posts = allPosts
-    .filter((post: Post) => post.board === decodeURI(params.board))
+    .filter((post: Post) => post.board === decodeURIComponent(params.board))
     .sort((a, b) => compareDesc(new Date(a.created), new Date(b.created)))
-  // const board = decodeURI(params.board)
+
   return (
     <div>
       {posts.map((post, idx) => (

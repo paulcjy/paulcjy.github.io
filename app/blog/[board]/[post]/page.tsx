@@ -14,8 +14,8 @@ export const generateMetadata = ({
 }) => {
   const post = allPosts.find(
     (post) =>
-      post.board === decodeURI(params.board) &&
-      post.file === decodeURI(params.post)
+      post.board === decodeURIComponent(params.board) &&
+      post.file === decodeURIComponent(params.post)
   )
   if (!post)
     throw new Error(`Post not found for slug: ${params.board}/${params.post}`)
@@ -25,8 +25,8 @@ export const generateMetadata = ({
 export default ({ params }: { params: { board: string; post: string } }) => {
   const post = allPosts.find(
     (post) =>
-      post.board === decodeURI(params.board) &&
-      post.file === decodeURI(params.post)
+      post.board === decodeURIComponent(params.board) &&
+      post.file === decodeURIComponent(params.post)
   )
   if (!post)
     throw new Error(`Post not found for slug: ${params.board}/${params.post}`)
