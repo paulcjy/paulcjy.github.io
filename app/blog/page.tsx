@@ -2,7 +2,7 @@ import { compareDesc } from 'date-fns'
 import { allPosts, Post } from 'contentlayer/generated'
 import { PostCard } from '#/components/PostCard'
 
-export default () => {
+export default function BlogPage() {
   const posts: Post[] = allPosts.sort((a, b) =>
     compareDesc(new Date(a.created), new Date(b.created))
   )

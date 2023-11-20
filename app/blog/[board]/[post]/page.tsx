@@ -22,7 +22,11 @@ export const generateMetadata = ({
   return { title: post.title }
 }
 
-export default ({ params }: { params: { board: string; post: string } }) => {
+export default function PostPage({
+  params,
+}: {
+  params: { board: string; post: string }
+}) {
   const post = allPosts.find(
     (post) =>
       post.board === decodeURIComponent(params.board) &&

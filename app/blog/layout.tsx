@@ -1,7 +1,11 @@
 import { BlogMenu } from '#/components/BlogMenu'
 import React from 'react'
 
-export default ({ children }: { children: React.ReactNode }) => {
+export default function BlogLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <div className="my-10 grid grid-cols-[1fr,minmax(auto,1100px),1fr]">
       <div className="col-start-2 grid grid-cols-[minmax(auto,200px),min(700px,100%)] gap-x-10">

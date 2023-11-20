@@ -12,7 +12,7 @@ export const generateMetadata = ({
   params: { board: string }
 }) => ({ title: decodeURIComponent(params.board) })
 
-export default ({ params }: { params: { board: string } }) => {
+export default function BoardPage({ params }: { params: { board: string } }) {
   const posts = allPosts
     .filter((post: Post) => post.board === decodeURIComponent(params.board))
     .sort((a, b) => compareDesc(new Date(a.created), new Date(b.created)))

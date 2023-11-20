@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation"
+import { redirect } from 'next/navigation'
 
-export default () => {
-	redirect('/blog');
+export default function RootPage() {
+  redirect('/blog')
 }

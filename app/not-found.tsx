@@ -1,6 +1,6 @@
 export const generateMetadata = () => ({ title: '404: Not Found' })
 
-export default () => {
+export default function GlobalNotFound() {
   return (
     <div className="flex flex-col h-[90vh] items-center justify-center">
       <div className="flex items-center">
