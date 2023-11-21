@@ -1,5 +1,5 @@
 1:HL["/_next/static/css/b7fe3cbc00178457.css","style",{"crossOrigin":""}]
-0:["51Ku_G8eX5ElfRvKuLq77",[[["",{"children":["blog",{"children":[["board","GitHub%20Pages%20%2B%20Next.js","d"],{"children":["__PAGE__?{\"board\":\"GitHub Pages + Next.js\"}",{}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b7fe3cbc00178457.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
+0:["kGur8dH0s-IY-xf_8UVaG",[[["",{"children":["blog",{"children":[["board","GitHub%20Pages%20%2B%20Next.js","d"],{"children":["__PAGE__?{\"board\":\"GitHub Pages + Next.js\"}",{}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b7fe3cbc00178457.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
 4:I[2649,["326","static/chunks/326-9823f391d24e26fc.js","185","static/chunks/app/layout-930f9122564ec0e4.js"],"CustomThemeProvider"]
 5:I[8326,["326","static/chunks/326-9823f391d24e26fc.js","431","static/chunks/app/blog/%5Bboard%5D/page-86149bc53665de2b.js"],""]
 6:I[5235,["326","static/chunks/326-9823f391d24e26fc.js","185","static/chunks/app/layout-930f9122564ec0e4.js"],""]
