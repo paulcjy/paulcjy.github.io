@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     default: '개발 일지',
     template: '%s | 개발 일지',
   },
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export default function RootLayout({
