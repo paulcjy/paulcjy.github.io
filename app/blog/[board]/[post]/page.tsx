@@ -38,16 +38,16 @@ export default function PostPage({
   return (
     <article className="mx-auto">
       <div className="mb-12 text-center">
-        <h1 className="text-3xl font-bold">{post.title}</h1>
+        <h1 className="mb-1 text-3xl font-bold">{post.title}</h1>
         <time
           dateTime={post.created}
           className="mb-1 text-xs text-gray-600 dark:text-gray-400"
         >
-          {format(parseISO(post.created), 'yyyy. LL. dd.')}
+          {format(parseISO(post.created), 'yyyy. MM. dd. HH:mm')}
         </time>
       </div>
       <div
-        className="[&>*]:mb-3 [&>*:last-child]:mb-0 markdown-body"
+        className="markdown-body"
         dangerouslySetInnerHTML={{ __html: post.body.html }}
       />
     </article>

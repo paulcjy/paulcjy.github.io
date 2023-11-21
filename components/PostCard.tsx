@@ -26,8 +26,11 @@ export const PostCard = (post: Post) => {
           {title}
         </Link>
       </h1>
-      <time dateTime={created} className="mb-2 block text-xs text-gray-600">
-        {format(parseISO(created), 'yyyy. LL. dd.')}
+      <time
+        dateTime={created}
+        className="mb-2 block text-xs text-gray-600 dark:text-gray-400"
+      >
+        {format(parseISO(created), 'yyyy. MM. dd.')}
       </time>
       <div className="text-sm leading-loose">
         {summary.length > summaryLimit ? `${summary}...` : summary}
