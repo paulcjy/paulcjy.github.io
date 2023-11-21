@@ -38,5 +38,5 @@ next-env.d.ts
 .contentlayer
 
 # deploy
-/out/
-/posts/
+# /out/
+# /posts/
