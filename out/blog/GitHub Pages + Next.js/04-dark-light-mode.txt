@@ -1,0 +1,138 @@
+1:HL["/_next/static/css/8c778e73ed56f245.css","style",{"crossOrigin":""}]
+0:["fehhpasi4J_9q9Mf824ex",[[["",{"children":["blog",{"children":[["board","GitHub%20Pages%20%2B%20Next.js","d"],{"children":[["post","04-dark-light-mode","d"],{"children":["__PAGE__?{\"board\":\"GitHub Pages + Next.js\",\"post\":\"04-dark-light-mode\"}",{}]}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/8c778e73ed56f245.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
+4:I[2649,["326","static/chunks/326-9823f391d24e26fc.js","185","static/chunks/app/layout-c52e075abc27b8ed.js"],"CustomThemeProvider"]
+5:I[8326,["326","static/chunks/326-9823f391d24e26fc.js","431","static/chunks/app/blog/%5Bboard%5D/page-86149bc53665de2b.js"],""]
+6:I[5235,["326","static/chunks/326-9823f391d24e26fc.js","185","static/chunks/app/layout-c52e075abc27b8ed.js"],""]
+7:I[6954,[],""]
+8:I[7264,[],""]
+9:["board","GitHub%20Pages%20%2B%20Next.js","d"]
+b:T2bfe,<h1>next-themes</h1>
+<p><a href="https://github.com/pacocoursey/next-themes" title="next-themes">next-themes</a>는 Next.js에서 다크 모드를 쉽게 사용할 수 있도록 해 준다. next-themes에서 소개하는 특징 중 아래 내용이 마음에 들어서 선택했다.</p>
+<ul>
+<li>단 두 줄의 코드로 다크 모드 완성</li>
+<li>Next.js <code>app</code> 디렉토리 지원</li>
+<li>시스템 설정 사용 가능</li>
+</ul>
+<h1>next-themes 설치</h1>
+<pre><code class="hljs language-sh">npm install next-themes
+</code></pre>
+<h1>Theme Provider 적용</h1>
+<p><code>app</code> 라우터에서는 Provider를 별도의 파일로 만들어줘야 한다. Provider는 Client Component여야 하기 떄문이다. <code>app</code> 라우터를 사용하면 단 두 줄의 코드는 아니다.</p>
+<p>또한, Tailwind CSS와 함께 사용하려면 <code>&#x3C;ThemeProvider></code>의 <a href="#theme-provider--tailwind-css-%EC%84%A4%EC%A0%95">설정</a>도 변경해주어야 한다.</p>
+<pre><code class="hljs language-tsx"><span class="hljs-comment">// app/providers.tsx</span>
+
+<span class="hljs-string">'use client'</span>
+
+<span class="hljs-keyword">import</span> { <span class="hljs-title class_">ThemeProvider</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">'next-themes'</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Providers</span>(<span class="hljs-params">{ children }</span>) {
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">ThemeProvider</span>></span>{children}<span class="hljs-tag">&#x3C;/<span class="hljs-name">ThemeProvider</span>></span></span>
+}
+</code></pre>
+<p><code>app/layout.tsx</code>에서 <code>&#x3C;body></code> 태그의 내부를 방금 만든 <code>&#x3C;Providers></code> 컴포넌트로 감싸준다.</p>
+<pre><code class="hljs language-tsx"><span class="hljs-comment">// app/layout.tsx</span>
+
+<span class="hljs-keyword">import</span> { <span class="hljs-title class_">Providers</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">'./providers'</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Layout</span>(<span class="hljs-params">{ children }</span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">html</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">body</span>></span>
+        <span class="hljs-tag">&#x3C;<span class="hljs-name">Providers</span>></span>{children}<span class="hljs-tag">&#x3C;/<span class="hljs-name">Providers</span>></span>
+      <span class="hljs-tag">&#x3C;/<span class="hljs-name">body</span>></span>
+    <span class="hljs-tag">&#x3C;/<span class="hljs-name">html</span>></span></span>
+  )
+}
+</code></pre>
+<blockquote>
+<p>Next.js Pages Router를 사용한다면 <a href="https://github.com/pacocoursey/next-themes#with-pages" title="next-themes #with-pages">여기</a> 참고</p>
+</blockquote>
+<h1>Theme Provider + Tailwind CSS 설정</h1>
+<p><a href="https://github.com/pacocoursey/next-themes#themeprovider" title="next-themes #themeprovider">ThemeProvider</a></p>
+<p>여러 가지 설정이 있지만, Tailwind와 사용하려면 <code>attribute</code>를 <code>class</code>로 설정해야 한다.</p>
+<pre><code class="hljs language-tsx"><span class="hljs-comment">// app/providers.tsx</span>
+
+<span class="hljs-string">'use client'</span>
+
+<span class="hljs-keyword">import</span> { <span class="hljs-title class_">ThemeProvider</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">'next-themes'</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Providers</span>(<span class="hljs-params">{ children }</span>) {
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">ThemeProvider</span> <span class="hljs-attr">attribute</span>=<span class="hljs-string">"class"</span>></span>{children}<span class="hljs-tag">&#x3C;/<span class="hljs-name">ThemeProvider</span>></span></span>
+}
+</code></pre>
+<p>브라우저에서 페이지를 열고 <code>&#x3C;html></code>태그를 보면, <code>class</code>와 <code>style</code>이 다크 모드에서는 <code>dark</code>로, 라이트 모드에서는 <code>light</code>로 바뀌는 것을 알 수 있다.</p>
+<pre><code class="hljs language-html"><span class="hljs-comment">&#x3C;!-- dark mode --></span>
+<span class="hljs-tag">&#x3C;<span class="hljs-name">html</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"color-scheme: dark;"</span> /></span>
+
+<span class="hljs-comment">&#x3C;!-- light mode --></span>
+<span class="hljs-tag">&#x3C;<span class="hljs-name">html</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"light"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"color-scheme: light;"</span> /></span>
+</code></pre>
+<h2><code>attribute</code>를 <code>class</code>로 설정하지 않으면</h2>
+<p>기본값은 <code>data-theme</code>에 <code>dark</code>와 <code>light</code>를 저장하는 것이다. <code>style="color-scheme"</code>은 항상 바꿔준다.</p>
+<pre><code class="hljs language-html"><span class="hljs-comment">&#x3C;!-- dark mode --></span>
+<span class="hljs-tag">&#x3C;<span class="hljs-name">html</span> <span class="hljs-attr">data-theme</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"color-scheme: dark;"</span> /></span>
+
+<span class="hljs-comment">&#x3C;!-- light mode --></span>
+<span class="hljs-tag">&#x3C;<span class="hljs-name">html</span> <span class="hljs-attr">data-theme</span>=<span class="hljs-string">"light"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"color-scheme: light;"</span> /></span>
+</code></pre>
+<p>다른 설정으로는 <code>data-*</code> 형식의 이름을 사용할 수 있다. (예, <code>data-color</code>)</p>
+<pre><code class="hljs language-html"><span class="hljs-comment">&#x3C;!-- dark mode --></span>
+<span class="hljs-tag">&#x3C;<span class="hljs-name">html</span> <span class="hljs-attr">data-color</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"color-scheme: dark;"</span> /></span>
+
+<span class="hljs-comment">&#x3C;!-- light mode --></span>
+<span class="hljs-tag">&#x3C;<span class="hljs-name">html</span> <span class="hljs-attr">data-color</span>=<span class="hljs-string">"light"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"color-scheme: light;"</span> /></span>
+</code></pre>
+<blockquote>
+<p>공식 문서에는 <code>class</code> 또는 <code>data-*</code>형식이라고 하지만, 아무 문자열을 넣어도 작동하긴 했다.</p>
+</blockquote>
+<h1>전환 버튼 만들기</h1>
+<p>마침 <a href="https://github.com/timlrx/tailwind-nextjs-starter-blog" title="tailwind-nextjs starter blog">좋은 예제</a>를 발견해서 <a href="https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/main/components/ThemeSwitch.tsx" title="tailwind-nextjs blog: Theme Switch Button">버튼 코드</a>를 가져와 사용했다. 이 예제도 next-themes를 사용한다.</p>
+<pre><code class="hljs language-tsx"><span class="hljs-string">'use client'</span>
+
+<span class="hljs-keyword">import</span> { useEffect, useState } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>
+<span class="hljs-keyword">import</span> { useTheme } <span class="hljs-keyword">from</span> <span class="hljs-string">'next-themes'</span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">ThemeSwitch</span> = (<span class="hljs-params"></span>) => {
+  <span class="hljs-keyword">const</span> [mounted, setMounted] = <span class="hljs-title function_">useState</span>(<span class="hljs-literal">false</span>)
+  <span class="hljs-keyword">const</span> { theme, setTheme, resolvedTheme } = <span class="hljs-title function_">useTheme</span>()
+
+  <span class="hljs-comment">// When mounted on client, now we can show the UI</span>
+  <span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =></span> <span class="hljs-title function_">setMounted</span>(<span class="hljs-literal">true</span>), [])
+
+  <span class="hljs-keyword">if</span> (!mounted) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
+  }
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">button</span>
+      <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Toggle Dark Mode"</span>
+      <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =></span>
+        setTheme(
+          theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark'
+        )
+      }
+    >
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">svg</span>
+        <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span>
+        <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 20 20"</span>
+        <span class="hljs-attr">fill</span>=<span class="hljs-string">"currentColor"</span>
+        <span class="hljs-attr">className</span>=<span class="hljs-string">"h-6 w-6 text-gray-900 dark:text-gray-100"</span>
+      ></span>
+        {mounted &#x26;&#x26; (theme === 'dark' || resolvedTheme === 'dark') ? (
+          <span class="hljs-tag">&#x3C;<span class="hljs-name">path</span>
+            <span class="hljs-attr">fillRule</span>=<span class="hljs-string">"evenodd"</span>
+            <span class="hljs-attr">d</span>=<span class="hljs-string">"M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"</span>
+            <span class="hljs-attr">clipRule</span>=<span class="hljs-string">"evenodd"</span>
+          /></span>
+        ) : (
+          <span class="hljs-tag">&#x3C;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"</span> /></span>
+        )}
+      <span class="hljs-tag">&#x3C;/<span class="hljs-name">svg</span>></span>
+    <span class="hljs-tag">&#x3C;/<span class="hljs-name">button</span>></span></span>
+  )
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">ThemeSwitch</span>
+</code></pre>2:[null,["$","html",null,{"children":["$","body",null,{"children":["$","$L4",null,{"children":[["$","header",null,{"className":"h-16 sticky top-0 flex justify-center shadow bg-white/70 items-center backdrop-blur-sm dark:bg-black/80 dark:shadow-neutral-800","children":["$","nav",null,{"className":"flex ","children":[["$","div",null,{"className":"flex font-bold","children":[["$","$L5","Blog",{"href":"/blog","className":"transition flex justify-center w-16 text-gray-900 hover:text-gray-300 dark:text-gray-100 dark:hover:text-gray-600","children":"Blog"}],["$","$L5","About",{"href":"/about","className":"transition flex justify-center w-16 text-gray-900 hover:text-gray-300 dark:text-gray-100 dark:hover:text-gray-600","children":"About"}]]}],["$","div",null,{"className":"flex","children":["$","$L6",null,{}]}]]}]}],["$","main",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"flex flex-col h-[90vh] items-center justify-center","children":["$","div",null,{"className":"flex items-center","children":[["$","h1",null,{"className":"inline-block text-2xl pr-8 mr-8 border-r-[1.5px] border-gray-400 py-2","children":"404"}],["$","h2",null,{"className":"inline-block text-lg","children":"This page could not be found"}]]}]}],"notFoundStyles":[],"childProp":{"current":[null,["$","div",null,{"className":"my-10 grid grid-cols-[1fr,minmax(auto,1100px),1fr]","children":["$","div",null,{"className":"col-start-2 grid grid-cols-[minmax(auto,200px),min(700px,100%)] gap-x-10","children":[["$","div",null,{"children":["$","div",null,{"className":"space-y-5","children":[["$","div","Web",{"children":[["$","div",null,{"className":"mb-1 px-3 font-semibold tracking-wider text-zinc-400","children":"Web"}],[["$","$L5","GitHub Pages + Next.js",{"href":"/blog/GitHub Pages + Next.js","className":"block rounded-md m-0 px-3 py-1 text-sm font-medium hover:bg-gray-100 hover:text-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-100","children":[["$","span",null,{"className":"pr-1.5","children":"GitHub Pages + Next.js"}],["$","span",null,{"className":"text-gray-400","children":["(",9,")"]}]]}]]]}]]}]}],["$","div",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children",["board","GitHub%20Pages%20%2B%20Next.js","d"],"children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$9","children",["post","04-dark-light-mode","d"],"children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$La",["$","article",null,{"className":"mx-auto","children":[["$","div",null,{"className":"mb-12 text-center","children":[["$","h1",null,{"className":"mb-1 text-3xl font-bold","children":"다크 모드와 라이트 모드 추가하기(next-themes + tailwindcss)"}],["$","time",null,{"dateTime":"2023-11-17T13:08:00.000Z","className":"mb-1 text-xs text-gray-600 dark:text-gray-400","children":"2023. 11. 17. 22:08"}]]}],["$","div",null,{"className":"markdown-body","dangerouslySetInnerHTML":{"__html":"$b"}}]]}],null],"segment":"__PAGE__?{\"board\":\"GitHub Pages + Next.js\",\"post\":\"04-dark-light-mode\"}"},"styles":null}],"segment":["post","04-dark-light-mode","d"]},"styles":null}],"segment":["board","GitHub%20Pages%20%2B%20Next.js","d"]},"styles":null}]}]]}]}],null],"segment":"blog"},"styles":null}]}]]}]}]}],null]
+3:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"다크 모드와 라이트 모드 추가하기(next-themes + tailwindcss) | 개발 일지"}],["$","link","3",{"rel":"icon","href":"/favicon.png"}]]
+a:null
