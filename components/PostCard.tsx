@@ -11,10 +11,11 @@ export const PostCard = (post: Post) => {
     body: { html },
   } = post
 
-  const summaryLimit = 220
-  const summary: string = html
-    .replaceAll(/<.*?>/g, '')
-    .substring(0, html.length > summaryLimit ? summaryLimit + 1 : html.length)
+  const plain = html.replaceAll(/<.*?>/g, '')
+
+  const textLimit = 200
+  const summary =
+    plain.length < textLimit ? plain : plain.substring(0, textLimit) + '...'
 
   return (
     <div className="mb-10">
@@ -32,9 +33,7 @@ export const PostCard = (post: Post) => {
       >
         {format(parseISO(created), 'yyyy. MM. dd.')}
       </time>
-      <div className="text-sm leading-loose">
-        {summary.length > summaryLimit ? `${summary}...` : summary}
-      </div>
+      <div className="text-sm leading-loose">{summary}</div>
     </div>
   )
 }
