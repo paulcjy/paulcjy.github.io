@@ -3,6 +3,7 @@ import { Header } from '#/components/Header'
 import { CustomThemeProvider } from './theme-provider'
 import '#/styles/globals.css'
 import '#/styles/github-markdown.css'
+import '#/styles/github-markdown-codeblock.css'
 
 export const metadata: Metadata = {
   title: {
