@@ -11,7 +11,7 @@ export const PostCard = (post: Post) => {
     body: { html },
   } = post
 
-  const plain = html.replaceAll(/<.*?>/g, '')
+  const plain = html.replaceAll(/<.*?>/g, '').replaceAll('&#x3C;', '<')
 
   const textLimit = 200
   const summary =
