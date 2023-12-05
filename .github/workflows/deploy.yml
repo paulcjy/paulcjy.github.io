@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: development
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts
+      - run: |
+          npm ci
+          next build
+          touch out/.nojekyll
+          sed -i 's/\/\/ //g' next.config.js
+          sed -i 's/\/out\///g' .gitignore
+          git add out/
+          git commit -m 'Deploy'
+          git subtree push --prefix out origin gh-pages
