@@ -18,6 +18,7 @@ jobs:
           sed -i 's/\/out\///g' .gitignore
           git config --global user.email 'paulcjy@naver.com'
           git config --global user.name 'paulcjy'
-          git add .
+          git add out/
           git commit -m 'Deploy'
+          git pull
           git subtree push --prefix out origin gh-pages
