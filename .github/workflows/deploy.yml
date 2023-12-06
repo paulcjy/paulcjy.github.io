@@ -7,11 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: development
       - uses: actions/setup-node@v3
         with:
-          node-version: latest
+          node-version: lts/*
       - run: |
           npm ci
           npm run build
