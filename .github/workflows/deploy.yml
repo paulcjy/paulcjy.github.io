@@ -16,6 +16,8 @@ jobs:
           touch out/.nojekyll
           sed -i 's/\/\/ //g' next.config.js
           sed -i 's/\/out\///g' .gitignore
+          git config --global user.email 'paulcjy@naver.com'
+          git config --global user.name 'paulcjy'
           git add out/
           git commit -m 'Deploy'
           git subtree push --prefix out origin gh-pages
