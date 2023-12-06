@@ -37,6 +37,8 @@ jobs:
           node-version: lts/*
       - name: Install dependencies
         run: npm ci
+      - name: Add export configuration
+        run: sed -i 's/\/\/ //g' next.config.js
       - name: Build and static export with Next.js
         run: npm run build
       - name: Upload artifact
