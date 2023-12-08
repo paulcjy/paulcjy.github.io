@@ -4,9 +4,7 @@ import { Board, getBoards } from '#/lib/menu'
 import { compareDesc } from 'date-fns'
 
 export const generateStaticParams = async () =>
-  getBoards().map((board: Board) => {
-    board: board.id
-  })
+  getBoards().map((board: Board) => ({ board: board.id }))
 
 export const generateMetadata = ({ params }: { params: { board: string } }) => {
   const boardId = decodeURIComponent(params.board)
