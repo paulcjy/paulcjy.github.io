@@ -1,5 +1,5 @@
 ---
-title: [GitHub Actions 공식문서]Workflow on.push 이벤트
+title: '[GitHub Actions 공식문서]Workflow on.push 이벤트'
 created: 2023-12-02
 tags:
 ---

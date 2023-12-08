@@ -1,5 +1,5 @@
 ---
-title: [GitHub Actions 공식문서]GitHub Actions의 이해
+title: '[GitHub Actions 공식문서]GitHub Actions의 이해'
 created: 2023-12-01
 tags:
 ---
