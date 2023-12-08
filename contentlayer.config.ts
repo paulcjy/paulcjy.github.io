@@ -15,19 +15,37 @@ export const Post = defineDocumentType(() => ({
       type: 'string',
       resolve: (post) => post._raw.sourceFileDir.split('/')[0],
     },
-    board: {
+    boardName: {
       type: 'string',
       resolve: (post) => post._raw.sourceFileDir.split('/')[1],
     },
-    file: {
+    boardId: {
+      type: 'string',
+      resolve: (post) =>
+        post._raw.sourceFileDir
+          .split('/')[1]
+          .replace(/[:/?#\[\]@!$&'()*+,;=% ]+/g, '-'),
+    },
+    fileName: {
       type: 'string',
       resolve: (post) => post._raw.sourceFileName.replace(/\.[^.]+$/, ''),
+    },
+    fileId: {
+      type: 'string',
+      resolve: (post) =>
+        post._raw.sourceFileName
+          .replace(/\.[^.]+$/, '')
+          .replace(/[:/?#\[\]@!$&'()*+,;=% ]+/g, '-'),
     },
     url: {
       type: 'string',
       resolve: (post) => {
-        const board = post._raw.sourceFileDir.split('/')[1]
-        const file = post._raw.sourceFileName.replace(/\.[^.]+$/, '')
+        const board = post._raw.sourceFileDir
+          .split('/')[1]
+          .replace(/[:/?#\[\]@!$&'()*+,;=% ]+/g, '-')
+        const file = post._raw.sourceFileName
+          .replace(/\.[^.]+$/, '')
+          .replace(/[:/?#\[\]@!$&'()*+,;=% ]+/g, '-')
         return `/blog/${board}/${file}`
       },
     },

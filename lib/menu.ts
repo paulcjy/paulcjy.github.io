@@ -6,7 +6,13 @@ export type Menu = {
 }
 
 export type Boards = {
-  [board: string]: number
+  [board: string]: Board
+}
+
+export type Board = {
+  id: string
+  count: number
+  name?: string
 }
 
 export const getMenu = cache(() => {
@@ -17,7 +23,10 @@ export const getMenu = cache(() => {
     menu[category] = {}
     readdirSync(`${posts}/${category}`).forEach((board: string) => {
       const count: number = readdirSync(`${posts}/${category}/${board}`).length
-      menu[category][board] = count
+      menu[category][board] = {
+        id: board.replace(/[:/?#\[\]@!$&'()*+,;=% ]+/g, '-'),
+        count,
+      }
     })
   })
 
@@ -26,7 +35,13 @@ export const getMenu = cache(() => {
 
 export const getBoards = () => {
   const menu: Menu = getMenu()
-  return Object.values(menu).reduce((acc: string[], boards: Boards) => {
-    return [...acc, ...Object.keys(boards)]
-  }, [] as string[])
+  return Object.values(menu).reduce((acc: Board[], boards: Boards) => {
+    return [
+      ...acc,
+      ...Object.entries(boards).map(([boardName, board]: [string, Board]) => ({
+        ...board,
+        name: boardName,
+      })),
+    ]
+  }, [] as Board[])
 }

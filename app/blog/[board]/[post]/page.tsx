@@ -3,8 +3,8 @@ import { allPosts } from 'contentlayer/generated'
 
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({
-    board: post.board,
-    post: post.file,
+    board: post.boardId,
+    post: post.fileId,
   }))
 
 export const generateMetadata = ({
@@ -14,8 +14,8 @@ export const generateMetadata = ({
 }) => {
   const post = allPosts.find(
     (post) =>
-      post.board === decodeURIComponent(params.board) &&
-      post.file === decodeURIComponent(params.post)
+      post.boardId === decodeURIComponent(params.board) &&
+      post.fileId === decodeURIComponent(params.post)
   )
   if (!post)
     throw new Error(`Post not found for slug: ${params.board}/${params.post}`)
@@ -29,8 +29,8 @@ export default function PostPage({
 }) {
   const post = allPosts.find(
     (post) =>
-      post.board === decodeURIComponent(params.board) &&
-      post.file === decodeURIComponent(params.post)
+      post.boardId === decodeURIComponent(params.board) &&
+      post.fileId === decodeURIComponent(params.post)
   )
   if (!post)
     throw new Error(`Post not found for slug: ${params.board}/${params.post}`)
