@@ -50,6 +50,15 @@ export default function PostPage({
         className="markdown-body"
         dangerouslySetInnerHTML={{ __html: post.body.html }}
       />
+      <script
+        src="https://utteranc.es/client.js"
+        repo="paulcjy/paulcjy.github.io"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async
+      ></script>
     </article>
   )
 }
