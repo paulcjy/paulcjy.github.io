@@ -1,5 +1,6 @@
 import { format, parseISO } from 'date-fns'
 import { allPosts } from 'contentlayer/generated'
+import { Utterances } from '#/components/Utterances'
 
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({
@@ -47,18 +48,10 @@ export default function PostPage({
         </time>
       </div>
       <div
-        className="markdown-body"
+        className="markdown-body mb-10"
         dangerouslySetInnerHTML={{ __html: post.body.html }}
       />
-      <script
-        src="https://utteranc.es/client.js"
-        repo="paulcjy/paulcjy.github.io"
-        issue-term="pathname"
-        label="✨💬✨"
-        theme="github-dark"
-        crossorigin="anonymous"
-        async
-      ></script>
+      <Utterances />
     </article>
   )
 }
