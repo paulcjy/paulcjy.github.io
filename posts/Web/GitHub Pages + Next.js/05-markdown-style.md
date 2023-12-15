@@ -24,7 +24,7 @@ import 'your_css_file.css'
 
 Contentlayer 예제에서 작성한 `posts/[slug]/page.tsx`에서 마크다운이 들어간 부분의 `<div>` 태그의 `class`에 `markdown-body`를 추가한다.
 
-```ts
+```tsx
 const PostLayout = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug)
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`)
