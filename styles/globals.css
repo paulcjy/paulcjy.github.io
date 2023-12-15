@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @import './github-markdown.css';
-@import './github-markdown-codeblock.css';
 
 @layer base {
   ul,
