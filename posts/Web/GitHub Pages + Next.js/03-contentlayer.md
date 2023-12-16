@@ -75,7 +75,7 @@ contentlayer 깃허브에 이미 해당 [이슈][6]가 올라와 있었다. Next
 
 `next.config.js`에서 `nextConfig`를 `withContentlayer`로 감싸준다.
 
-```js
+```ts
 // next.config.js
 const { withContentlayer } = require('next-contentlayer')
 

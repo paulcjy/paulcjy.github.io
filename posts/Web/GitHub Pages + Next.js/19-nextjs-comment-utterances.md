@@ -59,7 +59,7 @@ Next.js에서 적용하려고 보니 `<script>`태그에는 `repo` 속성을 사
 
 나는 다크 모드와 라이트 모드를 둘 다 사용하기 때문에 코드를 약간 수정했다. next-themes로 다크/라이트 모드를 구현할 때 사용할 수 있다.
 
-```ts
+```tsx
 'use client'
 
 import { useTheme } from 'next-themes'
