@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={`${meslo.variable}`}>
-      <body className="mx-auto max-w-8xl">
+      <body>
         <Header />
         {children}
       </body>
