@@ -17,7 +17,8 @@ export default function RootLayout({
     <html lang="ko" className={`${meslo.variable}`}>
       <body>
         <Header />
-        {children}
+        <main className="mx-auto max-w-8xl">{children}</main>
+        {/* 글로벌 푸터 */}
       </body>
     </html>
   )
