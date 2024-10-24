@@ -10,7 +10,7 @@ export const Header = () => {
         </Link>
         {/* TODO: 검색창 추가(새 컴포넌트로) */}
         <nav>
-          <ul className="flex space-x-6 font-meslo">
+          <ul className="font-quicksand flex space-x-6 font-medium">
             {headerNavigation.map((item) => (
               <li key={item.title}>
                 <Link href={item.href}>{item.title}</Link>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { meslo } from './fonts'
+import { quicksand } from './fonts'
 import { Header } from '@/components/Header'
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ko" className={`${meslo.variable}`}>
+    <html lang="ko" className={`${quicksand.variable} antialiased`}>
       <body>
         <Header />
         <main className="mx-auto max-w-8xl">{children}</main>

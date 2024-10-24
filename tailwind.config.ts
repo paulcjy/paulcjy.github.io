@@ -5,7 +5,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        meslo: ['var(--font-meslo)', 'Menlo', 'monospace'],
+        quicksand: ['var(--font-quicksand)', 'Quicksand', 'sans-serif'],
+        // meslo: ['var(--font-meslo)', 'Menlo', 'monospace'],
       },
       spacing: {
         '8xl': '90rem',
