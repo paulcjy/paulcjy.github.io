@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import '../styles/main.css'
 import { quicksand } from './fonts'
 import { Header } from '@/components/Header'
 

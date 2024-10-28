@@ -1,7 +1,7 @@
 import localFont from 'next/font/local'
 
 export const quicksand = localFont({
-  src: './fonts/Quicksand-VariableFont_wght.ttf',
+  src: '../fonts/Quicksand-VariableFont_wght.ttf',
   variable: '--font-quicksand',
 })
 
