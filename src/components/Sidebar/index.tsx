@@ -1,4 +1,4 @@
-import { ScrollArea } from '@/components/ui/scroll-area'
+import { ScrollArea } from '@/ui/scroll-area'
 export const Sidebar = () => {
   return (
     <nav>
