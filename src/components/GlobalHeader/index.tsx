@@ -10,8 +10,8 @@ export const GlobalHeader = () => {
           <h1 className="text-xl font-bold">최재영의 개발 일지</h1>
         </Link>
         {/* TODO: 검색창 추가(새 컴포넌트로) */}
-        <nav className="flex gap-2">
-          <ul className="flex gap-6">
+        <nav className="flex gap-4">
+          <ul className="flex gap-6 font-medium">
             {textNavLinks.map((item) => (
               <li key={item.title} className="flex items-center">
                 <Link href={item.href}>{item.title}</Link>
