@@ -5,7 +5,7 @@ import { ThemeToggle } from '@/components/ThemeToggle'
 export const GlobalHeader = () => {
   return (
     <header className="sticky top-0 w-full bg-white/80 shadow backdrop-blur-sm dark:bg-black/70">
-      <div className="flex h-16 items-center justify-between px-8">
+      <div className="h-global-header-height flex items-center justify-between px-8">
         <Link href="/">
           <h1 className="text-xl font-bold">최재영의 개발 일지</h1>
         </Link>
