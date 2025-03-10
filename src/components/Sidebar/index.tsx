@@ -15,24 +15,26 @@ export const BlogSidebar = () => {
   return (
     <aside id="sidebar" className="relative">
       <div className="top-global-header-height sticky">
-        <Sidebar className="!h-sidebar-height relative">
+        <Sidebar className="!h-sidebar-height relative border-none">
           <SidebarContent>
-            {sidebarItems.map((group, groupIndex) => (
-              <SidebarGroup key={`${group.title}-${groupIndex}`}>
-                <SidebarGroupLabel>{group.title}</SidebarGroupLabel>
-                <SidebarGroupContent>
-                  <SidebarMenu>
-                    {group.children.map((item, itemIndex) => (
-                      <SidebarMenuItem key={`${item.title}-${itemIndex}`}>
-                        <SidebarMenuButton asChild>
-                          <a href={item.href}>{item.title}</a>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    ))}
-                  </SidebarMenu>
-                </SidebarGroupContent>
-              </SidebarGroup>
-            ))}
+            <ScrollArea className="h-full">
+              {sidebarItems.map((group, groupIndex) => (
+                <SidebarGroup key={`${group.title}-${groupIndex}`}>
+                  <SidebarGroupLabel>{group.title}</SidebarGroupLabel>
+                  <SidebarGroupContent>
+                    <SidebarMenu>
+                      {group.children.map((item, itemIndex) => (
+                        <SidebarMenuItem key={`${item.title}-${itemIndex}`}>
+                          <SidebarMenuButton asChild>
+                            <a href={item.href}>{item.title}</a>
+                          </SidebarMenuButton>
+                        </SidebarMenuItem>
+                      ))}
+                    </SidebarMenu>
+                  </SidebarGroupContent>
+                </SidebarGroup>
+              ))}
+            </ScrollArea>
           </SidebarContent>
         </Sidebar>
       </div>
