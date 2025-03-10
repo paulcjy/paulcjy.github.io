@@ -3,6 +3,7 @@ import '@/styles/main.css'
 import { Quicksand } from 'next/font/google'
 import { GlobalHeader } from '@/components/GlobalHeader'
 import { ThemeProvider } from '@/components/ThemeProvider'
+import { SidebarProvider } from '@/ui/sidebar'
 
 export const metadata: Metadata = {
   title: '최재영의 개발 일지',
@@ -23,8 +24,10 @@ export default function RootLayout({
     <html lang="ko" className={quicksand.className}>
       <body className={`antialiased`}>
         <ThemeProvider>
-          <GlobalHeader />
-          <main>{children}</main>
+          <SidebarProvider className="flex-col">
+            <GlobalHeader />
+            <main>{children}</main>
+          </SidebarProvider>
         </ThemeProvider>
       </body>
     </html>
