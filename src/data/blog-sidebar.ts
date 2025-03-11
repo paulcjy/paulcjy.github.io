@@ -1,6 +1,11 @@
 import { LayoutList, NotebookPen, Tag } from 'lucide-react'
 
-export const blogTypes = [
+export interface BlogType {
+  name: string
+  icon: React.ElementType
+}
+
+export const blogTypes: BlogType[] = [
   {
     name: 'Category',
     icon: LayoutList,

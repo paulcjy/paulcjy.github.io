@@ -1,6 +1,6 @@
 'use client'
 
-import { blogTypes } from '@/data/blog-sidebar'
+import { BlogType, blogTypes } from '@/data/blog-sidebar'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -26,25 +26,34 @@ export const TypeSelector = () => {
             size="lg"
             className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground cursor-pointer"
           >
-            <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-7 items-center justify-center rounded-md">
-              <selectedType.icon className="size-4" />
-            </div>
-            <div className="text-sm font-semibold">{selectedType.name}</div>
+            <TypeItem type={selectedType} />
             <ChevronsUpDown className="ml-auto" />
           </SidebarMenuButton>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-60">
+        <DropdownMenuContent className="w-62">
           {blogTypes.map((type) => (
             <DropdownMenuItem
               key={type.name}
               onSelect={() => setSelectedType(type)}
             >
-              {type.name}
+              <TypeItem type={type} />
+              {/* {type.name} */}
               {type.name === selectedType.name && <Check className="ml-auto" />}
             </DropdownMenuItem>
           ))}
         </DropdownMenuContent>
       </DropdownMenu>
     </SidebarMenuItem>
+  )
+}
+
+const TypeItem = ({ type }: { type: BlogType }) => {
+  return (
+    <>
+      <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-7 items-center justify-center rounded-md">
+        <type.icon className="text-sidebar-primary-foreground size-4" />
+      </div>
+      <div className="text-sm font-semibold">{type.name}</div>
+    </>
   )
 }
