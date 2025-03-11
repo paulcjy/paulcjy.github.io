@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={quicksand.className}>
-      <body className={`overscroll-none antialiased`}>
+      <body className={`overscroll-y-none antialiased`}>
         <ThemeProvider>
           <SidebarProvider className="flex-col">
             <GlobalHeader />
