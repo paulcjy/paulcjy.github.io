@@ -21,7 +21,7 @@ export const TypeSelector = () => {
         <DropdownMenuTrigger asChild>
           <SidebarMenuButton
             size="lg"
-            className="text-md cursor-pointer font-medium"
+            className="text-md data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground cursor-pointer font-medium"
           >
             {selectedType}
             <ChevronsUpDown className="ml-auto" />
