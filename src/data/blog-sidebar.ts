@@ -1,4 +1,19 @@
-export const blogType = ['category', 'tag', 'daily']
+import { LayoutList, NotebookPen, Tag } from 'lucide-react'
+
+export const blogTypes = [
+  {
+    name: 'Category',
+    icon: LayoutList,
+  },
+  {
+    name: 'Tag',
+    icon: Tag,
+  },
+  {
+    name: 'Daily',
+    icon: NotebookPen,
+  },
+]
 
 export const sidebarItems = {
   category: [

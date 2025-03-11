@@ -9,7 +9,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/ui/sidebar'
-import { sidebarItems } from '@/data/blog-sidebar-items'
+import { sidebarItems } from '@/data/blog-sidebar'
 import { ScrollArea } from '@/ui/scroll-area'
 import { TypeSelector } from './type-selector'
 
@@ -23,7 +23,7 @@ export const BlogSidebar = () => {
             <SidebarMenuItem>
               <SidebarMenuButton asChild>
                 <a href="#">
-                  <span className="text-base font-medium">Total</span>
+                  <span className="font-semibold">전체 글 보기</span>
                 </a>
               </SidebarMenuButton>
             </SidebarMenuItem>
@@ -31,6 +31,7 @@ export const BlogSidebar = () => {
         </SidebarHeader>
         <SidebarContent className="mt-2">
           <ScrollArea className="h-full">
+            {/* 여기부터 별도의 킴포넌트로 분리 */}
             {sidebarItems.category.map((group, groupIndex) => (
               <SidebarGroup key={`${group.title}-${groupIndex}`}>
                 <SidebarGroupLabel>{group.title}</SidebarGroupLabel>
