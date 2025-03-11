@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ko" className={quicksand.className}>
+    <html lang="ko" className={quicksand.className} suppressHydrationWarning>
       <body className={`overscroll-y-none antialiased`}>
         <ThemeProvider>
           <SidebarProvider className="flex-col">
