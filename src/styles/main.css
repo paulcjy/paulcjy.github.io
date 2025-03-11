@@ -3,6 +3,6 @@
 @import './shadcn.css';
 
 @theme {
-  --spacing-global-header-height: --spacing(14);
+  --spacing-global-header-height: --spacing(12);
   --spacing-sidebar-height: calc(100vh - var(--spacing-global-header-height));
 }

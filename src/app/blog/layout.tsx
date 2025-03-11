@@ -1,4 +1,5 @@
-import { BlogSidebar } from '@/components/Sidebar'
+import { BlogSidebar } from '@/components/BlogSidebar'
+import { SidebarInset } from '@/ui/sidebar'
 
 export default function BlogLayout({
   children,
@@ -6,9 +7,7 @@ export default function BlogLayout({
   return (
     <div className="flex flex-1">
       <BlogSidebar />
-      <div id="content" className="flex w-full flex-1 flex-col">
-        {children}
-      </div>
+      <SidebarInset className="flex-row">{children}</SidebarInset>
     </div>
   )
 }
