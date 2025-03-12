@@ -1,11 +1,11 @@
 import { LayoutList, NotebookPen, Tag } from 'lucide-react'
 
-export interface BlogType {
+export interface Content {
   name: string
   icon: React.ElementType
 }
 
-export const blogTypes: BlogType[] = [
+export const contents: Content[] = [
   {
     name: 'Category',
     icon: LayoutList,
@@ -15,7 +15,7 @@ export const blogTypes: BlogType[] = [
     icon: Tag,
   },
   {
-    name: 'Daily',
+    name: 'Dev Diary',
     icon: NotebookPen,
   },
 ]

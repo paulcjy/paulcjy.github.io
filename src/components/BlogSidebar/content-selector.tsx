@@ -1,6 +1,6 @@
 'use client'
 
-import { BlogType, blogTypes } from '@/data/blog-sidebar'
+import { Content } from '@/data/blog-sidebar'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,14 +9,17 @@ import {
 } from '@/ui/dropdown-menu'
 import { SidebarMenuButton, SidebarMenuItem } from '@/ui/sidebar'
 import { Check, ChevronsUpDown } from 'lucide-react'
-import { useState } from 'react'
 
-export const TypeSelector = () => {
-  const [selectedType, setSelectedType] = useState(blogTypes[0])
-
-  if (!selectedType) return null
-
-  // const handleTypeChange = (type: string) => setSelectedType(type)
+export const ContentSelector = ({
+  contents,
+  selectedContent,
+  onContentChange,
+}: {
+  contents: Content[]
+  selectedContent: Content
+  onContentChange: (content: Content) => void
+}) => {
+  if (!selectedContent) return null
 
   return (
     <SidebarMenuItem>
@@ -26,19 +29,21 @@ export const TypeSelector = () => {
             size="lg"
             className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground cursor-pointer"
           >
-            <TypeItem type={selectedType} />
+            <ContentItem type={selectedContent} />
             <ChevronsUpDown className="ml-auto" />
           </SidebarMenuButton>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-62">
-          {blogTypes.map((type) => (
+          {contents.map((content) => (
             <DropdownMenuItem
-              key={type.name}
-              onSelect={() => setSelectedType(type)}
+              key={content.name}
+              onSelect={() => onContentChange(content)}
             >
-              <TypeItem type={type} />
+              <ContentItem type={content} />
               {/* {type.name} */}
-              {type.name === selectedType.name && <Check className="ml-auto" />}
+              {content.name === selectedContent.name && (
+                <Check className="ml-auto" />
+              )}
             </DropdownMenuItem>
           ))}
         </DropdownMenuContent>
@@ -47,7 +52,7 @@ export const TypeSelector = () => {
   )
 }
 
-const TypeItem = ({ type }: { type: BlogType }) => {
+const ContentItem = ({ type }: { type: Content }) => {
   return (
     <>
       <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-7 items-center justify-center rounded-md">

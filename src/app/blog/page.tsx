@@ -1,5 +1,3 @@
-import { BlogSidebar } from '@/components/Sidebar'
-
 export default function BlogPage() {
   return (
     <>
@@ -10,8 +8,7 @@ export default function BlogPage() {
             <div>{i}</div>
           ))}
       </article>
-      <aside>
-      </aside>
+      <aside></aside>
     </>
   )
 }

@@ -1,25 +1,44 @@
+'use client'
+
 import {
   Sidebar,
   SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/ui/sidebar'
-import { sidebarItems } from '@/data/blog-sidebar'
+import { Content, contents } from '@/data/blog-sidebar'
 import { ScrollArea } from '@/ui/scroll-area'
-import { TypeSelector } from './type-selector'
+import { ContentSelector } from './content-selector'
+import { useState } from 'react'
+import { CategoryMenu } from './category-menu'
+import { TagMenu } from './tag-menu'
+import { DiaryMenu } from './diary-menu'
 
 export const BlogSidebar = () => {
+  const [selectedContent, setSelectedContent] = useState<Content>(contents[0])
+
+  const renderSidebarContent = () => {
+    switch (selectedContent.name) {
+      case 'Category':
+        return <CategoryMenu />
+      case 'Tag':
+        return <TagMenu />
+      case 'Dev Diary':
+        return <DiaryMenu />
+    }
+  }
   return (
     <nav>
       <Sidebar className="!h-sidebar-height top-global-header-height border-none">
         <SidebarHeader>
           <SidebarMenu>
-            <TypeSelector />
+            <ContentSelector
+              contents={contents}
+              selectedContent={selectedContent}
+              onContentChange={setSelectedContent}
+            />
             <SidebarMenuItem>
               <SidebarMenuButton asChild>
                 <a href="#">
@@ -30,25 +49,7 @@ export const BlogSidebar = () => {
           </SidebarMenu>
         </SidebarHeader>
         <SidebarContent className="mt-2">
-          <ScrollArea className="h-full">
-            {/* 여기부터 별도의 킴포넌트로 분리 */}
-            {sidebarItems.category.map((group, groupIndex) => (
-              <SidebarGroup key={`${group.title}-${groupIndex}`}>
-                <SidebarGroupLabel>{group.title}</SidebarGroupLabel>
-                <SidebarGroupContent>
-                  <SidebarMenu>
-                    {group.children.map((item, itemIndex) => (
-                      <SidebarMenuItem key={`${item.title}-${itemIndex}`}>
-                        <SidebarMenuButton asChild>
-                          <a href={item.href}>{item.title}</a>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    ))}
-                  </SidebarMenu>
-                </SidebarGroupContent>
-              </SidebarGroup>
-            ))}
-          </ScrollArea>
+          <ScrollArea className="h-full">{renderSidebarContent()}</ScrollArea>
         </SidebarContent>
       </Sidebar>
     </nav>
