@@ -1,6 +1,7 @@
 ---
 title: Sample post 1
 created: 2025-03-12 19:13:00
+tags: [nextjs, contentlayer]
 ---
 
 ## This is sample post 1

@@ -1,6 +1,7 @@
 ---
 title: Sample post 2
 created: 2025-03-12 19:14:00
+tags: [markdown, hello world]
 ---
 
 ## This is sample post 2
