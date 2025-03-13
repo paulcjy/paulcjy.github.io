@@ -1,4 +1,4 @@
-import { BlogSidebar } from '@/components/blog-sidebar'
+import { TOC } from '@/components/toc'
 
 export default function BlogPage() {
   return (
@@ -10,7 +10,9 @@ export default function BlogPage() {
             <div key={i}>{i}</div>
           ))}
       </article>
-      <aside></aside>
+      <aside>
+        <TOC />
+      </aside>
     </>
   )
 }
