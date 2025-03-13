@@ -1,3 +1,5 @@
+import { BlogSidebar } from '@/components/blog-sidebar'
+
 export default function BlogPage() {
   return (
     <>
@@ -5,7 +7,7 @@ export default function BlogPage() {
         {Array(40)
           .fill(null)
           .map((v, i) => (
-            <div>{i}</div>
+            <div key={i}>{i}</div>
           ))}
       </article>
       <aside></aside>

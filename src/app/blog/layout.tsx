@@ -1,4 +1,4 @@
-import { BlogSidebar } from '@/components/BlogSidebar'
+import { BlogSidebar } from '@/components/blog-sidebar'
 import { SidebarInset } from '@/ui/sidebar'
 
 export default function BlogLayout({

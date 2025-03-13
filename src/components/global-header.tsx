@@ -1,6 +1,6 @@
 import { textNavLinks } from '@/data/global-nav-links'
 import Link from 'next/link'
-import { ThemeToggle } from '@/components/ThemeToggle'
+import { ThemeToggle } from '@/components/theme-toggle'
 
 export const GlobalHeader = () => {
   return (

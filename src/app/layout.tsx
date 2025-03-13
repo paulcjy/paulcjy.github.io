@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import '@/styles/main.css'
 import { Quicksand } from 'next/font/google'
-import { GlobalHeader } from '@/components/GlobalHeader'
-import { ThemeProvider } from '@/components/ThemeProvider'
+import { GlobalHeader } from '@/components/global-header'
+import { ThemeProvider } from '@/components/theme-provider'
 import { SidebarProvider } from '@/ui/sidebar'
 
 export const metadata: Metadata = {
