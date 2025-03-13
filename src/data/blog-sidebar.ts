@@ -20,7 +20,7 @@ export const contents: Content[] = [
   },
 ]
 
-export const sidebarItems = {
+export const categoryMenuItems = {
   category: [
     {
       title: 'Group 1',

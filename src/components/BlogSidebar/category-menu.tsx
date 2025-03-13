@@ -1,4 +1,4 @@
-import { sidebarItems } from '@/data/blog-sidebar'
+import { categoryMenuItems } from '@/data/blog-sidebar'
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -11,7 +11,7 @@ import {
 export const CategoryMenu = () => {
   return (
     <>
-      {sidebarItems.category.map((group, groupIndex) => (
+      {categoryMenuItems.category.map((group, groupIndex) => (
         <SidebarGroup key={`${group.title}-${groupIndex}`}>
           <SidebarGroupLabel>{group.title}</SidebarGroupLabel>
           <SidebarGroupContent>
