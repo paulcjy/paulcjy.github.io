@@ -1,5 +1,6 @@
 ---
 title: '[C++]큰 수를 읽기 쉽게 구분하기'
+slug: cpp-digit-separator
 created: 2024-05-03
 tags:
 ---

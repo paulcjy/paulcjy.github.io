@@ -1,5 +1,6 @@
 ---
-title: "[C++]동적할당"
+title: '[C++]동적할당'
+slug: cpp-new
 created: 2024-03-10
 tags:
 ---
@@ -63,3 +64,4 @@ int main() {
 	return 0;
 }
 ```
+

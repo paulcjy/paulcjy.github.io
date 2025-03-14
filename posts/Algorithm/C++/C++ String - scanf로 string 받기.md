@@ -1,5 +1,6 @@
 ---
 title: '[C++]scanf()로 string 입력받기'
+slug: cpp-scanf-string
 created: 2024-03-14
 tags:
 ---
@@ -14,3 +15,4 @@ string str;
 scanf("%s", input);
 str = input;
 ```
+

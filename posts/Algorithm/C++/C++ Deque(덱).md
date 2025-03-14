@@ -1,7 +1,7 @@
 ---
-title: "[C++]Deque(덱)"
+title: '[C++]Deque(덱)'
+slug: cpp-deque
 created: 2024-03-18
-tags:
 ---
 
 # 헤더
@@ -27,9 +27,11 @@ deque<int> dq;
 | front      |      |
 | back       |      |
 | size       |      |
-| empty           |      |
+| empty      |      |
 
 # 참고
+
 [모두의 코드 - 덱][1]
 
 [1]: https://modoocode.com/176
+

@@ -1,10 +1,12 @@
 ---
 title: '[C++]Pair'
+slug: cpp-pair
 created: 2024-03-12
 tags:
 ---
 
-#cpp 
+#cpp
+
 # Header
 
 ```cpp
@@ -30,3 +32,4 @@ p.second
 
 make_pair(1, 2);
 ```
+

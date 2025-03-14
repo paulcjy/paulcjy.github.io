@@ -1,15 +1,17 @@
 ---
 title: '[C++]List(리스트)'
+slug: cpp-list
 created: 2024-03-13
-tags:
 ---
 
 # 헤더
+
 ```cpp
 #include <list>
 ```
 
 # 선언
+
 ```cpp
 list<int> l;
 ```
@@ -34,6 +36,8 @@ list<int> l;
 | reverse    |                          |
 
 # 참고
+
 [모두의 코드 - 리스트][1]
 
 [1]: https://modoocode.com/177
+

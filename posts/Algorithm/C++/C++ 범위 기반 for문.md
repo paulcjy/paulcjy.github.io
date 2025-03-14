@@ -1,5 +1,6 @@
 ---
-title: "[C++]범위기반 for문(Range-based for loop)"
+title: '[C++]범위기반 for문(Range-based for loop)'
+slug: cpp-range-based-for
 created: 2024-03-13
 tags:
 ---
@@ -39,10 +40,13 @@ for ( const auto &y : x ) {
 }
 
 ```
+
 범위 기반 for문의 루프는 `break`, `return`, `goto`가 실행되면 종료된다.
 `continue`가 실행되면 현재의 루프만 종료한다.
 
 # 범위 기반 for문의 특징
+
 - 자동으로 배열을 인식한다.
 - `.begin()`과 `.end()`가 있는 컨테이너를 인식한다.
 - 나머지에 대해서는 `begin()`/`end()` argument-dependent lookup을 사용한다.
+

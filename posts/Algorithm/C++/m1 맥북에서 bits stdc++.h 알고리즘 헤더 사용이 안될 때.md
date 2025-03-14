@@ -1,5 +1,6 @@
 ---
 title: '[C++]맥북에서 <bits/stdc++.h>가 없을 때'
+slug: bits-stdcpp-in-mac
 created: 2024-04-09
 tags:
 ---
@@ -7,6 +8,7 @@ tags:
 1. 터미널에 `gcc --version`이나 `c++ --version`을 입력하여 설치 경로를 파악한다. (내 경우에는 두 경로가 같았음)
 2. 경로가 `/usr/bin`로 끝날텐데 `/usr/include`로 들어가서 `bits`라는 디렉토리를 새로 만든다.
 3. `/usr/include/bits`에 `stdc++.h` 파일을 만들고 아래 코드를 붙여넣는다.
+
 ```cpp
 #ifndef _GLIBCXX_NO_ASSERT
 #include <cassert>
@@ -51,7 +53,7 @@ tags:
 #include <iosfwd>
 #include <iostream>
 #include <istream>
-#include <iterator> 
+#include <iterator>
 #include <limits>
 #include <list>
 #include <locale>
@@ -94,4 +96,6 @@ tags:
 #include <unordered_set>
 #endif
 ```
+
 4. vscode에서 `c_cpp_properties.json`을 열고 `includePath`에 `gcc`/`c++` 경로를 `/usr`까지만 입력한다.ㅔ
+

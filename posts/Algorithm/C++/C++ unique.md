@@ -1,5 +1,6 @@
 ---
 title: '[C++]unique() - 중복 제거'
+slug: cpp-unique
 created: 2024-05-22
 tags:
 ---
@@ -10,3 +11,4 @@ tags:
 [참고 - cppreference][1]
 
 [1]: https://en.cppreference.com/w/cpp/algorithm/unique
+

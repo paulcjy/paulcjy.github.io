@@ -1,7 +1,7 @@
 ---
 title: '[C++]Map'
+slug: cpp-map
 created: 2024-05-21
-tags:
 ---
 
 ```cpp
@@ -24,7 +24,7 @@ int main() {
 
 ```
 
-
-
 참고
+
 - https://life-with-coding.tistory.com/305
+

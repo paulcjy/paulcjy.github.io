@@ -1,5 +1,6 @@
 ---
 title: '[C++]Queue(큐)'
+slug: cpp-queue
 created: 2024-03-22
 tags:
 ---
