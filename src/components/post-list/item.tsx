@@ -5,7 +5,7 @@ export const Item = ({ post }: { post: Post }) => {
   const { title, slug, created } = post
   return (
     <article className="mb-8">
-      <Link href={`/blog/${slug}`}>
+      <Link href={`/blog/posts/${slug}`}>
         <h2 className="mb-1 text-xl font-bold text-emerald-600 transition-all duration-200 hover:text-red-700/70">
           {title}
         </h2>
