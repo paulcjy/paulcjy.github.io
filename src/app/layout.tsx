@@ -26,7 +26,7 @@ export default function RootLayout({
         <ThemeProvider>
           <SidebarProvider className="flex-col">
             <GlobalHeader />
-            <div>{children}</div>
+            <div className="flex flex-1">{children}</div>
           </SidebarProvider>
         </ThemeProvider>
       </body>
