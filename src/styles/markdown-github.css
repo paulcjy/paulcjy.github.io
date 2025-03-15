@@ -1,4 +1,4 @@
-:root.dark {
+html.dark {
   /*dark*/
   color-scheme: dark;
   --color-prettylights-syntax-comment: #8b949e;
@@ -52,7 +52,7 @@
   --color-done-emphasis: #8957e5;
 }
 
-:root.light {
+html.light {
   /*light*/
   color-scheme: light;
   --color-prettylights-syntax-comment: #57606a;
@@ -224,9 +224,9 @@
   font-size: 1em;
 }
 
-.markdown-body figure {
-  margin: 1em 40px;
-}
+/*.markdown-body figure {*/
+/*  margin: 1em 40px;*/
+/*}*/
 
 .markdown-body hr {
   box-sizing: content-box;
