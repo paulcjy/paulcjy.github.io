@@ -5,6 +5,7 @@ import { Post as PostType } from 'contentlayer/generated'
 export const Post = defineDocumentType(() => ({
   name: 'Post',
   filePathPattern: `**/*.md`,
+  contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
     slug: { type: 'string', required: true },

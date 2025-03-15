@@ -1,3 +1,4 @@
+import { MDXComponent } from '@/components/mdx-component'
 import { TOC } from '@/components/toc'
 import { allPosts } from 'contentlayer/generated'
 import { format, parseISO } from 'date-fns'
@@ -13,7 +14,7 @@ export default async function PostPage({
   const { slug } = await params
   const post = allPosts.find(async (post) => post.slug === slug)
 
-  if (!post) throw new Error(`Post not found for slug: ${params.slug}`)
+  if (!post) throw new Error(`Post not found for slug: ${slug}`)
 
   return (
     <>
@@ -27,10 +28,7 @@ export default async function PostPage({
             {format(parseISO(post.created), 'yyyy. MM. dd. HH:mm')}
           </time>
         </div>
-        <div
-          className="markdown-body mb-10"
-          dangerouslySetInnerHTML={{ __html: post.body.html }}
-        />
+        <MDXComponent code={post.body.code} />
       </article>
       <TOC />
     </>
