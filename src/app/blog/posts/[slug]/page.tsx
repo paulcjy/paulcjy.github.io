@@ -12,7 +12,7 @@ export default async function PostPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const post = allPosts.find(async (post) => post.slug === slug)
+  const post = allPosts.find((post) => post.slug === slug)
 
   if (!post) throw new Error(`Post not found for slug: ${slug}`)
 
