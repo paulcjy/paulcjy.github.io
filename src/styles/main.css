@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 @import './dark-mode.css';
 @import './shadcn.css';
+@import './markdown-github.css';
 
 @theme {
   --spacing-global-header-height: --spacing(12);
