@@ -1,0 +1,19 @@
+pre {
+  --shiki-light-bg: #f6f8fa !important;
+}
+
+html.light {
+  pre[data-theme*=' '],
+  pre[data-theme*=' '] span {
+    color: var(--shiki-light);
+    background-color: var(--shiki-light-bg);
+  }
+}
+
+html.dark {
+  pre[data-theme*=' '],
+  pre[data-theme*=' '] span {
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
+  }
+}

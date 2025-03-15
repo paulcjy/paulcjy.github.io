@@ -1,6 +1,9 @@
 import fs from 'node:fs'
 import { defineDocumentType, makeSource } from 'contentlayer2/source-files'
 import { Post as PostType } from 'contentlayer/generated'
+import rehypePrettyCode, {
+  Options as RehypePrettyCodeOptions,
+} from 'rehype-pretty-code'
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -18,9 +21,20 @@ export const Post = defineDocumentType(() => ({
   },
 }))
 
+const rehypePrettyCodeOptions: RehypePrettyCodeOptions = {
+  // theme: 'github-dark',
+  theme: {
+    dark: 'github-dark',
+    light: 'github-light',
+  },
+}
+
 export default makeSource({
   contentDirPath: 'posts',
   documentTypes: [Post],
+  mdx: {
+    rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions]],
+  },
   onSuccess: async (importData) => {
     const { allPosts } = await importData()
     console.log('allPosts: ', allPosts.length)
