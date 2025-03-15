@@ -37,17 +37,19 @@ const createTagSidebarItems = (allPosts: PostType[]) => {
   // 배열로 저장해야 하지만 태그의 개수를 쉽게 세기 위해 태그 id가 키값인 객체로 생성
   const result: Record<string, Tag> = allPosts.reduce(
     (acc, post) => {
-      post.tags.forEach((tag) => {
-        const tagId = tag
-          .replace(/[:/?#\[\]@!$&'()*+,;=% ]+/g, '-')
-          .toLowerCase()
-        acc[tagId] ??= {
-          id: tagId,
-          name: tag.toLowerCase(),
-          count: 0,
-        }
-        acc[tagId].count++
-      })
+      if (post.tags && !post.draft) {
+        post.tags.forEach((tag) => {
+          const tagId = tag
+            .replace(/[:/?#\[\]@!$&'()*+,;=% ]+/g, '-')
+            .toLowerCase()
+          acc[tagId] ??= {
+            id: tagId,
+            name: tag.toLowerCase(),
+            count: 0,
+          }
+          acc[tagId].count++
+        })
+      }
       return acc
     },
     {} as Record<string, Tag>,
