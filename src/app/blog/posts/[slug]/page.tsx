@@ -28,7 +28,9 @@ export default async function PostPage({
             {format(parseISO(post.created), 'yyyy. MM. dd. HH:mm')}
           </time>
         </div>
-        <MDXComponent code={post.body.code} />
+        <div className="markdown-body mb-10">
+          <MDXComponent code={post.body.code} />
+        </div>
       </article>
       <TOC />
     </>
