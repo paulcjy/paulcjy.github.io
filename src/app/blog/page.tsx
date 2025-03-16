@@ -1,5 +1,4 @@
 import { PostList } from '@/components/post-list'
-import { TOC } from '@/components/toc'
 import { allPosts } from 'contentlayer/generated'
 
 export default function BlogPage() {
@@ -10,9 +9,7 @@ export default function BlogPage() {
   return (
     <>
       <PostList posts={posts} />
-      <aside>
-        <TOC />
-      </aside>
+      <aside>{/* <TOC /> */}</aside>
     </>
   )
 }

@@ -32,7 +32,7 @@ export default async function PostPage({
           <MDXComponent code={post.body.code} />
         </div>
       </article>
-      <TOC />
+      <TOC data={post.toc} />
     </>
   )
 }

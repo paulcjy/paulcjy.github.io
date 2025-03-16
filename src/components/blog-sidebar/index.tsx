@@ -15,6 +15,7 @@ import { ComponentProps, useState } from 'react'
 import { CategoryMenu } from './category-menu'
 import { TagMenu } from './tag-menu'
 import { DiaryMenu } from './diary-menu'
+import Link from 'next/link'
 
 export const BlogSidebar = ({
   side,
@@ -43,9 +44,9 @@ export const BlogSidebar = ({
           />
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
-              <a href="#">
+              <Link href="/blog">
                 <span className="font-semibold">전체 글 보기</span>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
