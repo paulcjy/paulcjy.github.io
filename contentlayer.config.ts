@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import { defineDocumentType, makeSource } from 'contentlayer2/source-files'
 import { Post as PostType } from 'contentlayer/generated'
+import rehypeSlug from 'rehype-slug'
 import rehypePrettyCode, {
   Options as RehypePrettyCodeOptions,
 } from 'rehype-pretty-code'
@@ -33,7 +34,7 @@ export default makeSource({
   contentDirPath: 'posts',
   documentTypes: [Post],
   mdx: {
-    rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions]],
+    rehypePlugins: [rehypeSlug, [rehypePrettyCode, rehypePrettyCodeOptions]],
   },
   onSuccess: async (importData) => {
     const { allPosts } = await importData()
