@@ -1,6 +1,11 @@
 import fs from 'node:fs'
 import { defineDocumentType, makeSource } from 'contentlayer2/source-files'
 import { Post as PostType } from 'contentlayer/generated'
+import { unified } from 'unified'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import rehypeExtractToc from '@stefanprobst/rehype-extract-toc'
+import rehypeStringify from 'rehype-stringify'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings, {
   Options as RehypeAutolinkHeadingsOptions,
@@ -9,6 +14,18 @@ import { h } from 'hastscript'
 import rehypePrettyCode, {
   Options as RehypePrettyCodeOptions,
 } from 'rehype-pretty-code'
+
+const extractToc = async (markdown: string) => {
+  const processor = unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypeSlug)
+    .use(rehypeExtractToc)
+    .use(rehypeStringify)
+
+  const file = await processor.process(markdown)
+  return file.data.toc ?? []
+}
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -23,6 +40,12 @@ export const Post = defineDocumentType(() => ({
     category: { type: 'string' },
     tags: { type: 'list', of: { type: 'string' }, default: [] },
     draft: { type: 'boolean', default: false },
+  },
+  computedFields: {
+    toc: {
+      type: 'json',
+      resolve: (doc) => extractToc(doc.body.raw),
+    },
   },
 }))
 
