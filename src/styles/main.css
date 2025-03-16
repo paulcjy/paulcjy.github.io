@@ -2,6 +2,7 @@
 @import './dark-mode.css';
 @import './shadcn.css';
 @import './markdown-github.css';
+@import './shiki.css';
 
 @theme {
   --spacing-global-header-height: --spacing(12);
