@@ -8,3 +8,11 @@
   --spacing-global-header-height: --spacing(12);
   --spacing-sidebar-height: calc(100vh - var(--spacing-global-header-height));
 }
+
+@layer base {
+  html {
+    scroll-padding-top: calc(
+      var(--spacing-global-header-height) + --spacing(4)
+    );
+  }
+}
