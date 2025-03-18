@@ -101,8 +101,7 @@ export default makeSource({
 })
 
 interface Tag {
-  id: string
-  name: string
+  slug: string
   count: number
 }
 
@@ -112,15 +111,14 @@ const createTagMenuItems = (allPosts: PostType[]) => {
     (acc, post) => {
       if (post.tags && !post.draft) {
         post.tags.forEach((tag) => {
-          const tagId = tag
+          const slug = tag
             .replace(/[:/?#\[\]@!$&'()*+,;=% ]+/g, '-')
             .toLowerCase()
-          acc[tagId] ??= {
-            id: tagId,
-            name: tag.toLowerCase(),
+          acc[slug] ??= {
+            slug,
             count: 0,
           }
-          acc[tagId].count++
+          acc[slug].count++
         })
       }
       return acc
@@ -130,7 +128,7 @@ const createTagMenuItems = (allPosts: PostType[]) => {
 
   // 개수를 다 세고 배열로 변경하여 정렬
   const tags: Tag[] = Object.values(result).sort((a, b) =>
-    a.id.localeCompare(b.id),
+    a.slug.localeCompare(b.slug),
   )
 
   fs.writeFileSync(

@@ -1,6 +1,6 @@
 export interface CategoryMenuItem {
   name: string
-  href: string
+  slug: string
 }
 
 export interface CategoryMenuGroup {
@@ -10,25 +10,29 @@ export interface CategoryMenuGroup {
 
 export const categoryMenuItems: CategoryMenuGroup[] = [
   {
+    name: 'Web',
+    children: [
+      { name: '백엔드', slug: 'back-end' },
+      { name: '블로그', slug: 'blog' },
+    ],
+  },
+  {
     name: 'Linux',
     children: [
-      { name: 'Arch Linux', href: 'arch-linux' },
-      { name: 'Linux', href: 'linux' },
+      { name: 'Arch Linux', slug: 'arch-linux' },
+      { name: 'Linux', slug: 'linux' },
     ],
   },
   {
     name: 'Language',
     children: [
-      { name: 'JavaScript', href: 'javascript' },
-      { name: 'C++', href: 'cpp' },
-      { name: 'Python', href: 'python' },
+      { name: 'JavaScript', slug: 'javascript' },
+      { name: 'C++', slug: 'cpp' },
+      { name: 'Python', slug: 'python' },
     ],
   },
   {
-    name: 'Web',
-    children: [
-      { name: '백엔드', href: 'back-end' },
-      { name: '블로그', href: 'blog' },
-    ],
+    name: 'Algorithm',
+    children: [{ name: '알고리즘', slug: 'algorithm' }],
   },
 ]

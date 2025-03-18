@@ -16,20 +16,20 @@ export const CategoryMenu = () => {
 
   return (
     <>
-      {categoryMenuItems.map((group) => (
-        <SidebarGroup key={group.name}>
+      {categoryMenuItems.map((categoryGroup) => (
+        <SidebarGroup key={categoryGroup.name}>
           <SidebarGroupLabel className="font-bold">
-            {group.name}
+            {categoryGroup.name}
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {group.children.map((item) => (
-                <SidebarMenuItem key={item.name}>
+              {categoryGroup.children.map((category) => (
+                <SidebarMenuItem key={category.name}>
                   <SidebarMenuButton asChild>
-                    <Link href={`/blog/categories/${item.href}`}>
-                      {item.name}
+                    <Link href={`/blog/categories/${category.slug}`}>
+                      {category.name}
                       <SidebarMenuBadge className="font-normal opacity-50">
-                        {counts[item.name] ?? ''}
+                        {counts[category.slug] ?? ''}
                       </SidebarMenuBadge>
                     </Link>
                   </SidebarMenuButton>
