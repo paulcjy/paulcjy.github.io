@@ -1,4 +1,5 @@
 import { PostList } from '@/components/post-list'
+import { Sidebar } from '@/components/sidebar'
 import tagMenuItems from '@/data/.contentlayer/tag-menu-items.json'
 import { allPosts } from 'contentlayer/generated'
 
@@ -18,6 +19,9 @@ export default async function TagPage({
   return (
     <>
       <PostList posts={posts} />
+      <aside>
+        <Sidebar side="right" />
+      </aside>
     </>
   )
 }

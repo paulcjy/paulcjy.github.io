@@ -1,4 +1,5 @@
 import { PostList } from '@/components/post-list'
+import { Sidebar } from '@/components/sidebar'
 import { allPosts } from 'contentlayer/generated'
 
 export default function BlogPage() {
@@ -9,7 +10,9 @@ export default function BlogPage() {
   return (
     <>
       <PostList posts={posts} />
-      <aside>{/* <TOC /> */}</aside>
+      <aside>
+        <Sidebar side="right" />
+      </aside>
     </>
   )
 }

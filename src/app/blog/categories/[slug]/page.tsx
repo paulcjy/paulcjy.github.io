@@ -1,4 +1,5 @@
 import { PostList } from '@/components/post-list'
+import { Sidebar } from '@/components/sidebar'
 import { categoryMenuItems } from '@/data/category-menu-items'
 import { allPosts } from 'contentlayer/generated'
 
@@ -20,6 +21,9 @@ export default async function CategoryPage({
   return (
     <>
       <PostList posts={posts} />
+      <aside>
+        <Sidebar side="right" />
+      </aside>
     </>
   )
 }
