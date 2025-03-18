@@ -28,7 +28,7 @@ export const CategoryMenu = () => {
                   <SidebarMenuButton asChild>
                     <Link href={`/blog/categories/${item.href}`}>
                       {item.name}
-                      <SidebarMenuBadge className="font-normal">
+                      <SidebarMenuBadge className="font-normal opacity-50">
                         {counts[item.name] ?? ''}
                       </SidebarMenuBadge>
                     </Link>
