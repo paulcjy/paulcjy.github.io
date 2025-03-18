@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import { defineDocumentType, makeSource } from 'contentlayer2/source-files'
 import { Post as PostType } from 'contentlayer/generated'
 import { unified } from 'unified'
+import remarkGfm from 'remark-gfm'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeExtractToc from '@stefanprobst/rehype-extract-toc'
@@ -85,6 +86,7 @@ export default makeSource({
   contentDirPath: 'posts',
   documentTypes: [Post],
   mdx: {
+    remarkPlugins: [remarkGfm],
     rehypePlugins: [
       rehypeSlug,
       [rehypeAutolinkHeadings, rehypeAutolinkHeadingsOptions],
@@ -94,6 +96,7 @@ export default makeSource({
   onSuccess: async (importData) => {
     const { allPosts } = await importData()
     createTagMenuItems(allPosts)
+    createCategoryMenuCounts(allPosts)
   },
 })
 
@@ -133,5 +136,24 @@ const createTagMenuItems = (allPosts: PostType[]) => {
   fs.writeFileSync(
     'src/data/.contentlayer/tag-menu-items.json',
     JSON.stringify(tags, null, 2),
+  )
+}
+
+const createCategoryMenuCounts = (allPosts: PostType[]) => {
+  const counts: Record<string, number> = allPosts.reduce(
+    (acc, post) => {
+      if (!post.category || post.draft) return acc
+      acc[post.category] ??= 0
+      acc[post.category]++
+      return acc
+    },
+    {} as Record<string, number>,
+  )
+
+  console.log(counts)
+
+  fs.writeFileSync(
+    'src/data/.contentlayer/category-menu-counts.json',
+    JSON.stringify(counts, null, 2),
   )
 }
