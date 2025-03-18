@@ -4,7 +4,7 @@ import { allPosts } from 'contentlayer/generated'
 import { format, parseISO } from 'date-fns'
 
 export const generateStaticParams = () =>
-  allPosts.map((post) => ({ slug: post.slug }))
+  allPosts.map((post) => ({ slug: post.slug })).filter((post) => post.slug)
 
 export default async function PostPage({
   params,
