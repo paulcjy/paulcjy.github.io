@@ -2,9 +2,9 @@ import { PostList } from '@/components/post-list'
 import { allPosts } from 'contentlayer/generated'
 
 export default function BlogPage() {
-  const posts = allPosts
-    .filter((post) => !post.draft)
-    .sort((a, b) => new Date(b.created) - new Date(a.created))
+  const posts = allPosts.sort(
+    (a, b) => new Date(b.created) - new Date(a.created),
+  )
 
   return (
     <>
