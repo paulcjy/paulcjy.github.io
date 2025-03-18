@@ -32,4 +32,8 @@ export const categoryMenuItems: CategoryMenuGroup[] = [
     name: 'Algorithm',
     children: [{ name: '알고리즘', slug: 'algorithm' }],
   },
+  {
+    name: 'Others',
+    children: [{ name: 'GitHub Actions', slug: 'github-actions' }],
+  },
 ]
