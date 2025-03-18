@@ -1,4 +1,5 @@
 import { Post } from 'contentlayer/generated'
+import { format, parseISO } from 'date-fns'
 import Link from 'next/link'
 
 export const Item = ({ post }: { post: Post }) => {
@@ -14,7 +15,7 @@ export const Item = ({ post }: { post: Post }) => {
           dateTime={created}
           className="text-muted-foreground mb-2 block text-sm"
         >
-          {new Date(created).toLocaleDateString()}
+          {format(parseISO(created), 'yyyy. MM. dd.')}
         </time>
         {/* {description && <p>{description}</p>} */}
       </Link>
