@@ -26,8 +26,8 @@ export const TOC = ({ data }: { data: TocEntry[] }) => {
       { rootMargin: '-100px 0px -66%' },
     )
 
-    // 문서 내의 모든 h1, h2, h3를 관찰
-    const headings = Array.from(document.querySelectorAll('h1, h2, h3'))
+    // 문서 내의 모든 h2, h3를 관찰
+    const headings = Array.from(document.querySelectorAll('h2, h3'))
     headings.forEach((heading) => observer.observe(heading))
 
     return () => {

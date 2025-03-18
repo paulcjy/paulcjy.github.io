@@ -8,6 +8,9 @@ export const TocItem = ({
   entry: TocEntry
   activeId: string | null
 }) => {
+  const allowedDepth = [2, 3]
+  if (!allowedDepth.includes(entry.depth)) return null
+
   const isActive = entry.id === activeId
 
   // 링크 클릭 핸들러 - 부드러운 스크롤 구현
@@ -30,7 +33,7 @@ export const TocItem = ({
         onClick={(e) => handleClick(e, entry.id)}
         className={cn(
           'transition-colors hover:text-blue-600',
-          entry.depth === 2 && 'ml-4',
+          entry.depth === 3 && 'ml-4',
           isActive ? 'font-semibold text-blue-600' : 'text-muted-foreground',
         )}
       >
