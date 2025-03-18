@@ -51,9 +51,9 @@ export const TOC = ({ data }: { data: TocEntry[] }) => {
     }
   }, [])
 
-  if (!data || data.length === 0) {
-    return null
-  }
+  // if (!data || data.length === 0) {
+  //   return null
+  // }
 
   return (
     <Sidebar side="right" className="pt-16 text-sm">
