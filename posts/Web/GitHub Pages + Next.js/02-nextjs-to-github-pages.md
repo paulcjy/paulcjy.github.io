@@ -1,11 +1,12 @@
 ---
 title: Next.js 프로젝트를 GitHub Pages에 업로드하기
-slug:
+slug: blog2-deploy-to-github-pages
 created: 2023-11-15 23:21:00
 updated:
 description:
-category:
+category: blog2
 tags:
+published: true
 ---
 
 [Next.js 예제](https://github.com/vercel/next.js/tree/canary/examples/github-pages)

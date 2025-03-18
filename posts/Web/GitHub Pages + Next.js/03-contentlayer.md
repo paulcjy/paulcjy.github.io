@@ -1,11 +1,12 @@
 ---
 title: Contentlayer로 마크다운 파일 읽기
-slug:
+slug: blog2-contentlayer
 created: 2023-11-16 21:58:00
 updated:
 description:
-category: blog
+category: blog2
 tags: [contentlayer, markdown, nextjs, github-pages, github]
+published: true
 ---
 
 # Contentlayer란

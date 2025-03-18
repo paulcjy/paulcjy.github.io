@@ -1,11 +1,12 @@
 ---
 title: Utterances로 깃허브 페이지(Next.js)에 댓글 기능 만들기
-slug: utterances
+slug: blog2-utterances
 created: 2023-12-11 22:22:00
 updated:
 description:
-category: blog
+category: blog2
 tags: [nextjs, github, github-pages, blog, utterances, comment]
+published: true
 ---
 
 # Utterances

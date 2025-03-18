@@ -1,11 +1,12 @@
 ---
 title: 헤더(메뉴바) 뒤로 내용이 비치게 하기 - CSS opacity, blur
-slug:
+slug: blog2-header-opacity
 created: 2023-11-21
 updated:
 description:
-category:
+category: blog2
 tags:
+published: true
 ---
 
 # 투명도(opacity)

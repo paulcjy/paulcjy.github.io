@@ -1,11 +1,12 @@
 ---
 title: Contentlayer에서 highlight.js로 코드블럭 하이라이트
-slug:
+slug: blog2-highlight-js
 created: 2023-11-18 21:30:00
 updated:
 description:
-category:
+category: blog2
 tags: [contentlayer, markdown, highlight-js]
+published: true
 ---
 
 마크다운에 깃허브 스타일을 적용했지만, 코드블럭은 하이라이트되지 않는다. Contentlayer에서는 플러그인 설치와 설정만 하면 쉽게 코드를 하이라이트 할 수 있다. Contentlayer 공식 문서에서 [rehype-highlight][2]를 사용했기 때문에 그대로 따라했다.

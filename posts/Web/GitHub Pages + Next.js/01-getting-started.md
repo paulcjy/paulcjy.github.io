@@ -1,11 +1,12 @@
 ---
 title: 'Repository와 Next.js 프로젝트 생성'
-slug:
+slug: blog2-getting-started
 created: 2023-11-15 19:51:00
 updated:
 description:
-category:
+category: blog2
 tags:
+published: true
 ---
 
 # GitHub Repository 생성

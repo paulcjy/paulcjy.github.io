@@ -1,11 +1,12 @@
 ---
 title: GitHub Actions로 배포 자동화
 created: 2023-12-05
-slug:
+slug: blog2-deploy-with-github-actions
 updated:
 description:
-category:
+category: blog2
 tags:
+published: true
 ---
 
 # 자동화를 시도한 이유

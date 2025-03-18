@@ -1,11 +1,12 @@
 ---
 title: '[Next.js]빌드 에러: Warning Assign arrow function to a variable before exporting as module default import no-anonymous-default-export'
 created: 2023-11-23
-slug:
+slug: blog2-const-page-error
 updated:
 description:
-category:
+category: blog2
 tags:
+published: true
 ---
 
 Next.js에서 `page.tsx`에 이름 없이 arrow function만 사용했다. 어차피 이름은 사용되지 않고 `export default`가 페이지 컴포넌트로 사용되기 때문이다.

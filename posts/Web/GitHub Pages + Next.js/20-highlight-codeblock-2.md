@@ -12,10 +12,11 @@ tags:
     starry-night,
     pretty-lights,
   ]
-slug:
+slug: blog2-starry-night
 updated:
 description:
-category:
+category: blog2
+published: true
 ---
 
 # 문제

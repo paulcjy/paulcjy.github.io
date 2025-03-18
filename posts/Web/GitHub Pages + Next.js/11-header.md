@@ -1,9 +1,10 @@
 ---
 title: 헤더(메뉴) 만들기
-created: 2023-11-20
-tags: [header]
 slug:
+created: 2023-11-20
 updated:
 description:
-category:
+category: blog2
+tags: [header]
+published: true
 ---

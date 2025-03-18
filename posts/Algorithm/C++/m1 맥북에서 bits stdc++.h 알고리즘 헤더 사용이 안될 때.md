@@ -1,6 +1,6 @@
 ---
+title: '[C++] 맥에서 <bits/stdc++.h> 사용하기'
 slug: bits-stdcpp-in-mac
-
 created: 2024-04-09
 updated:
 description:

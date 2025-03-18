@@ -1,11 +1,12 @@
 ---
 title: 다크 모드와 라이트 모드 추가하기(next-themes + tailwindcss)
-slug:
+slug: blog2-themes
 created: 2023-11-17 22:08:00
 updated:
 description:
-category:
+category: blog2
 tags: [dark-mode, light-mode, nextjs, github-pages, github-blog, next-themes]
+published: true
 ---
 
 # next-themes

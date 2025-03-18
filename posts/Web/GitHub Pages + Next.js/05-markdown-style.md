@@ -1,11 +1,12 @@
 ---
 title: 마크다운에 깃허브 스타일 적용하기
-slug:
+slug: blog2-github-style-markdown
 created: 2023-11-18 12:44:00
 updated:
 description:
-category:
+category: blog2
 tags: [markdown, github]
+published: true
 ---
 
 # github-markdown-css

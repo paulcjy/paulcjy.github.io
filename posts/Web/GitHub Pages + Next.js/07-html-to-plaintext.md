@@ -1,11 +1,12 @@
 ---
 title: html로 변환한 마크다운에서 정규표현식으로 html 태그 제거
-slug:
+slug: blog2-extract-summary-from-html
 created: 2023-11-18 23:28:00
 updated:
 description:
-category:
+category: blog2
 tags: [html, markdown, javascript, replace-all]
+published: true
 ---
 
 # 문제

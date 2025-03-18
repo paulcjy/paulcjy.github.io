@@ -1,11 +1,12 @@
 ---
 title: encodeURI와 encodeURIComponent
 created: 2023-11-20
-slug:
+slug: blog2-encode-uri
 updated:
 description:
-category:
+category: blog2
 tags:
+published: true
 ---
 
 # 문제 상황
