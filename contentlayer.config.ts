@@ -61,7 +61,7 @@ const rehypeAutolinkHeadingsOptions: RehypeAutolinkHeadingsOptions = {
   properties: {
     className: ['anchor'],
   },
-  content: (node) =>
+  content: () =>
     h(
       'svg',
       {
@@ -93,8 +93,7 @@ export default makeSource({
   },
   onSuccess: async (importData) => {
     const { allPosts } = await importData()
-    console.log('allPosts: ', allPosts.length)
-    createTagSidebarItems(allPosts)
+    createTagMenuItems(allPosts)
   },
 })
 
@@ -104,7 +103,7 @@ interface Tag {
   count: number
 }
 
-const createTagSidebarItems = (allPosts: PostType[]) => {
+const createTagMenuItems = (allPosts: PostType[]) => {
   // 배열로 저장해야 하지만 태그의 개수를 쉽게 세기 위해 태그 id가 키값인 객체로 생성
   const result: Record<string, Tag> = allPosts.reduce(
     (acc, post) => {
@@ -135,6 +134,4 @@ const createTagSidebarItems = (allPosts: PostType[]) => {
     'src/data/.contentlayer/tag-menu-items.json',
     JSON.stringify(tags, null, 2),
   )
-
-  console.log('Tag menu data succesfully generated as TypeScript')
 }
