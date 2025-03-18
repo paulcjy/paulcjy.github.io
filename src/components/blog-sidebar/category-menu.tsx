@@ -1,4 +1,4 @@
-import { categoryMenuItems } from '@/data/blog-sidebar'
+import { categoryMenuItems } from '@/data/category-menu-items'
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -7,19 +7,24 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
 } from '@/ui/sidebar'
+import Link from 'next/link'
 
 export const CategoryMenu = () => {
   return (
     <>
-      {categoryMenuItems.category.map((group, groupIndex) => (
-        <SidebarGroup key={`${group.title}-${groupIndex}`}>
-          <SidebarGroupLabel>{group.title}</SidebarGroupLabel>
+      {categoryMenuItems.map((group) => (
+        <SidebarGroup key={group.name}>
+          <SidebarGroupLabel className="font-bold">
+            {group.name}
+          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {group.children.map((item, itemIndex) => (
-                <SidebarMenuItem key={`${item.title}-${itemIndex}`}>
+              {group.children.map((item) => (
+                <SidebarMenuItem key={item.name}>
                   <SidebarMenuButton asChild>
-                    <a href={item.href}>{item.title}</a>
+                    <Link href={`/blog/categories/${item.href}`}>
+                      {item.name}
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
