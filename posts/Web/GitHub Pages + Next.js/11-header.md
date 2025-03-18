@@ -6,5 +6,4 @@ updated:
 description:
 category: blog2
 tags: [header]
-published: true
 ---
