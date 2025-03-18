@@ -1,4 +1,5 @@
 import { categoryMenuItems } from '@/data/category-menu-items'
+import categoryMenuCounts from '@/data/.contentlayer/category-menu-counts.json'
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -6,10 +7,13 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
+  SidebarMenuBadge,
 } from '@/ui/sidebar'
 import Link from 'next/link'
 
 export const CategoryMenu = () => {
+  const counts: Record<string, number> = categoryMenuCounts
+
   return (
     <>
       {categoryMenuItems.map((group) => (
@@ -24,6 +28,9 @@ export const CategoryMenu = () => {
                   <SidebarMenuButton asChild>
                     <Link href={`/blog/categories/${item.href}`}>
                       {item.name}
+                      <SidebarMenuBadge className="font-normal">
+                        {counts[item.name] ?? ''}
+                      </SidebarMenuBadge>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
