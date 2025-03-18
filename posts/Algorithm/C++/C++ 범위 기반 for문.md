@@ -2,7 +2,11 @@
 title: '[C++]범위기반 for문(Range-based for loop)'
 slug: cpp-range-based-for
 created: 2024-03-13
+updated:
+description:
+category: C++
 tags:
+published: true
 ---
 
 [Microsoft - 범위 기반 for문](https://learn.microsoft.com/ko-kr/cpp/cpp/range-based-for-statement-cpp?view=msvc-170)
@@ -49,4 +53,3 @@ for ( const auto &y : x ) {
 - 자동으로 배열을 인식한다.
 - `.begin()`과 `.end()`가 있는 컨테이너를 인식한다.
 - 나머지에 대해서는 `begin()`/`end()` argument-dependent lookup을 사용한다.
-

@@ -2,6 +2,11 @@
 title: '[C++]Map'
 slug: cpp-map
 created: 2024-05-21
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, map]
+published: true
 ---
 
 ```cpp
@@ -27,4 +32,3 @@ int main() {
 참고
 
 - https://life-with-coding.tistory.com/305
-

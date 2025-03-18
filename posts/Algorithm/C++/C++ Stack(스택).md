@@ -2,7 +2,11 @@
 title: '[C++]Stack(스택)'
 slug: cpp-stack
 created: 2024-03-18
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, stack]
+published: true
 ---
 
 # 헤더

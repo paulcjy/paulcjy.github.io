@@ -2,6 +2,11 @@
 title: '[C++]List(리스트)'
 slug: cpp-list
 created: 2024-03-13
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, list]
+published: true
 ---
 
 # 헤더
@@ -40,4 +45,3 @@ list<int> l;
 [모두의 코드 - 리스트][1]
 
 [1]: https://modoocode.com/177
-

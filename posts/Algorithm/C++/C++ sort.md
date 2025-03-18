@@ -2,7 +2,11 @@
 title: '[C++]sort()'
 slug: cpp-sort
 created: 2024-03-27
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, sort]
+published: true
 ---
 
 # 사용법
@@ -38,4 +42,3 @@ sort(arr, arr + n, greater<>());
 ```
 
 > `greater`는 두 값 중 첫번째 값이 클 경우 `true`를 반환하는 함수이다.
-

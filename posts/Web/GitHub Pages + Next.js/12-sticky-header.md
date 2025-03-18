@@ -1,6 +1,10 @@
 ---
 title: 헤더(메뉴바) 상단에 고정하기
 created: 2023-11-21
+slug:
+updated:
+description:
+category:
 tags:
 ---
 

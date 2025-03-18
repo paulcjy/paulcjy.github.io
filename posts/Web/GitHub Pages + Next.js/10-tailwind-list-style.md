@@ -1,6 +1,10 @@
 ---
 title: tailwind css에서 리스트 항목(<li>)에 숫자나 기호 표시하기
+slug:
 created: 2023-11-20
+updated:
+description:
+category:
 tags:
 ---
 

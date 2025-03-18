@@ -1,7 +1,12 @@
 ---
 title: '[GitHub Actions 공식문서]Workflow on.push 이벤트'
+slug: github-actions-on-push
 created: 2023-12-02
+updated:
+description:
+category: GitHub Actions
 tags:
+published: true
 ---
 
 # `on.push.<branches|tags|branches-ignore|tags-ignore>`

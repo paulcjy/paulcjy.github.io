@@ -2,7 +2,11 @@
 title: '[C++]XOR'
 slug: cpp-logical-xor
 created: 2024-05-19
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, xor]
+published: true
 ---
 
 # XOR
@@ -24,4 +28,3 @@ int b = 10;
 if (!a != !b) cout << true;
 else cout << false;
 ```
-

@@ -1,7 +1,12 @@
 ---
 title: '[GitHub Actions 공식문서]GitHub Actions의 이해'
+slug: github-actions-overview
 created: 2023-12-01
-tags:
+updated:
+description:
+category: GitHub Actions
+tags: [github, actions, github actions]
+published: true
 ---
 
 [GitHub Actions의 이해][1]

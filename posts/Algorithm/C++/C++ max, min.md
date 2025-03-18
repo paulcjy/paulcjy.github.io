@@ -2,7 +2,11 @@
 title: '[C++]max(), min()'
 slug: cpp-max-min
 created: 2024-03-25
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, max, min]
+published: true
 ---
 
 # max / min
@@ -36,4 +40,3 @@ int mIndex = std::min_element(v.begin(), v.end()) - v.begin();
 
 반환값이 iterator라는 것에 주의.
 요소에 하나씩 접근하여 최대/최소를 구하므로 시간복잡도는 O(n)이다.
-

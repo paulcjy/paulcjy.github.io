@@ -12,6 +12,10 @@ tags:
     starry night,
     pretty lights,
   ]
+slug:
+updated:
+description:
+category:
 ---
 
 # 문제

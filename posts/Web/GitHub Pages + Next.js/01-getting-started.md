@@ -1,6 +1,11 @@
 ---
 title: 'Repository와 Next.js 프로젝트 생성'
+slug:
 created: 2023-11-15 19:51:00
+updated:
+description:
+category:
+tags:
 ---
 
 # GitHub Repository 생성

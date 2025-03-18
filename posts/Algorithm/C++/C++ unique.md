@@ -2,7 +2,11 @@
 title: '[C++]unique() - 중복 제거'
 slug: cpp-unique
 created: 2024-05-22
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, unique]
+published: true
 ---
 
 `unique` 함수는 벡터에서 중복된(버릴) 원소들을 맨 뒤로 옮겨준다. 그리고 버릴 원소들의 시작점을 반복자로 리턴한다.
@@ -11,4 +15,3 @@ tags:
 [참고 - cppreference][1]
 
 [1]: https://en.cppreference.com/w/cpp/algorithm/unique
-

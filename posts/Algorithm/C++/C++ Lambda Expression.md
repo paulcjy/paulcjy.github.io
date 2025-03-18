@@ -2,6 +2,11 @@
 title: '[C++]람다 표현식(Lambda Expression)'
 slug: cpp-lambda-expression
 created: 2024-05-18
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, lambda]
+published: true
 ---
 
 # 참고
@@ -15,4 +20,3 @@ created: 2024-05-18
 [2]: https://blog.koriel.kr/modern-cpp-lambdayi-teugjinggwa-sayongbeob/
 [3]: https://en.cppreference.com/w/cpp/language/lambda
 [4]: https://www.geeksforgeeks.org/lambda-expression-in-c/
-

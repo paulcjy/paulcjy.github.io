@@ -2,7 +2,11 @@
 title: '[C++]Tuple(튜플)'
 slug: cpp-tuple
 created: 2024-03-16
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, tuple]
+published: true
 ---
 
 # 헤더
@@ -38,4 +42,3 @@ char z;
 tie(x, y, z) = t2;
 // x = 30, y = "world", z = 'd'
 ```
-

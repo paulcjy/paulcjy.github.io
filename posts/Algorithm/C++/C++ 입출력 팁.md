@@ -2,7 +2,11 @@
 title: '[C++]입출력 팁'
 slug: cpp-io-tip
 created: 2024-03-11
+updated:
+description:
+category: C++
 tags:
+published: true
 ---
 
 # ios::sync_with_stdio(false)

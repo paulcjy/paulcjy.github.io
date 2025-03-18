@@ -2,7 +2,11 @@
 title: 순열과 조합
 slug: cpp-combination-permutation
 created: 2024-03-13
+updated:
+description:
+category: C++
 tags:
+published: true
 ---
 
 # 조합 (nCr)
@@ -63,4 +67,3 @@ do {
 	reverse(num+r, num+n);
 } while (next_permutation(num, num+n));
 ```
-

@@ -1,6 +1,10 @@
 ---
 title: 헤더(메뉴바) 뒤로 내용이 비치게 하기 - CSS opacity, blur
+slug:
 created: 2023-11-21
+updated:
+description:
+category:
 tags:
 ---
 

@@ -1,6 +1,10 @@
 ---
 title: encodeURI와 encodeURIComponent
 created: 2023-11-20
+slug:
+updated:
+description:
+category:
 tags:
 ---
 

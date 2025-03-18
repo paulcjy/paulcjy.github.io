@@ -1,6 +1,10 @@
 ---
 title: html로 변환한 마크다운에서 정규표현식으로 html 태그 제거
+slug:
 created: 2023-11-18 23:28:00
+updated:
+description:
+category:
 tags: [html, markdown, plain text, javascript, replaceAll]
 ---
 

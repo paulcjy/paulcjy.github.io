@@ -1,6 +1,10 @@
 ---
 title: Contentlayer로 마크다운 파일 읽기
+slug:
 created: 2023-11-16 21:58:00
+updated:
+description:
+category: blog
 tags: [contentlayer, markdown, Next.js, GitHub Pages, GitHub]
 ---
 
@@ -214,7 +218,7 @@ function PostCard(post: Post) {
 
 export default function Home() {
   const posts = allPosts.sort((a, b) =>
-    compareDesc(new Date(a.date), new Date(b.date))
+    compareDesc(new Date(a.date), new Date(b.date)),
   )
 
   return (

@@ -2,7 +2,11 @@
 title: '[C++]컨테이너에서 원소 제거하기'
 slug: cpp-erase
 created: 2024-04-29
+updated:
+description:
+category: C++
 tags:
+published: true
 ---
 
 [참고: stackoverflow - Remove elements of a vector inside the loop][1]
@@ -39,4 +43,3 @@ c.erase(
 
 [1]: https://stackoverflow.com/questions/8628951/remove-elements-of-a-vector-inside-the-loop
 [2]: https://cplusplus.com/reference/algorithm/remove_if/
-

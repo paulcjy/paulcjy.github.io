@@ -2,7 +2,11 @@
 title: '[C++]iota() - Python의 range같은 함수'
 slug: cpp-iota
 created: 2024-04-15
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, iota, range]
+published: true
 ---
 
 [cpp reference][1]
@@ -40,4 +44,3 @@ iota(arr, arr+5, 1);
 
 [1]: https://en.cppreference.com/w/cpp/algorithm/iota
 [2]: https://en.cppreference.com/w/cpp/algorithm/generate
-

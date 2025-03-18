@@ -2,7 +2,11 @@
 title: '[C++]scanf()로 string 입력받기'
 slug: cpp-scanf-string
 created: 2024-03-14
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, scanf, string]
+published: true
 ---
 
 `scanf`로는 `string` 변수에 바로 저장할 수 없다.
@@ -15,4 +19,3 @@ string str;
 scanf("%s", input);
 str = input;
 ```
-

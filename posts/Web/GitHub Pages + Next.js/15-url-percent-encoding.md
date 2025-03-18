@@ -1,6 +1,10 @@
 ---
 title: 퍼센트(%)로 인코딩된 URL 깔끔하게 정리하기
 created: 2023-12-10 23:05:00
+slug:
+updated:
+description:
+category:
 tags:
 ---
 

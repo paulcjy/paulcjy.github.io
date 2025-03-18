@@ -1,6 +1,10 @@
 ---
 title: '[Next.js]Error: Page ~ is missing param ~ in generateStaticParams(), which is required with output export config'
 created: 2023-11-21
+slug:
+updated:
+description:
+category:
 tags:
 ---
 

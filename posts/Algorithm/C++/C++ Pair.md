@@ -2,7 +2,11 @@
 title: '[C++]Pair'
 slug: cpp-pair
 created: 2024-03-12
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, pair]
+published: true
 ---
 
 #cpp
@@ -32,4 +36,3 @@ p.second
 
 make_pair(1, 2);
 ```
-

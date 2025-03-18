@@ -1,6 +1,10 @@
 ---
 title: Contentlayer에서 highlight.js로 코드블럭 하이라이트
+slug:
 created: 2023-11-18 21:30:00
+updated:
+description:
+category:
 tags: [contentlayer, markdown, highlight.js]
 ---
 

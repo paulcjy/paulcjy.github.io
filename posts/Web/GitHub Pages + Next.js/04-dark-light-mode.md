@@ -1,6 +1,10 @@
 ---
 title: 다크 모드와 라이트 모드 추가하기(next-themes + tailwindcss)
+slug:
 created: 2023-11-17 22:08:00
+updated:
+description:
+category:
 tags: [dark mode, light mode, next.js, github pages, github blog, next-themes]
 ---
 
@@ -148,7 +152,7 @@ const ThemeSwitch = () => {
       aria-label="Toggle Dark Mode"
       onClick={() =>
         setTheme(
-          theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark'
+          theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark',
         )
       }
     >

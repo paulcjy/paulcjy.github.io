@@ -1,6 +1,10 @@
 ---
 title: 스크롤바 항상 보이게 하기
+slug:
 created: 2023-11-18
+updated:
+description:
+category:
 tags: [css, scroll, scroll bar, tailwind, tailwind css]
 ---
 

@@ -2,7 +2,11 @@
 title: '[C++]Queue(큐)'
 slug: cpp-queue
 created: 2024-03-22
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, queue]
+published: true
 ---
 
 # 헤더

@@ -1,6 +1,10 @@
 ---
 title: GitHub Actions로 배포 자동화
 created: 2023-12-05
+slug:
+updated:
+description:
+category:
 tags:
 ---
 

@@ -2,7 +2,11 @@
 title: '[C++]fill(), fill_n()'
 slug: cpp-fill-filln
 created: 2024-03-15
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, fill, filln]
+published: true
 ---
 
 # fill
@@ -66,4 +70,3 @@ fill_n(&d4[0][0][0][0], sizeof(d4), value);
 # 참고
 
 [[C++ memset]]
-

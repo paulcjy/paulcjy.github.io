@@ -2,7 +2,11 @@
 title: '[C++]for each문'
 slug: cpp-for-each
 created: 2024-03-16
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, for each]
+published: true
 ---
 
 [Microsoft - for each문](https://learn.microsoft.com/ko-kr/cpp/dotnet/for-each-in?view=msvc-170)
@@ -14,4 +18,3 @@ for each ( type-identifier in expression ) {
 	statements
 }
 ```
-

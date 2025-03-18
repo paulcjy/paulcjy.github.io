@@ -2,7 +2,11 @@
 title: '[C++]memset()'
 slug: cpp-memset
 created: 2024-03-12
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, memset]
+published: true
 ---
 
 [cpp reference][1]
@@ -27,4 +31,3 @@ memset(시작주소, 입력값, 개수);
 [[C++ fill, fill_n]]
 
 [1]: https://en.cppreference.com/w/cpp/string/byte/memset
-

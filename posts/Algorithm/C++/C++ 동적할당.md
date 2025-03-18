@@ -2,7 +2,11 @@
 title: '[C++]동적할당'
 slug: cpp-new
 created: 2024-03-10
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, new]
+published: true
 ---
 
 # 변수 할당
@@ -64,4 +68,3 @@ int main() {
 	return 0;
 }
 ```
-

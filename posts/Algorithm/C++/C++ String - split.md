@@ -2,7 +2,11 @@
 title: '[C++]문자열 split 함수 구현'
 slug: cpp-string-split
 created: 2024-03-29
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, string, split]
+published: true
 ---
 
 # stringstream 사용
@@ -35,4 +39,3 @@ vector<string> split(string input, char delim) {
 	return result;
 }
 ```
-

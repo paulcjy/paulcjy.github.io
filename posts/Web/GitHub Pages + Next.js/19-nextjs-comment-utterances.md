@@ -1,6 +1,10 @@
 ---
 title: Utterances로 깃허브 페이지(Next.js)에 댓글 기능 만들기
+slug: utterances
 created: 2023-12-11 22:22:00
+updated:
+description:
+category: blog
 tags: [nextjs, github, github pages, blog, utterances, comment]
 ---
 
@@ -80,7 +84,7 @@ export const Utterances = () => {
         scriptElement.setAttribute('label', '✨💬✨')
         scriptElement.setAttribute(
           'theme',
-          theme === 'light' ? 'github-light' : 'github-dark'
+          theme === 'light' ? 'github-light' : 'github-dark',
         )
         scriptElement.setAttribute('crossorigin', 'anonymous')
         scriptElement.setAttribute('async', 'true')

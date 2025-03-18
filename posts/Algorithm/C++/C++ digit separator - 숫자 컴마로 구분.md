@@ -2,7 +2,11 @@
 title: '[C++]큰 수를 읽기 쉽게 구분하기'
 slug: cpp-digit-separator
 created: 2024-05-03
-tags:
+updated:
+description:
+category: C++
+tags: [cpp, algorithm]
+published: true
 ---
 
 작은 따옴표(`'`)를 숫자에 컴마 역할을 하도록 사용할 수 있다.

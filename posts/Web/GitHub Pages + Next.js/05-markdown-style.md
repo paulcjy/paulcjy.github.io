@@ -1,6 +1,10 @@
 ---
 title: 마크다운에 깃허브 스타일 적용하기
+slug:
 created: 2023-11-18 12:44:00
+updated:
+description:
+category:
 tags: [markdown, GitHub]
 ---
 
@@ -38,7 +42,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         <h1 className="text-3xl font-bold">{post.title}</h1>
       </div>
       <div
-        className="[&>*]:mb-3 [&>*:last-child]:mb-0 markdown-body" // 여기
+        className="markdown-body [&>*]:mb-3 [&>*:last-child]:mb-0" // 여기
         dangerouslySetInnerHTML={{ __html: post.body.html }}
       />
     </article>

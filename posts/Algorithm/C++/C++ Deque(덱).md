@@ -2,6 +2,11 @@
 title: '[C++]Deque(덱)'
 slug: cpp-deque
 created: 2024-03-18
+updated:
+description:
+category: C++
+tags: [cpp, algorithm, deque]
+published: true
 ---
 
 # 헤더
@@ -34,4 +39,3 @@ deque<int> dq;
 [모두의 코드 - 덱][1]
 
 [1]: https://modoocode.com/176
-

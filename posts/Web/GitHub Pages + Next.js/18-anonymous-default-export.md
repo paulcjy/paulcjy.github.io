@@ -1,6 +1,10 @@
 ---
 title: '[Next.js]빌드 에러: Warning Assign arrow function to a variable before exporting as module default import no-anonymous-default-export'
 created: 2023-11-23
+slug:
+updated:
+description:
+category:
 tags:
 ---
 
