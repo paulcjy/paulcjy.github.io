@@ -11,16 +11,13 @@ export interface CategoryMenuGroup {
 export const categoryMenuItems: CategoryMenuGroup[] = [
   {
     name: 'Web',
-    children: [
-      { name: '백엔드', slug: 'back-end' },
-      { name: '블로그', slug: 'blog' },
-    ],
+    children: [{ name: '개발 블로그 v2 (Next.js)', slug: 'blog2' }],
   },
   {
     name: 'Linux',
     children: [
-      { name: 'Arch Linux', slug: 'arch-linux' },
       { name: 'Linux', slug: 'linux' },
+      { name: 'Arch Linux', slug: 'arch-linux' },
     ],
   },
   {
