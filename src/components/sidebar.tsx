@@ -24,6 +24,7 @@ export const Sidebar = ({
           '!h-sidebar-height top-global-header-height border-none',
           className,
         )}
+        {...props}
       >
         {children}
       </UISidebar>

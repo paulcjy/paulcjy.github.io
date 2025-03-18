@@ -4,7 +4,7 @@ import { allPosts } from 'contentlayer/generated'
 
 export default function BlogPage() {
   const posts = allPosts.sort(
-    (a, b) => new Date(b.created) - new Date(a.created),
+    (a, b) => new Date(b.created).getTime() - new Date(a.created).getTime(),
   )
 
   return (

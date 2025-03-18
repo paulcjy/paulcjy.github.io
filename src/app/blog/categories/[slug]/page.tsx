@@ -16,7 +16,9 @@ export default async function CategoryPage({
   const { slug } = await params
   const posts = allPosts
     .filter((post) => post.category === slug)
-    .sort((a, b) => new Date(b.created) - new Date(a.created))
+    .sort(
+      (a, b) => new Date(b.created).getTime() - new Date(a.created).getTime(),
+    )
 
   return (
     <>

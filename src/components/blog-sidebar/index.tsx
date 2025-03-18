@@ -12,7 +12,7 @@ import {
 import { Content, contents } from '@/data/blog-sidebar'
 import { ScrollArea } from '@/ui/scroll-area'
 import { ContentSelector } from './content-selector'
-import { ComponentProps, useState } from 'react'
+import { useState } from 'react'
 import { CategoryMenu } from './category-menu'
 import { TagMenu } from './tag-menu'
 import { DiaryMenu } from './diary-menu'
