@@ -40,7 +40,7 @@ export const Post = defineDocumentType(() => ({
     description: { type: 'string' },
     category: { type: 'string' },
     tags: { type: 'list', of: { type: 'string' }, default: [] },
-    draft: { type: 'boolean', default: false },
+    published: { type: 'boolean', required: true },
   },
   computedFields: {
     toc: {
