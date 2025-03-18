@@ -5,6 +5,7 @@ import {
   SidebarContent,
   SidebarHeader,
   SidebarMenu,
+  SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/ui/sidebar'
@@ -16,11 +17,9 @@ import { CategoryMenu } from './category-menu'
 import { TagMenu } from './tag-menu'
 import { DiaryMenu } from './diary-menu'
 import Link from 'next/link'
+import { count as totalCount } from '@/data/.contentlayer/total-post-count.json'
 
-export const BlogSidebar = ({
-  side,
-  className,
-}: ComponentProps<'div'> & { side?: 'left' | 'right' }) => {
+export const BlogSidebar = () => {
   const [selectedContent, setSelectedContent] = useState<Content>(contents[0])
 
   const renderSidebarContent = () => {
@@ -46,6 +45,9 @@ export const BlogSidebar = ({
             <SidebarMenuButton asChild>
               <Link href="/blog">
                 <span className="font-semibold">전체 글 보기</span>
+                <SidebarMenuBadge className="font-normal opacity-80">
+                  {totalCount}
+                </SidebarMenuBadge>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
