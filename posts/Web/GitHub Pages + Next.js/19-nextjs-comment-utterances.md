@@ -5,7 +5,7 @@ created: 2023-12-11 22:22:00
 updated:
 description:
 category: blog
-tags: [nextjs, github, github pages, blog, utterances, comment]
+tags: [nextjs, github, github-pages, blog, utterances, comment]
 ---
 
 # Utterances

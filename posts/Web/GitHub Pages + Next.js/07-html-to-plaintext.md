@@ -5,7 +5,7 @@ created: 2023-11-18 23:28:00
 updated:
 description:
 category:
-tags: [html, markdown, plain text, javascript, replaceAll]
+tags: [html, markdown, javascript, replace-all]
 ---
 
 # 문제

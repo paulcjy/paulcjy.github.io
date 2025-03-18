@@ -4,7 +4,7 @@ slug: cpp-new
 created: 2024-03-10
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, new]
 published: true
 ---

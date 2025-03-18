@@ -4,7 +4,7 @@ slug: cpp-pair
 created: 2024-03-12
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, pair]
 published: true
 ---

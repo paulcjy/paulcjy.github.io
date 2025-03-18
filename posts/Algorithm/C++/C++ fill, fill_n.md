@@ -4,7 +4,7 @@ slug: cpp-fill-filln
 created: 2024-03-15
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, fill, filln]
 published: true
 ---

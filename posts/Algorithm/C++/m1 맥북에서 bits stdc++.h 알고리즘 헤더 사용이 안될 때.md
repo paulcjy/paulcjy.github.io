@@ -4,7 +4,7 @@ slug: bits-stdcpp-in-mac
 created: 2024-04-09
 updated:
 description:
-category: C++
+category: cpp
 tags:
 published: true
 ---

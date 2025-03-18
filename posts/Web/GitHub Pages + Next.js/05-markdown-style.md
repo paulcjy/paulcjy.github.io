@@ -5,7 +5,7 @@ created: 2023-11-18 12:44:00
 updated:
 description:
 category:
-tags: [markdown, GitHub]
+tags: [markdown, github]
 ---
 
 # github-markdown-css

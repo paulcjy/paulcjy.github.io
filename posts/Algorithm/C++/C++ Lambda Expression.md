@@ -4,7 +4,7 @@ slug: cpp-lambda-expression
 created: 2024-05-18
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, lambda]
 published: true
 ---

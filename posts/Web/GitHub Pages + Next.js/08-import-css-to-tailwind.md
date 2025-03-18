@@ -5,7 +5,7 @@ created: 2023-11-19 14:47:00
 updated:
 description:
 category:
-tags: [tailwind, tailwindcss, import, css files]
+tags: [tailwind, import]
 ---
 
 ```css

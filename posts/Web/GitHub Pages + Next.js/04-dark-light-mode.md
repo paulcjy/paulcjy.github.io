@@ -5,7 +5,7 @@ created: 2023-11-17 22:08:00
 updated:
 description:
 category:
-tags: [dark mode, light mode, next.js, github pages, github blog, next-themes]
+tags: [dark-mode, light-mode, nextjs, github-pages, github-blog, next-themes]
 ---
 
 # next-themes

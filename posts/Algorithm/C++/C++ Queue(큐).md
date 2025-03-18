@@ -4,7 +4,7 @@ slug: cpp-queue
 created: 2024-03-22
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, queue]
 published: true
 ---

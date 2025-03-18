@@ -4,7 +4,7 @@ slug: cpp-deque
 created: 2024-03-18
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, deque]
 published: true
 ---

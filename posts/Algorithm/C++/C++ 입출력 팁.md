@@ -4,7 +4,7 @@ slug: cpp-io-tip
 created: 2024-03-11
 updated:
 description:
-category: C++
+category: cpp
 tags:
 published: true
 ---

@@ -4,7 +4,7 @@ slug: cpp-logical-xor
 created: 2024-05-19
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, xor]
 published: true
 ---

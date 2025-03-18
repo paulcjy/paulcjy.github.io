@@ -4,7 +4,7 @@ slug: cpp-tuple
 created: 2024-03-16
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, tuple]
 published: true
 ---

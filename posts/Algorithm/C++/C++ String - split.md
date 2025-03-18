@@ -4,7 +4,7 @@ slug: cpp-string-split
 created: 2024-03-29
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, string, split]
 published: true
 ---

@@ -4,7 +4,7 @@ slug: github-actions-on-push
 created: 2023-12-02
 updated:
 description:
-category: GitHub Actions
+category: github-actions
 tags:
 published: true
 ---

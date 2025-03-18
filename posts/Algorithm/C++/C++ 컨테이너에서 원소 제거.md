@@ -4,7 +4,7 @@ slug: cpp-erase
 created: 2024-04-29
 updated:
 description:
-category: C++
+category: cpp
 tags:
 published: true
 ---

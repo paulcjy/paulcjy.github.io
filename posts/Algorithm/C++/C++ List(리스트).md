@@ -4,7 +4,7 @@ slug: cpp-list
 created: 2024-03-13
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, list]
 published: true
 ---

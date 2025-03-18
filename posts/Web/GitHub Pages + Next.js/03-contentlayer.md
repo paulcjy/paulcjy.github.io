@@ -5,7 +5,7 @@ created: 2023-11-16 21:58:00
 updated:
 description:
 category: blog
-tags: [contentlayer, markdown, Next.js, GitHub Pages, GitHub]
+tags: [contentlayer, markdown, nextjs, github-pages, github]
 ---
 
 # Contentlayer란

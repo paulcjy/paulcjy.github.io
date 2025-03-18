@@ -5,7 +5,7 @@ created: 2023-11-18
 updated:
 description:
 category:
-tags: [css, scroll, scroll bar, tailwind, tailwind css]
+tags: [css, scroll, scroll-bar, tailwind]
 ---
 
 길이가 짧은 페이지에는 스크롤바가 없고, 길이가 길어지면 스크롤바가 생기니 페이지를 이동할 때마다 화면이 좌우로 조금씩 왔다갔다 했다. 그래서 항상 스크롤바를 띄우기로 했다.

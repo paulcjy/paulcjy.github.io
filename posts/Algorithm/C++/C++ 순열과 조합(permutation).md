@@ -4,7 +4,7 @@ slug: cpp-combination-permutation
 created: 2024-03-13
 updated:
 description:
-category: C++
+category: cpp
 tags:
 published: true
 ---

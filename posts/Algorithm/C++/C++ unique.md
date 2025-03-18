@@ -4,7 +4,7 @@ slug: cpp-unique
 created: 2024-05-22
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, unique]
 published: true
 ---

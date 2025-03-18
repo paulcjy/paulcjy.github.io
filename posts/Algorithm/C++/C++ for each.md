@@ -4,8 +4,8 @@ slug: cpp-for-each
 created: 2024-03-16
 updated:
 description:
-category: C++
-tags: [cpp, algorithm, for each]
+category: cpp
+tags: [cpp, algorithm, for-each]
 published: true
 ---
 

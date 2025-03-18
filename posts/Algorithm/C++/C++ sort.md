@@ -4,7 +4,7 @@ slug: cpp-sort
 created: 2024-03-27
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, sort]
 published: true
 ---

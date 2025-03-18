@@ -4,7 +4,7 @@ slug: cpp-digit-separator
 created: 2024-05-03
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm]
 published: true
 ---

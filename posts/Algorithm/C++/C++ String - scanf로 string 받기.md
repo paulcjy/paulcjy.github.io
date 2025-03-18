@@ -4,7 +4,7 @@ slug: cpp-scanf-string
 created: 2024-03-14
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, scanf, string]
 published: true
 ---

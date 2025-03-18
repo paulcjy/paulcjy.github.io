@@ -8,9 +8,9 @@ tags:
     css,
     markdown,
     highlight,
-    code block,
-    starry night,
-    pretty lights,
+    code-block,
+    starry-night,
+    pretty-lights,
   ]
 slug:
 updated:

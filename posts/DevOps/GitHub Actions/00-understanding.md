@@ -4,8 +4,8 @@ slug: github-actions-overview
 created: 2023-12-01
 updated:
 description:
-category: GitHub Actions
-tags: [github, actions, github actions]
+category: github-actions
+tags: [github, actions, github-actions]
 published: true
 ---
 

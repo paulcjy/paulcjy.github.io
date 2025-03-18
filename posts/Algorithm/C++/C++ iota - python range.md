@@ -4,7 +4,7 @@ slug: cpp-iota
 created: 2024-04-15
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, iota, range]
 published: true
 ---

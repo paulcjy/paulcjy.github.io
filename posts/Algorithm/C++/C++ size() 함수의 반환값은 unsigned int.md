@@ -4,7 +4,7 @@ slug: cpp-size-return-type
 created: 2024-05-30
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, size]
 published: true
 ---

@@ -4,7 +4,7 @@ slug: cpp-max-min
 created: 2024-03-25
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, max, min]
 published: true
 ---

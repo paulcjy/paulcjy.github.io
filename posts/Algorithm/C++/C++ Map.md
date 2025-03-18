@@ -4,7 +4,7 @@ slug: cpp-map
 created: 2024-05-21
 updated:
 description:
-category: C++
+category: cpp
 tags: [cpp, algorithm, map]
 published: true
 ---
