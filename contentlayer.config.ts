@@ -95,6 +95,7 @@ export default makeSource({
   },
   onSuccess: async (importData) => {
     const { allPosts } = await importData()
+    fs.mkdirSync('src/data/.contentlayer', { recursive: true })
     createTagMenuItems(allPosts)
     createCategoryMenuCounts(allPosts)
     createTotalPostCount(allPosts)
