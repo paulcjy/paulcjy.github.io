@@ -18,7 +18,7 @@ export default async function PostPage({
 
   return (
     <>
-      <article className="mx-auto max-w-4xl min-w-xl p-8">
+      <article className="mx-auto w-full max-w-4xl min-w-xl p-8">
         <div className="mb-12 text-center">
           <h1 className="mb-1 text-3xl font-bold">{post.title}</h1>
           <time
