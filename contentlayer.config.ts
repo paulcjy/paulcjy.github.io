@@ -97,6 +97,7 @@ export default makeSource({
     const { allPosts } = await importData()
     createTagMenuItems(allPosts)
     createCategoryMenuCounts(allPosts)
+    createTotalPostCount(allPosts)
   },
 })
 
@@ -109,18 +110,16 @@ const createTagMenuItems = (allPosts: PostType[]) => {
   // 배열로 저장해야 하지만 태그의 개수를 쉽게 세기 위해 태그 id가 키값인 객체로 생성
   const result: Record<string, Tag> = allPosts.reduce(
     (acc, post) => {
-      if (post.tags && !post.draft) {
-        post.tags.forEach((tag) => {
-          const slug = tag
-            .replace(/[:/?#\[\]@!$&'()*+,;=% ]+/g, '-')
-            .toLowerCase()
-          acc[slug] ??= {
-            slug,
-            count: 0,
-          }
-          acc[slug].count++
-        })
-      }
+      post.tags.forEach((tag) => {
+        const slug = tag
+          .replace(/[:/?#\[\]@!$&'()*+,;=% ]+/g, '-')
+          .toLowerCase()
+        acc[slug] ??= {
+          slug,
+          count: 0,
+        }
+        acc[slug].count++
+      })
       return acc
     },
     {} as Record<string, Tag>,
@@ -140,7 +139,7 @@ const createTagMenuItems = (allPosts: PostType[]) => {
 const createCategoryMenuCounts = (allPosts: PostType[]) => {
   const counts: Record<string, number> = allPosts.reduce(
     (acc, post) => {
-      if (!post.category || post.draft) return acc
+      if (!post.category) return acc
       acc[post.category] ??= 0
       acc[post.category]++
       return acc
@@ -153,5 +152,12 @@ const createCategoryMenuCounts = (allPosts: PostType[]) => {
   fs.writeFileSync(
     'src/data/.contentlayer/category-menu-counts.json',
     JSON.stringify(counts, null, 2),
+  )
+}
+
+const createTotalPostCount = (allPosts: PostType[]) => {
+  fs.writeFileSync(
+    'src/data/.contentlayer/total-post-count.json',
+    JSON.stringify({ count: allPosts.length }, null, 2),
   )
 }
