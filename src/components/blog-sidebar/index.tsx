@@ -17,10 +17,11 @@ import { CategoryMenu } from './category-menu'
 import { TagMenu } from './tag-menu'
 import { DiaryMenu } from './diary-menu'
 import Link from 'next/link'
-import { count as totalCount } from '@/data/.contentlayer/total-post-count.json'
+import totalPostCount from '@/data/.contentlayer/total-post-count.json'
 
 export const BlogSidebar = () => {
   const [selectedContent, setSelectedContent] = useState<Content>(contents[0])
+  const { count } = totalPostCount
 
   const renderSidebarContent = () => {
     switch (selectedContent.name) {
@@ -46,7 +47,7 @@ export const BlogSidebar = () => {
               <Link href="/blog">
                 <span className="font-semibold">전체 글 보기</span>
                 <SidebarMenuBadge className="font-normal opacity-80">
-                  {totalCount}
+                  {count}
                 </SidebarMenuBadge>
               </Link>
             </SidebarMenuButton>
