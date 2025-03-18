@@ -9,7 +9,7 @@ tags: [cpp, algorithm, new]
 published: true
 ---
 
-# 변수 할당
+## 변수 할당
 
 ```cpp
 T * p = new T;
@@ -25,17 +25,17 @@ int * a = new int(0); // 값을 0으로 할당
 using namespace std;
 
 int main() {
-	int* p = new int;
-	*p = 10;
+  int* p = new int;
+  *p = 10;
 
-	cout << *p << endl;
+  cout << *p << endl;
 
-	delete p;
-	return 0;
+  delete p;
+  return 0;
 }
 ```
 
-# 배열 할당
+## 배열 할당
 
 ```cpp
 int * arr = new int[n];
@@ -47,24 +47,24 @@ int * arr = new int[n];
 using namespace std;
 
 int main() {
-	int size;
-	cin >> size;
+  int size;
+  cin >> size;
 
-	// 배열 동적 할당
-	int* list = new int[size];
+  // 배열 동적 할당
+  int* list = new int[size];
 
-	// 배열 입력
-	for (int i = 0; i < size; i++) {
-		cin >> list[i];
-	}
+  // 배열 입력
+  for (int i = 0; i < size; i++) {
+    cin >> list[i];
+  }
 
-	// 배열 출력
-	for (int i = 0; i < size; i++) {
-		cout << list[i] << endl;
-	}
+  // 배열 출력
+  for (int i = 0; i < size; i++) {
+    cout << list[i] << endl;
+  }
 
-	// 해제
-	delete[] list;
-	return 0;
+  // 해제
+  delete[] list;
+  return 0;
 }
 ```

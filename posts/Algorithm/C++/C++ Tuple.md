@@ -9,13 +9,13 @@ tags: [cpp, algorithm, tuple]
 published: true
 ---
 
-# 헤더
+## 헤더
 
 ```cpp
 #include <tuple>
 ```
 
-# 선언
+## 선언
 
 ```cpp
 tuple<int, string, char> t1(20, "hello", 'c');
@@ -24,7 +24,7 @@ tuple<int, string, char> t2;
 t2 = make_tuple(30, "world", 'd');
 ```
 
-# 접근
+## 접근
 
 ```cpp
 int a = get<0>(t1);
@@ -32,7 +32,7 @@ string b = get<1>(t1);
 char c = get<2>(t1);
 ```
 
-# 분해
+## 분해
 
 ```cpp
 int x;

@@ -9,19 +9,19 @@ tags: [cpp, algorithm, stack]
 published: true
 ---
 
-# 헤더
+## 헤더
 
 ```cpp
 #include <stack>
 ```
 
-# 선언
+## 선언
 
 ```cpp
 stack<int> s;
 ```
 
-# 함수
+## 함수
 
 | 함수  | 설명                                    |
 | ----- | --------------------------------------- |
@@ -32,7 +32,7 @@ stack<int> s;
 | empty | 스택이 비어있는지 확인한다.             |
 | swap  | 두 스택의 내용을 서로 바꾼다.           |
 
-## push
+### push
 
 ```cpp
 void push(value_type&& value);
@@ -40,7 +40,7 @@ void push(value_type&& value);
 stack.push(value);
 ```
 
-## pop
+### pop
 
 ```cpp
 void pop();
@@ -48,7 +48,7 @@ void pop();
 stack.pop();
 ```
 
-## top
+### top
 
 ```cpp
 reference top();
@@ -56,7 +56,7 @@ reference top();
 value_type& value = stack.top();
 ```
 
-## size
+### size
 
 ```cpp
 size_type size() const;
@@ -64,7 +64,7 @@ size_type size() const;
 int size = stack.size();
 ```
 
-## empty
+### empty
 
 ```cpp
 bool empty() const;
@@ -72,13 +72,13 @@ bool empty() const;
 bool isEmpty = stack.empty();
 ```
 
-## swap
+### swap
 
 ```cpp
 void swap(stack& other);
 ```
 
-# 스택 초기화
+## 스택 초기화
 
 ```cpp
 stack s;
@@ -86,6 +86,6 @@ stack s;
 while (!s.empty()) s.pop();
 ```
 
-# 참고
+## 참고
 
-https://en.cppreference.com/w/cpp/container/stack
+- https://en.cppreference.com/w/cpp/container/stack

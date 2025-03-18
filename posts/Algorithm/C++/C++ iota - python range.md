@@ -22,7 +22,7 @@ void iota(ForwardIt first, ForwardIt last, T value)
 }
 ```
 
-# 사용법
+## 사용법
 
 ```cpp
 list<int> l(10);
@@ -38,7 +38,7 @@ iota(arr, arr+5, 1);
 // arr = {1, 2, 3, 4, 5}
 ```
 
-# 참고
+## 참고
 
 [generate][2]
 

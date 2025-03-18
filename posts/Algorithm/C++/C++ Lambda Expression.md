@@ -9,7 +9,7 @@ tags: [cpp, algorithm, lambda]
 published: true
 ---
 
-# 참고
+## 참고
 
 [모두의 코드 - 람다 함수][1]
 [devkoriel - Modern C++ lambda의 특징과 사용법][2]

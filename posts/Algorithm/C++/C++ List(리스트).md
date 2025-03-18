@@ -9,19 +9,19 @@ tags: [cpp, algorithm, list]
 published: true
 ---
 
-# 헤더
+## 헤더
 
 ```cpp
 #include <list>
 ```
 
-# 선언
+## 선언
 
 ```cpp
 list<int> l;
 ```
 
-# 함수
+## 함수
 
 | 함수       | 설명                     |
 | ---------- | ------------------------ |
@@ -40,7 +40,7 @@ list<int> l;
 | sort       |                          |
 | reverse    |                          |
 
-# 참고
+## 참고
 
 [모두의 코드 - 리스트][1]
 

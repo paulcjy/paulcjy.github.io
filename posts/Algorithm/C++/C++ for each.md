@@ -15,6 +15,6 @@ published: true
 
 ```cpp
 for each ( type-identifier in expression ) {
-	statements
+  statements
 }
 ```

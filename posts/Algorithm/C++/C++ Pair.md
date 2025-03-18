@@ -9,9 +9,7 @@ tags: [cpp, algorithm, pair]
 published: true
 ---
 
-#cpp
-
-# Header
+## Header
 
 ```cpp
 #include <utility>
@@ -21,13 +19,13 @@ published: true
 #include <vector>
 ```
 
-# Declaration
+## Declaration
 
 ```cpp
 pair<int, int> p;
 ```
 
-# Function
+## Function
 
 ```cpp
 // 접근

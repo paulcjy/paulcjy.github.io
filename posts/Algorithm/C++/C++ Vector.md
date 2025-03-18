@@ -9,7 +9,7 @@ tags: [cpp, algorithm, vector]
 published: true
 ---
 
-# 참고
+## 참고
 
 [모두의 코드 - 벡터][1]
 

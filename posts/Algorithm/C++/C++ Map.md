@@ -13,22 +13,22 @@ published: true
 #include <map>
 
 int main() {
-	// 선언
-	map<string, int> m;
+  // 선언
+  map<string, int> m;
 
-	// 삽입
-	m["key1"] = 5;
-	m.insert({"key2", 10});
+  // 삽입
+  m["key1"] = 5;
+  m.insert({"key2", 10});
 
-	// 조회
-	cout << m["key1"];
+  // 조회
+  cout << m["key1"];
 
-	// count
-	m.count("key1");
+  // count
+  m.count("key1");
 }
 
 ```
 
-참고
+## 참고
 
 - https://life-with-coding.tistory.com/305

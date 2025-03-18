@@ -9,19 +9,19 @@ tags: [cpp, algorithm, deque]
 published: true
 ---
 
-# 헤더
+## 헤더
 
 ```cpp
 #include <deque>
 ```
 
-# 선언
+## 선언
 
 ```cpp
 deque<int> dq;
 ```
 
-# 함수
+## 함수
 
 | 함수       | 설명 |
 | ---------- | ---- |
@@ -34,7 +34,7 @@ deque<int> dq;
 | size       |      |
 | empty      |      |
 
-# 참고
+## 참고
 
 [모두의 코드 - 덱][1]
 

@@ -9,19 +9,19 @@ tags: [cpp, algorithm, queue]
 published: true
 ---
 
-# 헤더
+## 헤더
 
 ```cpp
 #include <queue>
 ```
 
-# 선언
+## 선언
 
 ```cpp
 queue<int> q;
 ```
 
-# 함수
+## 함수
 
 | 함수  | 설명                      |
 | ----- | ------------------------- |
