@@ -1,6 +1,7 @@
-import { textNavLinks } from '@/data/global-nav-links'
+import { iconNavLinks, textNavLinks } from '@/data/global-nav-links'
 import Link from 'next/link'
 import { ThemeToggle } from '@/components/theme-toggle'
+import { Button } from '@/ui/button'
 
 export const GlobalHeader = () => {
   return (
@@ -18,8 +19,16 @@ export const GlobalHeader = () => {
               </li>
             ))}
           </ul>
-          <ul>
-            {/* 깃허브나 SNS 링크 */}
+          <ul className="flex gap-1 align-middle">
+            {iconNavLinks.map((item) => (
+              <li>
+                <Button variant="ghost" size="icon" asChild>
+                  <Link href={item.href}>
+                    <item.icon />
+                  </Link>
+                </Button>
+              </li>
+            ))}
             <li>
               <ThemeToggle />
             </li>

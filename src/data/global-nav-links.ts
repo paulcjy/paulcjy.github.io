@@ -1,3 +1,5 @@
+import { Github } from 'lucide-react'
+
 export const textNavLinks = [
   { title: 'Blog', href: '/blog' },
   { title: 'Projects', href: '/projects' },
@@ -5,8 +7,5 @@ export const textNavLinks = [
 ]
 
 export const iconNavLinks = [
-  { title: 'github', href: '/' },
-  { title: 'github', href: '/' },
-  { title: 'github', href: '/' },
-  { title: 'github', href: '/' },
+  { title: 'github', href: 'https://github.com/paulcjy', icon: Github },
 ]
