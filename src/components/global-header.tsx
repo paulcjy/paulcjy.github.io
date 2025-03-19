@@ -12,16 +12,18 @@ export const GlobalHeader = () => {
         </Link>
         {/* TODO: 검색창 추가(새 컴포넌트로) */}
         <nav className="flex gap-4">
-          <ul className="flex gap-6 font-medium">
+          <ul className="flex gap-6">
             {textNavLinks.map((item) => (
-              <li key={item.title} className="flex items-center text-sm">
-                <Link href={item.href}>{item.title}</Link>
+              <li key={item.title} className="flex items-center">
+                <Link href={item.href}>
+                  <span className="text-sm font-medium">{item.title}</span>
+                </Link>
               </li>
             ))}
           </ul>
-          <ul className="flex gap-1 align-middle">
+          <ul className="flex gap-1">
             {iconNavLinks.map((item) => (
-              <li>
+              <li key={item.title} className="flex items-center">
                 <Button variant="ghost" size="icon" asChild>
                   <Link href={item.href}>
                     <item.icon />
