@@ -9,6 +9,9 @@ tags:
 published: true
 ---
 
+[Arch Wiki - pacman](https://wiki.archlinux.org/title/Pacman)
+[Pacman Manual](https://man.archlinux.org/man/pacman.8)
+
 ## 옵션
 
 ### 주요 작업
@@ -58,53 +61,53 @@ published: true
 ## 패키지 검색
 
 ```bash
-pacman -Ss 패키지이름       # 패키지 데이터베이스에서 검색
-pacman -Qs 패키지이름       # 이미 설치된 패키지에서 검색
+pacman -Ss [package]       # 패키지 데이터베이스에서 검색
+pacman -Qs [package]       # 이미 설치된 패키지에서 검색
 ```
 
 ## 패키지 설치
 
 ```bash
-pacman -S 패키지이름        # 패키지 설치
-pacman -Sy 패키지이름       # 데이터베이스 동기화 후 설치
+pacman -S [package]        # 패키지 설치
+pacman -Sy [package]       # 데이터베이스 동기화 후 설치
 ```
 
 ## 패키지 제거
 
 ```bash
-pacman -R 패키지이름        # 단일 패키지 제거
-pacman -Rs 패키지이름       # 패키지와 의존성 제거 (사용되지 않는 의존성)
-pacman -Rsc 패키지이름      # 패키지와 모든 의존성 제거
-pacman -Rn 패키지이름       # 설정 파일 포함 완전 제거
+pacman -R [package]        # 단일 패키지 제거
+pacman -Rs [package]       # 패키지와 의존성 제거 (사용되지 않는 의존성)
+pacman -Rsc [package]      # 패키지와 모든 의존성 제거
+pacman -Rn [package]       # 설정 파일 포함 완전 제거
 ```
 
 ## 패키지 업그레이드
 
 ```bash
-pacman -Su                  # 시스템 업그레이드
-pacman -Syu                 # 데이터베이스 동기화 후 시스템 업그레이드 (권장)
+pacman -Su                 # 시스템 업그레이드
+pacman -Syu                # 데이터베이스 동기화 후 시스템 업그레이드 (권장)
 ```
 
 ## 패키지 정보 확인
 
 ```bash
-pacman -Qi 패키지이름       # 설치된 패키지의 상세 정보
-pacman -Si 패키지이름       # 원격 패키지의 상세 정보
-pacman -Ql 패키지이름       # 패키지가 설치한 파일 목록
-pacman -Qo 파일경로         # 특정 파일을 설치한 패키지 찾기
+pacman -Qi [package]       # 설치된 패키지의 상세 정보
+pacman -Si [package]       # 원격 패키지의 상세 정보
+pacman -Ql [package]       # 패키지가 설치한 파일 목록
+pacman -Qo [file path]     # 특정 파일을 설치한 패키지 찾기
 ```
 
 ## 캐시 관리
 
 ```bash
-pacman -Sc                  # 오래된 패키지 캐시 삭제
-pacman -Scc                 # 모든 패키지 캐시 삭제 (주의)
+pacman -Sc                 # 오래된 패키지 캐시 삭제
+pacman -Scc                # 모든 패키지 캐시 삭제 (주의)
 ```
 
 ## 기타
 
 ```bash
-pacman -Q                   # 설치된 모든 패키지 목록
-pacman -Qdt                 # 필요 없는 의존성 패키지 찾기
-pacman -Qm                  # AUR 등 외부 저장소에서 설치된 패키지
+pacman -Q                  # 설치된 모든 패키지 목록
+pacman -Qdt                # 필요 없는 의존성 패키지 찾기
+pacman -Qm                 # AUR 등 외부 저장소에서 설치된 패키지
 ```
