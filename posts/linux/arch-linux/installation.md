@@ -116,7 +116,7 @@ $ fdisk /dev/nvme0n1
 
 파티션을 생성하고 `p`를 입력하니 다음 내용이 출력되었다.
 
-```txt
+```text
 Device           Start        End    Sectors   Size Type
 /dev/nvme0n1p1    2048    2099199    2097152     1G EFI System
 /dev/nvme0n1p2 2099200 2000408575 1998309376 952.9G Linux filesystem

@@ -10,6 +10,7 @@ published: true
 ---
 
 [Arch Wiki - pacman](https://wiki.archlinux.org/title/Pacman)
+
 [Pacman Manual](https://man.archlinux.org/man/pacman.8)
 
 ## 옵션

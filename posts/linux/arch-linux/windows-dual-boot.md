@@ -14,13 +14,13 @@ published: true
 이건 실제 윈도우가 설치된 디스크에서 부팅을 담당하는 파티션이다.
 
 ```bash
-$ mount --mkdir /dev/nvme0n1p1 /mnt/efi-windows
+mount --mkdir /dev/nvme0n1p1 /mnt/efi-windows
 ```
 
 이제 EFI 파일을 리눅스의 EFI 파티션으로 복사한다.
 
 ```bash
-$ cp -r /mnt/efi-windows/EFI/Microsoft /boot/EFI/
+cp -r /mnt/efi-windows/EFI/Microsoft /boot/EFI/
 ```
 
 `/boot/loader/loader.conf`에 `auto-entries yes` 옵션을 추가하니 자동으로 윈도우 항목이 추가되었다.
