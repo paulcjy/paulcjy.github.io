@@ -23,9 +23,9 @@ export const categoryMenuItems: CategoryMenuGroup[] = [
   {
     name: 'Language',
     children: [
-      { name: 'JavaScript', slug: 'javascript' },
       { name: 'C++', slug: 'cpp' },
-      { name: 'Python', slug: 'python' },
+      { name: 'Java', slug: 'java' },
+      { name: 'JavaScript', slug: 'javascript' },
     ],
   },
   {
