@@ -22,6 +22,10 @@ published: true
 - `Alt-Shift-up/down`: 현재 줄을 위/아래로 이동
 - `Cmd-d`: 한 줄 복사
 - `Cmd-Shift-Return`: 현재 문장 자동 완성
+- `Cmd-o`: 네비게이션(검색)
+- `Cmd-e`: 최근 파일
+- `Ctrl-Space`: Code Completion
+- `Shift-F6`: Rename
 
 ## 코드 스니펫
 
