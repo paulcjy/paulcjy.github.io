@@ -11,7 +11,10 @@ export interface CategoryMenuGroup {
 export const categoryMenuItems: CategoryMenuGroup[] = [
   {
     name: 'Web',
-    children: [{ name: '개발 블로그 v2 (Next.js)', slug: 'blog2' }],
+    children: [
+      { name: '개발 블로그 v2 (Next.js)', slug: 'blog2' },
+      { name: 'Spring', slug: 'spring' },
+    ],
   },
   {
     name: 'Linux',
