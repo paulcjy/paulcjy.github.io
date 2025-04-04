@@ -21,6 +21,7 @@ export const categoryMenuItems: CategoryMenuGroup[] = [
     children: [
       { name: 'Linux', slug: 'linux' },
       { name: 'Arch Linux', slug: 'arch-linux' },
+      { name: 'Bash', slug: 'bash' },
     ],
   },
   {
@@ -33,11 +34,11 @@ export const categoryMenuItems: CategoryMenuGroup[] = [
     ],
   },
   {
-    name: 'Algorithm',
-    children: [{ name: '알고리즘', slug: 'algorithm' }],
-  },
-  {
     name: 'Others',
-    children: [{ name: 'GitHub Actions', slug: 'github-actions' }],
+    children: [
+      { name: '알고리즘', slug: 'algorithm' },
+      { name: 'Neovim', slug: 'nvim' },
+      { name: 'GitHub Actions', slug: 'github-actions' },
+    ],
   },
 ]
