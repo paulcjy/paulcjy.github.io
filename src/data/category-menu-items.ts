@@ -42,3 +42,14 @@ export const categoryMenuItems: CategoryMenuGroup[] = [
     ],
   },
 ]
+
+export const categoryMenuMap: Record<string, string> = categoryMenuItems.reduce(
+  (acc, categoryMenuGroup) => {
+    categoryMenuGroup.children.forEach((categoryMenuItem) => {
+      const { name, slug } = categoryMenuItem
+      acc[slug] = name
+    })
+    return acc
+  },
+  {} as Record<string, string>,
+)
